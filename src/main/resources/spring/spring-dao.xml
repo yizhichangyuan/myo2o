@@ -28,7 +28,7 @@
 
     <!--配置SqlSessionFactory对象-->
     <!--MyBatis全局配置文件-->
-    <!--扫描entity包，使用列名别名-->
+    <!--扫描entity包，将取出结果包装成entity对象-->
     <!--扫描Sql配置文件-->
     <bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean"
           p:dataSource-ref="dataSource"
@@ -36,5 +36,11 @@
           p:typeAliasesPackage="com.imooc.entity"
           p:mapperLocations="classpath:mapper/*.xml"/>
 
-
+    <!--配置扫描Dao接口包，动态实现Dao接口，注入到Spring容器中-->
+    <bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
+        <!--注入SqlSessionFactory-->
+        <property name="sqlSessionFactoryBeanName" value="sqlSessionFactory"/>
+        <!--给出需要扫描Dao接口包-->
+        <property name="basePackage" value="com.imooc.o2o.dao"/>
+    </bean>
 </beans>

@@ -147,7 +147,7 @@
                         </connector>
                     </connectors>
                     <contextPath>/o2o</contextPath>
-                    <scanIntervalSeconds>1</scanIntervalSeconds>
+                    <scanIntervalSeconds>2</scanIntervalSeconds>
                 </configuration>
             </plugin>
             <plugin>

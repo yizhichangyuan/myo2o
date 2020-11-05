@@ -2,17 +2,23 @@
 <!--配置文件发生变化，scan设置为true默认重新加载-->
 <!--debug设置为true会打印logback内部的信息，会造成干扰，设置为false-->
 <configuration scan="true" scanPeriod="60 seconds" debug="false">
+    <!--日志来源级别-->
     <!--定义参数常量-->
     <!--日志级别：TRACE<DEBUG<INFO<WARN<ERROR-->
     <!--logger.trace("msg")  logger.debug...-->
     <property name="log.level" value="debug"/>
-    <!--文件日志的保留时间-->
-    <property name="log.maxHistory" value="30"/>
-    <!--日志文件存储的根路径-->
-    <property name="log.filePath" value="Log/logs/webapps"/>
+
+    <!--日志记录格式-->
     <!--日志格式[thead]表示哪个进程执行，%-5level 缩进5位日志级别 msg表示日志信息 %n表示换行-->
     <property name="log.pattern" value="%d{yyyy-MM-dd HH:mm:ss.SSS} [%thread] %-5level %logger{50} -%msg%n"/>
 
+    <!--日志文件位置-->
+    <!--日志文件存储的根路径-->
+    <property name="log.filePath" value="Log/logs/webapps"/>
+
+    <!--日志文件存活时间-->
+    <!--文件日志的保留时间-->
+    <property name="log.maxHistory" value="30"/>
 
     <!--日志输入媒介：终端-->
     <!--控制台配置-->
@@ -95,6 +101,7 @@
     </appender>
 
 
+    <!--日志来源，name指定来源包-->
     <!--让日志关注哪些包，记录哪些级别以上的日志信息，绑定appender集合-->
     <!--additivity设置为true也会继承root，信息就会不仅会出现在文件里，也会出现控制台-->
     <logger name="com.imooc.o2o" level="${log.level}" additivity="true">

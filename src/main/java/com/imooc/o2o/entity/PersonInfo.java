@@ -3,12 +3,15 @@ package com.imooc.o2o.entity;
 import java.util.Date;
 
 public class PersonInfo {
-    private Long userId;
+    private Long userId; //用户id，用Long表示
     private String name;
     private String profileImg;
     private String email;
     private String gender;
     private Integer enableStatus; //用户状态，标识是否黑名单
+    private Integer userType; //1顾客 2店家 3超级管理员
+    private Date createTime;
+    private Date lastEditTime;
 
     public Long getUserId() {
         return userId;
@@ -81,8 +84,4 @@ public class PersonInfo {
     public void setLastEditTime(Date lastEditTime) {
         this.lastEditTime = lastEditTime;
     }
-
-    private Integer userType; //用户身份
-    private Date createTime;
-    private Date lastEditTime;
 }

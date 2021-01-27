@@ -25,4 +25,12 @@
           p:prefix="/WEB-INF/html/"
           p:suffix=".html"/>
 
+    <!--文件上传解析器，不设置该解析器，则接收不到表单中提交的表单项内容-->
+    <bean id="multipartResolver" class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
+        <!--最大文件上传大小，单位为字节B，1024 * 1024 * 20 = 20MB-->
+        <property name="defaultEncoding" value="utf-8"></property>
+        <property name="maxUploadSize" value="20971520"></property>
+        <property name="maxInMemorySize" value="20971520"></property>
+    </bean>
+
 </beans>

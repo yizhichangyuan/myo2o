@@ -19,6 +19,7 @@ import java.util.Map;
 @RequestMapping("/superadmin")
 public class AreaController {
     Logger logger = LoggerFactory.getLogger(AreaController.class);
+
     @Autowired
     private AreaService areaService;
 

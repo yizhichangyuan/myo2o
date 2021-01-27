@@ -10,13 +10,15 @@ public class Product {
     private String imgAddr; //简略图
     private String normalPrice; //日常价格
     private String promotionPrice; //促销价格
+    private List<ProductImg> productImgList; //商品详情图列表
+    private ProductCategory productCategory;
+    private Shop shop;
+
+    // 管理信息
     private Integer priority;
     private Date createTime;
     private Integer enableStatus; //商品状态，0表示下架不可用，1表示上架
 
-    private List<ProductImg> productImgList; //商品详情图列表
-    private ProductCategory productCategory;
-    private Shop shop;
 
     public Long getProductId() {
         return productId;

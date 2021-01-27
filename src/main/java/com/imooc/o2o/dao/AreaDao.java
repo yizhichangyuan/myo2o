@@ -10,7 +10,7 @@ public interface AreaDao {
     /**
      * 列出区域列表
      *
-     * @return AreaList
+     * @return areaList
      */
     List<Area> queryArea();
 }

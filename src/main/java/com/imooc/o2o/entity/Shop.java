@@ -4,16 +4,22 @@ import java.util.Date;
 
 public class Shop {
     private Long shopId;
+
+    // 店铺基本信息
     private String shopName;
     private String shopDesc;
     private String shopAddr;
     private String phone;
     private String shopImg;
+
+    // 管理信息
     private Integer priority;
     private Date createTime;
     private Date lastEditTime;
     private Integer enableStatus; //-1：不可用，0：审核中 1：可用
     private String advice; //超级管理员给店家的提醒
+
+    // 外键信息
     private Area area; //外键区域id
     private ShopCategory shopCategory; //外键类别id
     private PersonInfo owner; //店家

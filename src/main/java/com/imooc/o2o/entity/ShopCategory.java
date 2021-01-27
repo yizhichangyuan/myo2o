@@ -7,11 +7,12 @@ public class ShopCategory {
     private Long shopCategoryId;
     private String shopCategoryName;
     private String shopCategoryDesc;
+    private ShopCategory parent; //上级id，当parent为空，表示该行记录为大类别记录，当parent不为空，
+
+    // 管理信息
     private Integer priority;
     private Date createTime;
     private Date lastEditTime;
-    private ShopCategory parent; //上级id，当parent为空，表示该行记录为大类别记录，当parent不为空，
-    // 代表该行记录为小类别，parent指的是上级大类别id
 
     public Long getShopCategoryId() {
         return shopCategoryId;

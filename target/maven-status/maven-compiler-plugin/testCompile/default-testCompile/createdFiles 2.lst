@@ -1,0 +1,7 @@
+com/imooc/o2o/dao/ShopDaoTest.class
+com/imooc/o2o/BaseTest.class
+com/imooc/o2o/service/ShopServiceTest.class
+com/imooc/o2o/dao/AreaServiceTest.class
+com/imooc/o2o/service/AreaServiceTest.class
+com/imooc/o2o/dao/ShopCategoryDaoTest.class
+com/imooc/o2o/dao/AreaDaoTest.class

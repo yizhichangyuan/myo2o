@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:mvc="http://www.springframework.org/schema/mvc" xmlns:p="http://www.springframework.org/schema/p"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd
+       http://www.springframework.org/schema/mvc
+       http://www.springframework.org/schema/mvc/spring-mvc.xsd">
+
+    <context:component-scan base-package="com.imooc.o2o.web"/>
+
+    <!--开启mvc注解模式，requestMapping注解-->
+    <mvc:annotation-driven/>
+
+    <!--静态资源默认servlet配置，例如js、gif、png-->
+    <!--允许使用/做整体映射-->
+    <!--要求相对于根目录resources的为静态文件，dispatchServlet不拦截-->
+    <mvc:resources mapping="/resources/**" location="/resources/"/>
+    <!--静态文件交给默认的servlet来处理-->
+    <mvc:default-servlet-handler/>
+
+    <!--定义视图解析器-->
+    <bean id="viewResolver"
+          class="org.springframework.web.servlet.view.InternalResourceViewResolver"
+          p:prefix="/WEB-INF/html/"
+          p:suffix=".html"/>
+
+    <!--文件上传解析器，不设置该解析器，则接收不到表单中提交的表单项内容-->
+    <bean id="multipartResolver" class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
+        <!--最大文件上传大小，单位为字节B，1024 * 1024 * 20 = 20MB-->
+        <property name="defaultEncoding" value="utf-8"></property>
+        <property name="maxUploadSize" value="20971520"></property>
+        <property name="maxInMemorySize" value="20971520"></property>
+    </bean>
+
+</beans>

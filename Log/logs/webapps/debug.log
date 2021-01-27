@@ -1,0 +1,660 @@
+2021-01-26 00:46:34.428 [main] DEBUG c.imooc.o2o.dao.split.DynamicDataSourceInterceptor -设置方法[com.imooc.o2o.dao.ShopDao.queryShopList] use[slave] Strategy,SqlCommandType[SELECT]...
+2021-01-26 00:46:34.433 [main] DEBUG com.imooc.o2o.dao.split.DynamicDataSourceHolder -所使用的数据源为：slave
+2021-01-26 00:46:34.463 [main] DEBUG com.imooc.o2o.dao.ShopDao.queryShopList -==>  Preparing: select s.shop_id, s.shop_name, s.shop_desc, s.shop_addr, s.phone, s.shop_img, s.priority, s.enable_status, s.create_time, s.last_edit_time, s.advice, a.area_id, a.area_name, sc.shop_category_id, sc.shop_category_name FROM tb_shop s, tb_shop_category sc, tb_area a WHERE s.owner_id = ? and s.shop_category_id = sc.shop_category_id and s.area_id = a.area_id ORDER BY s.priority DESC LIMIT ?, ?; 
+2021-01-26 00:46:34.545 [main] DEBUG com.imooc.o2o.dao.ShopDao.queryShopList -==> Parameters: 1(Long), 0(Integer), 5(Integer)
+2021-01-26 00:46:34.581 [main] DEBUG com.imooc.o2o.dao.ShopDao.queryShopList -<==      Total: 5
+2021-01-26 00:47:44.293 [main] DEBUG c.imooc.o2o.dao.split.DynamicDataSourceInterceptor -设置方法[com.imooc.o2o.dao.ShopDao.queryShopCount] use[slave] Strategy,SqlCommandType[SELECT]...
+2021-01-26 00:47:44.295 [main] DEBUG com.imooc.o2o.dao.split.DynamicDataSourceHolder -所使用的数据源为：slave
+2021-01-26 00:47:44.320 [main] DEBUG com.imooc.o2o.dao.ShopDao.queryShopCount -==>  Preparing: select count(1) FROM tb_shop s, tb_shop_category sc, tb_area a WHERE s.owner_id = ? and s.shop_category_id = sc.shop_category_id and s.area_id = a.area_id ORDER BY s.priority DESC; 
+2021-01-26 00:47:44.402 [main] DEBUG com.imooc.o2o.dao.ShopDao.queryShopCount -==> Parameters: 1(Long)
+2021-01-26 00:47:44.433 [main] DEBUG com.imooc.o2o.dao.ShopDao.queryShopCount -<==      Total: 1
+2021-01-26 00:48:25.992 [main] DEBUG c.imooc.o2o.dao.split.DynamicDataSourceInterceptor -设置方法[com.imooc.o2o.dao.ShopDao.queryShopCount] use[slave] Strategy,SqlCommandType[SELECT]...
+2021-01-26 00:48:25.995 [main] DEBUG com.imooc.o2o.dao.split.DynamicDataSourceHolder -所使用的数据源为：slave
+2021-01-26 00:48:26.021 [main] DEBUG com.imooc.o2o.dao.ShopDao.queryShopCount -==>  Preparing: select count(1) FROM tb_shop s, tb_shop_category sc, tb_area a WHERE s.owner_id = ? and s.shop_category_id = sc.shop_category_id and s.area_id = a.area_id ORDER BY s.priority DESC; 
+2021-01-26 00:48:26.090 [main] DEBUG com.imooc.o2o.dao.ShopDao.queryShopCount -==> Parameters: 1(Long)
+2021-01-26 00:48:26.123 [main] DEBUG com.imooc.o2o.dao.ShopDao.queryShopCount -<==      Total: 1
+2021-01-26 00:49:36.543 [main] DEBUG c.imooc.o2o.dao.split.DynamicDataSourceInterceptor -设置方法[com.imooc.o2o.dao.ShopDao.queryShopCount] use[slave] Strategy,SqlCommandType[SELECT]...
+2021-01-26 00:49:36.545 [main] DEBUG com.imooc.o2o.dao.split.DynamicDataSourceHolder -所使用的数据源为：slave
+2021-01-26 00:49:36.564 [main] DEBUG com.imooc.o2o.dao.ShopDao.queryShopCount -==>  Preparing: select count(1) FROM tb_shop s, tb_shop_category sc, tb_area a WHERE s.owner_id = ? and s.shop_category_id = sc.shop_category_id and s.area_id = a.area_id ORDER BY s.priority DESC; 
+2021-01-26 00:49:36.639 [main] DEBUG com.imooc.o2o.dao.ShopDao.queryShopCount -==> Parameters: 1(Long)
+2021-01-26 00:49:36.664 [main] DEBUG com.imooc.o2o.dao.ShopDao.queryShopCount -<==      Total: 1
+2021-01-26 00:51:45.328 [main] DEBUG c.imooc.o2o.dao.split.DynamicDataSourceInterceptor -设置方法[com.imooc.o2o.dao.ShopDao.queryShopCount] use[slave] Strategy,SqlCommandType[SELECT]...
+2021-01-26 00:51:45.331 [main] DEBUG com.imooc.o2o.dao.split.DynamicDataSourceHolder -所使用的数据源为：slave
+2021-01-26 00:51:45.359 [main] DEBUG com.imooc.o2o.dao.ShopDao.queryShopCount -==>  Preparing: select count(1) FROM tb_shop s, tb_shop_category sc, tb_area a WHERE s.owner_id = ? and s.shop_category_id = sc.shop_category_id and s.area_id = a.area_id ORDER BY s.priority DESC; 
+2021-01-26 00:51:45.427 [main] DEBUG com.imooc.o2o.dao.ShopDao.queryShopCount -==> Parameters: 1(Long)
+2021-01-26 00:51:45.450 [main] DEBUG com.imooc.o2o.dao.ShopDao.queryShopCount -<==      Total: 1
+2021-01-26 00:54:04.237 [main] DEBUG c.imooc.o2o.dao.split.DynamicDataSourceInterceptor -设置方法[com.imooc.o2o.dao.ShopDao.queryShopCount] use[slave] Strategy,SqlCommandType[SELECT]...
+2021-01-26 00:54:04.239 [main] DEBUG com.imooc.o2o.dao.split.DynamicDataSourceHolder -所使用的数据源为：slave
+2021-01-26 00:54:04.258 [main] DEBUG com.imooc.o2o.dao.ShopDao.queryShopCount -==>  Preparing: select count(1) FROM tb_shop s, tb_shop_category sc, tb_area a WHERE s.owner_id = ? and s.shop_category_id = sc.shop_category_id and s.area_id = a.area_id ORDER BY s.priority DESC; 
+2021-01-26 00:54:04.333 [main] DEBUG com.imooc.o2o.dao.ShopDao.queryShopCount -==> Parameters: 1(Long)
+2021-01-26 00:54:04.362 [main] DEBUG com.imooc.o2o.dao.ShopDao.queryShopCount -<==      Total: 1
+2021-01-26 00:54:17.749 [main] DEBUG c.imooc.o2o.dao.split.DynamicDataSourceInterceptor -设置方法[com.imooc.o2o.dao.ShopDao.queryShopCount] use[slave] Strategy,SqlCommandType[SELECT]...
+2021-01-26 00:54:17.750 [main] DEBUG com.imooc.o2o.dao.split.DynamicDataSourceHolder -所使用的数据源为：slave
+2021-01-26 00:54:17.770 [main] DEBUG com.imooc.o2o.dao.ShopDao.queryShopCount -==>  Preparing: select count(1) FROM tb_shop s, tb_shop_category sc, tb_area a WHERE s.owner_id = ? and s.shop_category_id = sc.shop_category_id and s.area_id = a.area_id ORDER BY s.priority DESC; 
+2021-01-26 00:54:17.851 [main] DEBUG com.imooc.o2o.dao.ShopDao.queryShopCount -==> Parameters: 1(Long)
+2021-01-26 00:54:17.875 [main] DEBUG com.imooc.o2o.dao.ShopDao.queryShopCount -<==      Total: 1
+2021-01-26 00:55:56.374 [main] DEBUG c.imooc.o2o.dao.split.DynamicDataSourceInterceptor -设置方法[com.imooc.o2o.dao.ShopDao.queryShopList] use[slave] Strategy,SqlCommandType[SELECT]...
+2021-01-26 00:55:56.376 [main] DEBUG com.imooc.o2o.dao.split.DynamicDataSourceHolder -所使用的数据源为：slave
+2021-01-26 00:55:56.400 [main] DEBUG com.imooc.o2o.dao.ShopDao.queryShopList -==>  Preparing: select s.shop_id, s.shop_name, s.shop_desc, s.shop_addr, s.phone, s.shop_img, s.priority, s.enable_status, s.create_time, s.last_edit_time, s.advice, a.area_id, a.area_name, sc.shop_category_id, sc.shop_category_name FROM tb_shop s, tb_shop_category sc, tb_area a WHERE s.owner_id = ? and s.shop_category_id = sc.shop_category_id and s.area_id = a.area_id ORDER BY s.priority DESC LIMIT ?, ?; 
+2021-01-26 00:55:56.479 [main] DEBUG com.imooc.o2o.dao.ShopDao.queryShopList -==> Parameters: 1(Long), 0(Integer), 5(Integer)
+2021-01-26 00:55:56.508 [main] DEBUG com.imooc.o2o.dao.ShopDao.queryShopList -<==      Total: 5
+2021-01-26 00:55:56.518 [main] DEBUG c.imooc.o2o.dao.split.DynamicDataSourceInterceptor -设置方法[com.imooc.o2o.dao.ShopDao.queryShopCount] use[slave] Strategy,SqlCommandType[SELECT]...
+2021-01-26 00:55:56.518 [main] DEBUG com.imooc.o2o.dao.split.DynamicDataSourceHolder -所使用的数据源为：slave
+2021-01-26 00:55:56.519 [main] DEBUG com.imooc.o2o.dao.ShopDao.queryShopCount -==>  Preparing: select count(1) FROM tb_shop s, tb_shop_category sc, tb_area a WHERE s.owner_id = ? and s.shop_category_id = sc.shop_category_id and s.area_id = a.area_id ORDER BY s.priority DESC; 
+2021-01-26 00:55:56.519 [main] DEBUG com.imooc.o2o.dao.ShopDao.queryShopCount -==> Parameters: 1(Long)
+2021-01-26 00:55:56.524 [main] DEBUG com.imooc.o2o.dao.ShopDao.queryShopCount -<==      Total: 1
+2021-01-26 00:57:01.272 [main] DEBUG c.imooc.o2o.dao.split.DynamicDataSourceInterceptor -设置方法[com.imooc.o2o.dao.ShopDao.queryShopCount] use[slave] Strategy,SqlCommandType[SELECT]...
+2021-01-26 00:57:01.274 [main] DEBUG com.imooc.o2o.dao.split.DynamicDataSourceHolder -所使用的数据源为：slave
+2021-01-26 00:57:01.295 [main] DEBUG com.imooc.o2o.dao.ShopDao.queryShopCount -==>  Preparing: select count(1) FROM tb_shop s, tb_shop_category sc, tb_area a WHERE s.owner_id = ? and s.shop_category_id = sc.shop_category_id and s.area_id = a.area_id ORDER BY s.priority DESC; 
+2021-01-26 00:57:01.366 [main] DEBUG com.imooc.o2o.dao.ShopDao.queryShopCount -==> Parameters: 1(Long)
+2021-01-26 00:57:01.396 [main] DEBUG com.imooc.o2o.dao.ShopDao.queryShopCount -<==      Total: 1
+2021-01-26 00:58:34.275 [main] DEBUG c.imooc.o2o.dao.split.DynamicDataSourceInterceptor -设置方法[com.imooc.o2o.dao.ShopDao.queryShopCount] use[slave] Strategy,SqlCommandType[SELECT]...
+2021-01-26 00:58:34.277 [main] DEBUG com.imooc.o2o.dao.split.DynamicDataSourceHolder -所使用的数据源为：slave
+2021-01-26 00:58:34.293 [main] DEBUG com.imooc.o2o.dao.ShopDao.queryShopCount -==>  Preparing: select count(1) FROM tb_shop s, tb_shop_category sc, tb_area a WHERE s.owner_id = ? and s.shop_category_id = sc.shop_category_id and s.area_id = a.area_id ORDER BY s.priority DESC; 
+2021-01-26 00:58:34.364 [main] DEBUG com.imooc.o2o.dao.ShopDao.queryShopCount -==> Parameters: 1(Long)
+2021-01-26 00:58:34.389 [main] DEBUG com.imooc.o2o.dao.ShopDao.queryShopCount -<==      Total: 1
+2021-01-26 00:59:11.580 [main] DEBUG c.imooc.o2o.dao.split.DynamicDataSourceInterceptor -设置方法[com.imooc.o2o.dao.ShopDao.queryShopCount] use[slave] Strategy,SqlCommandType[SELECT]...
+2021-01-26 00:59:11.581 [main] DEBUG com.imooc.o2o.dao.split.DynamicDataSourceHolder -所使用的数据源为：slave
+2021-01-26 00:59:11.597 [main] DEBUG com.imooc.o2o.dao.ShopDao.queryShopCount -==>  Preparing: select count(1) FROM tb_shop s, tb_shop_category sc, tb_area a WHERE s.owner_id = ? and s.shop_category_id = sc.shop_category_id and s.area_id = a.area_id ORDER BY s.priority DESC; 
+2021-01-26 00:59:11.656 [main] DEBUG com.imooc.o2o.dao.ShopDao.queryShopCount -==> Parameters: 1(Long)
+2021-01-26 00:59:11.692 [main] DEBUG com.imooc.o2o.dao.ShopDao.queryShopCount -<==      Total: 1
+2021-01-26 01:00:14.978 [main] DEBUG c.imooc.o2o.dao.split.DynamicDataSourceInterceptor -设置方法[com.imooc.o2o.dao.ShopDao.queryShopCount] use[slave] Strategy,SqlCommandType[SELECT]...
+2021-01-26 01:00:14.980 [main] DEBUG com.imooc.o2o.dao.split.DynamicDataSourceHolder -所使用的数据源为：slave
+2021-01-26 01:00:14.997 [main] DEBUG com.imooc.o2o.dao.ShopDao.queryShopCount -==>  Preparing: select count(1) FROM tb_shop s, tb_shop_category sc, tb_area a WHERE s.owner_id = ? and s.shop_category_id = sc.shop_category_id and s.area_id = a.area_id ORDER BY s.priority DESC; 
+2021-01-26 01:00:15.061 [main] DEBUG com.imooc.o2o.dao.ShopDao.queryShopCount -==> Parameters: 1(Long)
+2021-01-26 01:00:15.086 [main] DEBUG com.imooc.o2o.dao.ShopDao.queryShopCount -<==      Total: 1
+2021-01-26 01:00:30.270 [main] DEBUG c.imooc.o2o.dao.split.DynamicDataSourceInterceptor -设置方法[com.imooc.o2o.dao.ShopDao.queryShopCount] use[slave] Strategy,SqlCommandType[SELECT]...
+2021-01-26 01:00:30.272 [main] DEBUG com.imooc.o2o.dao.split.DynamicDataSourceHolder -所使用的数据源为：slave
+2021-01-26 01:00:30.290 [main] DEBUG com.imooc.o2o.dao.ShopDao.queryShopCount -==>  Preparing: select count(1) FROM tb_shop s, tb_shop_category sc, tb_area a WHERE s.owner_id = ? and s.shop_category_id = sc.shop_category_id and s.area_id = a.area_id ORDER BY s.priority DESC; 
+2021-01-26 01:00:30.352 [main] DEBUG com.imooc.o2o.dao.ShopDao.queryShopCount -==> Parameters: 1(Long)
+2021-01-26 01:00:30.382 [main] DEBUG com.imooc.o2o.dao.ShopDao.queryShopCount -<==      Total: 1
+2021-01-26 01:01:48.559 [main] DEBUG c.imooc.o2o.dao.split.DynamicDataSourceInterceptor -设置方法[com.imooc.o2o.dao.ShopDao.queryShopCount] use[slave] Strategy,SqlCommandType[SELECT]...
+2021-01-26 01:01:48.562 [main] DEBUG com.imooc.o2o.dao.split.DynamicDataSourceHolder -所使用的数据源为：slave
+2021-01-26 01:01:48.583 [main] DEBUG com.imooc.o2o.dao.ShopDao.queryShopCount -==>  Preparing: select count(1) FROM tb_shop s, tb_shop_category sc, tb_area a WHERE s.owner_id = ? and s.shop_category_id = sc.shop_category_id and s.area_id = a.area_id ORDER BY s.priority DESC; 
+2021-01-26 01:01:48.641 [main] DEBUG com.imooc.o2o.dao.ShopDao.queryShopCount -==> Parameters: 1(Long)
+2021-01-26 01:01:48.665 [main] DEBUG com.imooc.o2o.dao.ShopDao.queryShopCount -<==      Total: 1
+2021-01-26 01:01:59.914 [main] DEBUG c.imooc.o2o.dao.split.DynamicDataSourceInterceptor -设置方法[com.imooc.o2o.dao.ShopDao.queryShopCount] use[slave] Strategy,SqlCommandType[SELECT]...
+2021-01-26 01:01:59.917 [main] DEBUG com.imooc.o2o.dao.split.DynamicDataSourceHolder -所使用的数据源为：slave
+2021-01-26 01:01:59.940 [main] DEBUG com.imooc.o2o.dao.ShopDao.queryShopCount -==>  Preparing: select count(1) FROM tb_shop s, tb_shop_category sc, tb_area a WHERE s.owner_id = ? and s.shop_category_id = sc.shop_category_id and s.area_id = a.area_id ORDER BY s.priority DESC; 
+2021-01-26 01:02:00.021 [main] DEBUG com.imooc.o2o.dao.ShopDao.queryShopCount -==> Parameters: 1(Long)
+2021-01-26 01:02:00.046 [main] DEBUG com.imooc.o2o.dao.ShopDao.queryShopCount -<==      Total: 1
+2021-01-26 01:05:42.701 [main] DEBUG c.imooc.o2o.dao.split.DynamicDataSourceInterceptor -设置方法[com.imooc.o2o.dao.ShopDao.queryShopCount] use[slave] Strategy,SqlCommandType[SELECT]...
+2021-01-26 01:05:42.705 [main] DEBUG com.imooc.o2o.dao.split.DynamicDataSourceHolder -所使用的数据源为：slave
+2021-01-26 01:05:42.723 [main] DEBUG com.imooc.o2o.dao.ShopDao.queryShopCount -==>  Preparing: SELECT COUNT(*) FROM tb_shop s, tb_shop_category sc, tb_area a WHERE s.owner_id = ? and s.shop_category_id = sc.shop_category_id and s.area_id = a.area_id ORDER BY s.priority DESC; 
+2021-01-26 01:05:42.789 [main] DEBUG com.imooc.o2o.dao.ShopDao.queryShopCount -==> Parameters: 1(Long)
+2021-01-26 01:05:42.814 [main] DEBUG com.imooc.o2o.dao.ShopDao.queryShopCount -<==      Total: 1
+2021-01-26 01:07:07.129 [main] DEBUG c.imooc.o2o.dao.split.DynamicDataSourceInterceptor -设置方法[com.imooc.o2o.dao.ShopDao.queryShopCount] use[slave] Strategy,SqlCommandType[SELECT]...
+2021-01-26 01:07:07.133 [main] DEBUG com.imooc.o2o.dao.split.DynamicDataSourceHolder -所使用的数据源为：slave
+2021-01-26 01:07:07.275 [main] DEBUG com.imooc.o2o.dao.ShopDao.queryShopCount -==>  Preparing: SELECT COUNT(*) FROM tb_shop s, tb_shop_category sc, tb_area a WHERE s.owner_id = ? and s.shop_category_id = sc.shop_category_id and s.area_id = a.area_id ORDER BY s.priority DESC; 
+2021-01-26 01:07:07.663 [main] DEBUG com.imooc.o2o.dao.ShopDao.queryShopCount -==> Parameters: 1(Long)
+2021-01-26 01:07:07.856 [main] DEBUG com.imooc.o2o.dao.ShopDao.queryShopCount -<==      Total: 1
+2021-01-26 01:07:35.346 [main] DEBUG c.imooc.o2o.dao.split.DynamicDataSourceInterceptor -设置方法[com.imooc.o2o.dao.ShopDao.queryShopCount] use[slave] Strategy,SqlCommandType[SELECT]...
+2021-01-26 01:07:35.348 [main] DEBUG com.imooc.o2o.dao.split.DynamicDataSourceHolder -所使用的数据源为：slave
+2021-01-26 01:07:35.365 [main] DEBUG com.imooc.o2o.dao.ShopDao.queryShopCount -==>  Preparing: SELECT COUNT(*) FROM tb_shop s, tb_shop_category sc, tb_area a WHERE s.owner_id = ? and s.shop_category_id = sc.shop_category_id and s.area_id = a.area_id ORDER BY s.priority DESC; 
+2021-01-26 01:07:35.435 [main] DEBUG com.imooc.o2o.dao.ShopDao.queryShopCount -==> Parameters: 1(Long)
+2021-01-26 01:07:35.463 [main] DEBUG com.imooc.o2o.dao.ShopDao.queryShopCount -<==      Total: 1
+2021-01-26 01:08:52.161 [main] DEBUG c.imooc.o2o.dao.split.DynamicDataSourceInterceptor -设置方法[com.imooc.o2o.dao.ShopDao.queryShopCount] use[slave] Strategy,SqlCommandType[SELECT]...
+2021-01-26 01:08:52.162 [main] DEBUG com.imooc.o2o.dao.split.DynamicDataSourceHolder -所使用的数据源为：slave
+2021-01-26 01:08:52.181 [main] DEBUG com.imooc.o2o.dao.ShopDao.queryShopCount -==>  Preparing: SELECT COUNT(*) FROM tb_shop s, tb_shop_category sc, tb_area a WHERE s.owner_id = ? and s.shop_category_id = sc.shop_category_id and s.area_id = a.area_id ORDER BY s.priority DESC; 
+2021-01-26 01:08:52.270 [main] DEBUG com.imooc.o2o.dao.ShopDao.queryShopCount -==> Parameters: 1(Long)
+2021-01-26 01:08:52.298 [main] DEBUG com.imooc.o2o.dao.ShopDao.queryShopCount -<==      Total: 1
+2021-01-26 01:09:48.432 [main] DEBUG c.imooc.o2o.dao.split.DynamicDataSourceInterceptor -设置方法[com.imooc.o2o.dao.ShopDao.queryShopCount] use[slave] Strategy,SqlCommandType[SELECT]...
+2021-01-26 01:09:48.434 [main] DEBUG com.imooc.o2o.dao.split.DynamicDataSourceHolder -所使用的数据源为：slave
+2021-01-26 01:09:48.461 [main] DEBUG com.imooc.o2o.dao.ShopDao.queryShopCount -==>  Preparing: SELECT COUNT(*) FROM tb_shop s, tb_shop_category sc, tb_area a WHERE s.area_id = ? and s.shop_category_id = sc.shop_category_id and s.area_id = a.area_id ORDER BY s.priority DESC; 
+2021-01-26 01:09:48.528 [main] DEBUG com.imooc.o2o.dao.ShopDao.queryShopCount -==> Parameters: 1(Integer)
+2021-01-26 01:09:48.553 [main] DEBUG com.imooc.o2o.dao.ShopDao.queryShopCount -<==      Total: 1
+2021-01-26 01:10:37.268 [main] DEBUG c.imooc.o2o.dao.split.DynamicDataSourceInterceptor -设置方法[com.imooc.o2o.dao.ShopDao.queryShopCount] use[slave] Strategy,SqlCommandType[SELECT]...
+2021-01-26 01:10:37.271 [main] DEBUG com.imooc.o2o.dao.split.DynamicDataSourceHolder -所使用的数据源为：slave
+2021-01-26 01:10:37.297 [main] DEBUG com.imooc.o2o.dao.ShopDao.queryShopCount -==>  Preparing: SELECT COUNT(*) FROM tb_shop s, tb_shop_category sc, tb_area a WHERE s.shop_category_id = sc.shop_category_id and s.area_id = a.area_id and s.area_id = ? ORDER BY s.priority DESC; 
+2021-01-26 01:10:37.368 [main] DEBUG com.imooc.o2o.dao.ShopDao.queryShopCount -==> Parameters: 1(Integer)
+2021-01-26 01:10:37.399 [main] DEBUG com.imooc.o2o.dao.ShopDao.queryShopCount -<==      Total: 1
+2021-01-26 01:12:26.044 [main] DEBUG c.imooc.o2o.dao.split.DynamicDataSourceInterceptor -设置方法[com.imooc.o2o.dao.ShopDao.queryShopCount] use[slave] Strategy,SqlCommandType[SELECT]...
+2021-01-26 01:12:26.046 [main] DEBUG com.imooc.o2o.dao.split.DynamicDataSourceHolder -所使用的数据源为：slave
+2021-01-26 01:12:26.069 [main] DEBUG com.imooc.o2o.dao.ShopDao.queryShopCount -==>  Preparing: SELECT COUNT(*) FROM tb_shop s, tb_shop_category sc, tb_area a WHERE s.shop_category_id = sc.shop_category_id and s.area_id = a.area_id and s.area_id = ? 
+2021-01-26 01:12:26.140 [main] DEBUG com.imooc.o2o.dao.ShopDao.queryShopCount -==> Parameters: 1(Integer)
+2021-01-26 01:12:26.171 [main] DEBUG com.imooc.o2o.dao.ShopDao.queryShopCount -<==      Total: 1
+2021-01-26 01:14:07.143 [main] DEBUG c.imooc.o2o.dao.split.DynamicDataSourceInterceptor -设置方法[com.imooc.o2o.dao.ShopDao.queryShopCount] use[slave] Strategy,SqlCommandType[SELECT]...
+2021-01-26 01:14:07.146 [main] DEBUG com.imooc.o2o.dao.split.DynamicDataSourceHolder -所使用的数据源为：slave
+2021-01-26 01:14:07.164 [main] DEBUG com.imooc.o2o.dao.ShopDao.queryShopCount -==>  Preparing: SELECT COUNT(*) FROM tb_shop s, tb_shop_category sc, tb_area a WHERE s.shop_category_id = sc.shop_category_id and s.area_id = a.area_id and s.area_id = ? 
+2021-01-26 01:14:07.231 [main] DEBUG com.imooc.o2o.dao.ShopDao.queryShopCount -==> Parameters: 1(Integer)
+2021-01-26 01:14:07.258 [main] DEBUG com.imooc.o2o.dao.ShopDao.queryShopCount -<==      Total: 1
+2021-01-26 01:17:15.205 [main] DEBUG c.imooc.o2o.dao.split.DynamicDataSourceInterceptor -设置方法[com.imooc.o2o.dao.ShopDao.queryShopCount] use[slave] Strategy,SqlCommandType[SELECT]...
+2021-01-26 01:17:15.210 [main] DEBUG com.imooc.o2o.dao.split.DynamicDataSourceHolder -所使用的数据源为：slave
+2021-01-26 01:17:15.235 [main] DEBUG com.imooc.o2o.dao.ShopDao.queryShopCount -==>  Preparing: SELECT COUNT(*) FROM tb_shop s, tb_shop_category sc, tb_area a WHERE s.shop_category_id = sc.shop_category_id and s.area_id = a.area_id and s.area_id = ? ORDER BY s.priority DESC; 
+2021-01-26 01:17:15.316 [main] DEBUG com.imooc.o2o.dao.ShopDao.queryShopCount -==> Parameters: 1(Integer)
+2021-01-26 01:17:15.345 [main] DEBUG com.imooc.o2o.dao.ShopDao.queryShopCount -<==      Total: 1
+2021-01-26 01:19:58.751 [main] DEBUG c.imooc.o2o.dao.split.DynamicDataSourceInterceptor -设置方法[com.imooc.o2o.dao.ShopDao.queryShopCount] use[slave] Strategy,SqlCommandType[SELECT]...
+2021-01-26 01:19:58.755 [main] DEBUG com.imooc.o2o.dao.split.DynamicDataSourceHolder -所使用的数据源为：slave
+2021-01-26 01:19:58.773 [main] DEBUG com.imooc.o2o.dao.ShopDao.queryShopCount -==>  Preparing: SELECT COUNT(*) FROM tb_shop s, tb_shop_category sc, tb_area a WHERE s.shop_category_id = sc.shop_category_id and s.area_id = a.area_id and s.area_id = ? ORDER BY s.priority DESC; 
+2021-01-26 01:19:58.836 [main] DEBUG com.imooc.o2o.dao.ShopDao.queryShopCount -==> Parameters: 1(Integer)
+2021-01-26 01:19:58.864 [main] DEBUG com.imooc.o2o.dao.ShopDao.queryShopCount -<==      Total: 1
+2021-01-26 01:21:23.635 [main] DEBUG c.imooc.o2o.dao.split.DynamicDataSourceInterceptor -设置方法[com.imooc.o2o.dao.ShopDao.queryShopCount] use[slave] Strategy,SqlCommandType[SELECT]...
+2021-01-26 01:21:23.637 [main] DEBUG com.imooc.o2o.dao.split.DynamicDataSourceHolder -所使用的数据源为：slave
+2021-01-26 01:21:23.653 [main] DEBUG com.imooc.o2o.dao.ShopDao.queryShopCount -==>  Preparing: SELECT COUNT(*) FROM tb_shop s, tb_shop_category sc, tb_area a WHERE s.shop_category_id = sc.shop_category_id and s.area_id = a.area_id and s.area_id = ? ORDER BY s.priority DESC; 
+2021-01-26 01:21:23.722 [main] DEBUG com.imooc.o2o.dao.ShopDao.queryShopCount -==> Parameters: 1(Integer)
+2021-01-26 01:21:23.755 [main] DEBUG com.imooc.o2o.dao.ShopDao.queryShopCount -<==      Total: 1
+2021-01-26 01:21:33.571 [main] DEBUG c.imooc.o2o.dao.split.DynamicDataSourceInterceptor -设置方法[com.imooc.o2o.dao.ShopDao.queryShopCount] use[slave] Strategy,SqlCommandType[SELECT]...
+2021-01-26 01:21:33.574 [main] DEBUG com.imooc.o2o.dao.split.DynamicDataSourceHolder -所使用的数据源为：slave
+2021-01-26 01:21:33.594 [main] DEBUG com.imooc.o2o.dao.ShopDao.queryShopCount -==>  Preparing: SELECT COUNT(*) FROM tb_shop s, tb_shop_category sc, tb_area a WHERE s.shop_category_id = sc.shop_category_id and s.area_id = a.area_id and s.area_id = ? ORDER BY s.priority DESC; 
+2021-01-26 01:21:33.659 [main] DEBUG com.imooc.o2o.dao.ShopDao.queryShopCount -==> Parameters: 4(Integer)
+2021-01-26 01:21:33.682 [main] DEBUG com.imooc.o2o.dao.ShopDao.queryShopCount -<==      Total: 1
+2021-01-26 12:13:00.605 [main] DEBUG c.imooc.o2o.dao.split.DynamicDataSourceInterceptor -设置方法[com.imooc.o2o.dao.ShopDao.queryShopCount] use[slave] Strategy,SqlCommandType[SELECT]...
+2021-01-26 12:13:00.608 [main] DEBUG com.imooc.o2o.dao.split.DynamicDataSourceHolder -所使用的数据源为：slave
+2021-01-26 12:13:00.633 [main] DEBUG com.imooc.o2o.dao.ShopDao.queryShopCount -==>  Preparing: SELECT COUNT(*) FROM tb_shop s, tb_shop_category sc, tb_area a WHERE s.shop_category_id = sc.shop_category_id and s.area_id = a.area_id and s.area_id = ? ORDER BY s.priority DESC; 
+2021-01-26 12:13:00.705 [main] DEBUG com.imooc.o2o.dao.ShopDao.queryShopCount -==> Parameters: 4(Integer)
+2021-01-26 12:13:00.734 [main] DEBUG com.imooc.o2o.dao.ShopDao.queryShopCount -<==      Total: 1
+2021-01-26 12:13:14.449 [main] DEBUG c.imooc.o2o.dao.split.DynamicDataSourceInterceptor -设置方法[com.imooc.o2o.dao.ShopDao.queryShopCount] use[slave] Strategy,SqlCommandType[SELECT]...
+2021-01-26 12:13:14.451 [main] DEBUG com.imooc.o2o.dao.split.DynamicDataSourceHolder -所使用的数据源为：slave
+2021-01-26 12:13:14.493 [main] DEBUG com.imooc.o2o.dao.ShopDao.queryShopCount -==>  Preparing: SELECT COUNT(*) FROM tb_shop s, tb_shop_category sc, tb_area a WHERE s.shop_category_id = sc.shop_category_id and s.area_id = a.area_id and s.area_id = ? ORDER BY s.priority DESC; 
+2021-01-26 12:13:14.567 [main] DEBUG com.imooc.o2o.dao.ShopDao.queryShopCount -==> Parameters: 4(Integer)
+2021-01-26 12:13:14.596 [main] DEBUG com.imooc.o2o.dao.ShopDao.queryShopCount -<==      Total: 1
+2021-01-26 12:13:26.690 [main] DEBUG c.imooc.o2o.dao.split.DynamicDataSourceInterceptor -设置方法[com.imooc.o2o.dao.ShopDao.queryShopCount] use[slave] Strategy,SqlCommandType[SELECT]...
+2021-01-26 12:13:26.692 [main] DEBUG com.imooc.o2o.dao.split.DynamicDataSourceHolder -所使用的数据源为：slave
+2021-01-26 12:13:26.716 [main] DEBUG com.imooc.o2o.dao.ShopDao.queryShopCount -==>  Preparing: SELECT COUNT(*) FROM tb_shop s, tb_shop_category sc, tb_area a WHERE s.shop_category_id = sc.shop_category_id and s.area_id = a.area_id and s.area_id = ? ORDER BY s.priority DESC; 
+2021-01-26 12:13:26.778 [main] DEBUG com.imooc.o2o.dao.ShopDao.queryShopCount -==> Parameters: 3(Integer)
+2021-01-26 12:13:26.801 [main] DEBUG com.imooc.o2o.dao.ShopDao.queryShopCount -<==      Total: 1
+2021-01-26 12:13:50.667 [main] DEBUG c.imooc.o2o.dao.split.DynamicDataSourceInterceptor -设置方法[com.imooc.o2o.dao.ShopDao.queryShopCount] use[slave] Strategy,SqlCommandType[SELECT]...
+2021-01-26 12:13:50.671 [main] DEBUG com.imooc.o2o.dao.split.DynamicDataSourceHolder -所使用的数据源为：slave
+2021-01-26 12:13:50.693 [main] DEBUG com.imooc.o2o.dao.ShopDao.queryShopCount -==>  Preparing: SELECT COUNT(*) FROM tb_shop s, tb_shop_category sc, tb_area a WHERE s.shop_category_id = sc.shop_category_id and s.area_id = a.area_id and s.area_id = ? ORDER BY s.priority DESC; 
+2021-01-26 12:13:50.757 [main] DEBUG com.imooc.o2o.dao.ShopDao.queryShopCount -==> Parameters: 3(Integer)
+2021-01-26 12:13:50.782 [main] DEBUG com.imooc.o2o.dao.ShopDao.queryShopCount -<==      Total: 1
+2021-01-26 12:14:19.859 [960953154@qtp-1186663391-4] DEBUG c.imooc.o2o.dao.split.DynamicDataSourceInterceptor -设置方法[com.imooc.o2o.dao.ShopDao.queryByShopId] use[slave] Strategy,SqlCommandType[SELECT]...
+2021-01-26 12:14:19.861 [960953154@qtp-1186663391-4] DEBUG com.imooc.o2o.dao.split.DynamicDataSourceHolder -所使用的数据源为：slave
+2021-01-26 12:14:19.881 [960953154@qtp-1186663391-4] DEBUG com.imooc.o2o.dao.ShopDao.queryByShopId -==>  Preparing: SELECT s.shop_id, s.shop_name, s.shop_desc, s.shop_addr, s.phone, s.shop_img, s.priority, s.enable_status, s.create_time, s.last_edit_time, s.advice, a.area_id, a.area_name, sc.shop_category_id, sc.shop_category_name FROM tb_shop s, tb_shop_category sc, tb_area a WHERE s.area_id = a.area_id AND s.shop_category_id = sc.shop_category_id AND s.shop_id = ? 
+2021-01-26 12:14:19.965 [960953154@qtp-1186663391-4] DEBUG com.imooc.o2o.dao.ShopDao.queryByShopId -==> Parameters: 8(Long)
+2021-01-26 12:14:20.001 [960953154@qtp-1186663391-4] DEBUG com.imooc.o2o.dao.ShopDao.queryByShopId -<==      Total: 1
+2021-01-26 12:14:20.012 [960953154@qtp-1186663391-4] DEBUG c.imooc.o2o.dao.split.DynamicDataSourceInterceptor -设置方法[com.imooc.o2o.dao.AreaDao.queryArea] use[slave] Strategy,SqlCommandType[SELECT]...
+2021-01-26 12:14:20.012 [960953154@qtp-1186663391-4] DEBUG com.imooc.o2o.dao.split.DynamicDataSourceHolder -所使用的数据源为：slave
+2021-01-26 12:14:20.012 [960953154@qtp-1186663391-4] DEBUG com.imooc.o2o.dao.AreaDao.queryArea -==>  Preparing: select area_id,area_name,priority,create_time,last_edit_time from tb_area order by priority desc; 
+2021-01-26 12:14:20.013 [960953154@qtp-1186663391-4] DEBUG com.imooc.o2o.dao.AreaDao.queryArea -==> Parameters: 
+2021-01-26 12:14:20.016 [960953154@qtp-1186663391-4] DEBUG com.imooc.o2o.dao.AreaDao.queryArea -<==      Total: 3
+2021-01-26 12:15:16.253 [315717112@qtp-1186663391-2] DEBUG c.imooc.o2o.dao.split.DynamicDataSourceInterceptor -设置方法[com.imooc.o2o.dao.ShopDao.queryByShopId] use[slave] Strategy,SqlCommandType[SELECT]...
+2021-01-26 12:15:16.253 [315717112@qtp-1186663391-2] DEBUG com.imooc.o2o.dao.split.DynamicDataSourceHolder -所使用的数据源为：slave
+2021-01-26 12:15:16.254 [315717112@qtp-1186663391-2] DEBUG com.imooc.o2o.dao.ShopDao.queryByShopId -==>  Preparing: SELECT s.shop_id, s.shop_name, s.shop_desc, s.shop_addr, s.phone, s.shop_img, s.priority, s.enable_status, s.create_time, s.last_edit_time, s.advice, a.area_id, a.area_name, sc.shop_category_id, sc.shop_category_name FROM tb_shop s, tb_shop_category sc, tb_area a WHERE s.area_id = a.area_id AND s.shop_category_id = sc.shop_category_id AND s.shop_id = ? 
+2021-01-26 12:15:16.255 [315717112@qtp-1186663391-2] DEBUG com.imooc.o2o.dao.ShopDao.queryByShopId -==> Parameters: 8(Long)
+2021-01-26 12:15:16.259 [315717112@qtp-1186663391-2] DEBUG com.imooc.o2o.dao.ShopDao.queryByShopId -<==      Total: 1
+2021-01-26 12:15:16.260 [315717112@qtp-1186663391-2] DEBUG c.imooc.o2o.dao.split.DynamicDataSourceInterceptor -设置方法[com.imooc.o2o.dao.AreaDao.queryArea] use[slave] Strategy,SqlCommandType[SELECT]...
+2021-01-26 12:15:16.260 [315717112@qtp-1186663391-2] DEBUG com.imooc.o2o.dao.split.DynamicDataSourceHolder -所使用的数据源为：slave
+2021-01-26 12:15:16.261 [315717112@qtp-1186663391-2] DEBUG com.imooc.o2o.dao.AreaDao.queryArea -==>  Preparing: select area_id,area_name,priority,create_time,last_edit_time from tb_area order by priority desc; 
+2021-01-26 12:15:16.261 [315717112@qtp-1186663391-2] DEBUG com.imooc.o2o.dao.AreaDao.queryArea -==> Parameters: 
+2021-01-26 12:15:16.264 [315717112@qtp-1186663391-2] DEBUG com.imooc.o2o.dao.AreaDao.queryArea -<==      Total: 3
+2021-01-26 12:15:45.866 [315717112@qtp-1186663391-2] DEBUG c.imooc.o2o.dao.split.DynamicDataSourceInterceptor -设置方法[com.imooc.o2o.dao.ShopDao.queryByShopId] use[slave] Strategy,SqlCommandType[SELECT]...
+2021-01-26 12:15:45.866 [315717112@qtp-1186663391-2] DEBUG com.imooc.o2o.dao.split.DynamicDataSourceHolder -所使用的数据源为：slave
+2021-01-26 12:15:45.867 [315717112@qtp-1186663391-2] DEBUG com.imooc.o2o.dao.ShopDao.queryByShopId -==>  Preparing: SELECT s.shop_id, s.shop_name, s.shop_desc, s.shop_addr, s.phone, s.shop_img, s.priority, s.enable_status, s.create_time, s.last_edit_time, s.advice, a.area_id, a.area_name, sc.shop_category_id, sc.shop_category_name FROM tb_shop s, tb_shop_category sc, tb_area a WHERE s.area_id = a.area_id AND s.shop_category_id = sc.shop_category_id AND s.shop_id = ? 
+2021-01-26 12:15:45.867 [315717112@qtp-1186663391-2] DEBUG com.imooc.o2o.dao.ShopDao.queryByShopId -==> Parameters: 8(Long)
+2021-01-26 12:15:45.870 [315717112@qtp-1186663391-2] DEBUG com.imooc.o2o.dao.ShopDao.queryByShopId -<==      Total: 1
+2021-01-26 12:15:45.871 [315717112@qtp-1186663391-2] DEBUG c.imooc.o2o.dao.split.DynamicDataSourceInterceptor -设置方法[com.imooc.o2o.dao.AreaDao.queryArea] use[slave] Strategy,SqlCommandType[SELECT]...
+2021-01-26 12:15:45.871 [315717112@qtp-1186663391-2] DEBUG com.imooc.o2o.dao.split.DynamicDataSourceHolder -所使用的数据源为：slave
+2021-01-26 12:15:45.871 [315717112@qtp-1186663391-2] DEBUG com.imooc.o2o.dao.AreaDao.queryArea -==>  Preparing: select area_id,area_name,priority,create_time,last_edit_time from tb_area order by priority desc; 
+2021-01-26 12:15:45.871 [315717112@qtp-1186663391-2] DEBUG com.imooc.o2o.dao.AreaDao.queryArea -==> Parameters: 
+2021-01-26 12:15:45.874 [315717112@qtp-1186663391-2] DEBUG com.imooc.o2o.dao.AreaDao.queryArea -<==      Total: 3
+2021-01-26 12:16:43.142 [982570411@qtp-1509387862-3] DEBUG c.imooc.o2o.dao.split.DynamicDataSourceInterceptor -设置方法[com.imooc.o2o.dao.ShopDao.queryByShopId] use[slave] Strategy,SqlCommandType[SELECT]...
+2021-01-26 12:16:43.145 [982570411@qtp-1509387862-3] DEBUG com.imooc.o2o.dao.split.DynamicDataSourceHolder -所使用的数据源为：slave
+2021-01-26 12:16:43.168 [982570411@qtp-1509387862-3] DEBUG com.imooc.o2o.dao.ShopDao.queryByShopId -==>  Preparing: SELECT s.shop_id, s.shop_name, s.shop_desc, s.shop_addr, s.phone, s.shop_img, s.priority, s.enable_status, s.create_time, s.last_edit_time, s.advice, a.area_id, a.area_name, sc.shop_category_id, sc.shop_category_name FROM tb_shop s, tb_shop_category sc, tb_area a WHERE s.area_id = a.area_id AND s.shop_category_id = sc.shop_category_id AND s.shop_id = ? 
+2021-01-26 12:16:43.297 [982570411@qtp-1509387862-3] DEBUG com.imooc.o2o.dao.ShopDao.queryByShopId -==> Parameters: 8(Long)
+2021-01-26 12:16:43.392 [982570411@qtp-1509387862-3] DEBUG com.imooc.o2o.dao.ShopDao.queryByShopId -<==      Total: 1
+2021-01-26 12:16:43.410 [982570411@qtp-1509387862-3] DEBUG c.imooc.o2o.dao.split.DynamicDataSourceInterceptor -设置方法[com.imooc.o2o.dao.AreaDao.queryArea] use[slave] Strategy,SqlCommandType[SELECT]...
+2021-01-26 12:16:43.410 [982570411@qtp-1509387862-3] DEBUG com.imooc.o2o.dao.split.DynamicDataSourceHolder -所使用的数据源为：slave
+2021-01-26 12:16:43.411 [982570411@qtp-1509387862-3] DEBUG com.imooc.o2o.dao.AreaDao.queryArea -==>  Preparing: select area_id,area_name,priority,create_time,last_edit_time from tb_area order by priority desc; 
+2021-01-26 12:16:43.412 [982570411@qtp-1509387862-3] DEBUG com.imooc.o2o.dao.AreaDao.queryArea -==> Parameters: 
+2021-01-26 12:16:43.418 [982570411@qtp-1509387862-3] DEBUG com.imooc.o2o.dao.AreaDao.queryArea -<==      Total: 3
+2021-01-26 12:17:08.485 [1224702664@qtp-1509387862-2] DEBUG c.imooc.o2o.dao.split.DynamicDataSourceInterceptor -设置方法[com.imooc.o2o.dao.ShopDao.queryByShopId] use[slave] Strategy,SqlCommandType[SELECT]...
+2021-01-26 12:17:08.486 [1224702664@qtp-1509387862-2] DEBUG com.imooc.o2o.dao.split.DynamicDataSourceHolder -所使用的数据源为：slave
+2021-01-26 12:17:08.486 [1224702664@qtp-1509387862-2] DEBUG com.imooc.o2o.dao.ShopDao.queryByShopId -==>  Preparing: SELECT s.shop_id, s.shop_name, s.shop_desc, s.shop_addr, s.phone, s.shop_img, s.priority, s.enable_status, s.create_time, s.last_edit_time, s.advice, a.area_id, a.area_name, sc.shop_category_id, sc.shop_category_name FROM tb_shop s, tb_shop_category sc, tb_area a WHERE s.area_id = a.area_id AND s.shop_category_id = sc.shop_category_id AND s.shop_id = ? 
+2021-01-26 12:17:08.487 [1224702664@qtp-1509387862-2] DEBUG com.imooc.o2o.dao.ShopDao.queryByShopId -==> Parameters: 8(Long)
+2021-01-26 12:17:08.490 [1224702664@qtp-1509387862-2] DEBUG com.imooc.o2o.dao.ShopDao.queryByShopId -<==      Total: 1
+2021-01-26 12:17:08.490 [1224702664@qtp-1509387862-2] DEBUG c.imooc.o2o.dao.split.DynamicDataSourceInterceptor -设置方法[com.imooc.o2o.dao.AreaDao.queryArea] use[slave] Strategy,SqlCommandType[SELECT]...
+2021-01-26 12:17:08.490 [1224702664@qtp-1509387862-2] DEBUG com.imooc.o2o.dao.split.DynamicDataSourceHolder -所使用的数据源为：slave
+2021-01-26 12:17:08.491 [1224702664@qtp-1509387862-2] DEBUG com.imooc.o2o.dao.AreaDao.queryArea -==>  Preparing: select area_id,area_name,priority,create_time,last_edit_time from tb_area order by priority desc; 
+2021-01-26 12:17:08.491 [1224702664@qtp-1509387862-2] DEBUG com.imooc.o2o.dao.AreaDao.queryArea -==> Parameters: 
+2021-01-26 12:17:08.494 [1224702664@qtp-1509387862-2] DEBUG com.imooc.o2o.dao.AreaDao.queryArea -<==      Total: 3
+2021-01-26 12:17:42.257 [1224702664@qtp-1509387862-2] DEBUG c.imooc.o2o.dao.split.DynamicDataSourceInterceptor -设置方法[com.imooc.o2o.dao.ShopDao.queryByShopId] use[slave] Strategy,SqlCommandType[SELECT]...
+2021-01-26 12:17:42.257 [1224702664@qtp-1509387862-2] DEBUG com.imooc.o2o.dao.split.DynamicDataSourceHolder -所使用的数据源为：slave
+2021-01-26 12:17:42.257 [1224702664@qtp-1509387862-2] DEBUG com.imooc.o2o.dao.ShopDao.queryByShopId -==>  Preparing: SELECT s.shop_id, s.shop_name, s.shop_desc, s.shop_addr, s.phone, s.shop_img, s.priority, s.enable_status, s.create_time, s.last_edit_time, s.advice, a.area_id, a.area_name, sc.shop_category_id, sc.shop_category_name FROM tb_shop s, tb_shop_category sc, tb_area a WHERE s.area_id = a.area_id AND s.shop_category_id = sc.shop_category_id AND s.shop_id = ? 
+2021-01-26 12:17:42.257 [1224702664@qtp-1509387862-2] DEBUG com.imooc.o2o.dao.ShopDao.queryByShopId -==> Parameters: 8(Long)
+2021-01-26 12:17:42.260 [1224702664@qtp-1509387862-2] DEBUG com.imooc.o2o.dao.ShopDao.queryByShopId -<==      Total: 1
+2021-01-26 12:17:42.261 [1224702664@qtp-1509387862-2] DEBUG c.imooc.o2o.dao.split.DynamicDataSourceInterceptor -设置方法[com.imooc.o2o.dao.AreaDao.queryArea] use[slave] Strategy,SqlCommandType[SELECT]...
+2021-01-26 12:17:42.261 [1224702664@qtp-1509387862-2] DEBUG com.imooc.o2o.dao.split.DynamicDataSourceHolder -所使用的数据源为：slave
+2021-01-26 12:17:42.261 [1224702664@qtp-1509387862-2] DEBUG com.imooc.o2o.dao.AreaDao.queryArea -==>  Preparing: select area_id,area_name,priority,create_time,last_edit_time from tb_area order by priority desc; 
+2021-01-26 12:17:42.261 [1224702664@qtp-1509387862-2] DEBUG com.imooc.o2o.dao.AreaDao.queryArea -==> Parameters: 
+2021-01-26 12:17:42.264 [1224702664@qtp-1509387862-2] DEBUG com.imooc.o2o.dao.AreaDao.queryArea -<==      Total: 3
+2021-01-26 12:23:59.896 [1174455053@qtp-1957175487-3] DEBUG c.imooc.o2o.dao.split.DynamicDataSourceInterceptor -设置方法[com.imooc.o2o.dao.ShopDao.queryByShopId] use[slave] Strategy,SqlCommandType[SELECT]...
+2021-01-26 12:23:59.900 [1174455053@qtp-1957175487-3] DEBUG com.imooc.o2o.dao.split.DynamicDataSourceHolder -所使用的数据源为：slave
+2021-01-26 12:23:59.915 [1174455053@qtp-1957175487-3] DEBUG com.imooc.o2o.dao.ShopDao.queryByShopId -==>  Preparing: SELECT s.shop_id, s.shop_name, s.shop_desc, s.shop_addr, s.phone, s.shop_img, s.priority, s.enable_status, s.create_time, s.last_edit_time, s.advice, a.area_id, a.area_name, sc.shop_category_id, sc.shop_category_name FROM tb_shop s, tb_shop_category sc, tb_area a WHERE s.area_id = a.area_id AND s.shop_category_id = sc.shop_category_id AND s.shop_id = ? 
+2021-01-26 12:24:00.002 [1174455053@qtp-1957175487-3] DEBUG com.imooc.o2o.dao.ShopDao.queryByShopId -==> Parameters: 8(Long)
+2021-01-26 12:24:00.046 [1174455053@qtp-1957175487-3] DEBUG com.imooc.o2o.dao.ShopDao.queryByShopId -<==      Total: 1
+2021-01-26 12:24:00.056 [1174455053@qtp-1957175487-3] DEBUG c.imooc.o2o.dao.split.DynamicDataSourceInterceptor -设置方法[com.imooc.o2o.dao.AreaDao.queryArea] use[slave] Strategy,SqlCommandType[SELECT]...
+2021-01-26 12:24:00.056 [1174455053@qtp-1957175487-3] DEBUG com.imooc.o2o.dao.split.DynamicDataSourceHolder -所使用的数据源为：slave
+2021-01-26 12:24:00.057 [1174455053@qtp-1957175487-3] DEBUG com.imooc.o2o.dao.AreaDao.queryArea -==>  Preparing: select area_id,area_name,priority,create_time,last_edit_time from tb_area order by priority desc; 
+2021-01-26 12:24:00.057 [1174455053@qtp-1957175487-3] DEBUG com.imooc.o2o.dao.AreaDao.queryArea -==> Parameters: 
+2021-01-26 12:24:00.061 [1174455053@qtp-1957175487-3] DEBUG com.imooc.o2o.dao.AreaDao.queryArea -<==      Total: 3
+2021-01-26 12:24:11.919 [1174455053@qtp-1957175487-3] DEBUG c.imooc.o2o.dao.split.DynamicDataSourceInterceptor -设置方法[com.imooc.o2o.dao.ShopDao.queryByShopId] use[slave] Strategy,SqlCommandType[SELECT]...
+2021-01-26 12:24:11.919 [1174455053@qtp-1957175487-3] DEBUG com.imooc.o2o.dao.split.DynamicDataSourceHolder -所使用的数据源为：slave
+2021-01-26 12:24:11.919 [1174455053@qtp-1957175487-3] DEBUG com.imooc.o2o.dao.ShopDao.queryByShopId -==>  Preparing: SELECT s.shop_id, s.shop_name, s.shop_desc, s.shop_addr, s.phone, s.shop_img, s.priority, s.enable_status, s.create_time, s.last_edit_time, s.advice, a.area_id, a.area_name, sc.shop_category_id, sc.shop_category_name FROM tb_shop s, tb_shop_category sc, tb_area a WHERE s.area_id = a.area_id AND s.shop_category_id = sc.shop_category_id AND s.shop_id = ? 
+2021-01-26 12:24:11.920 [1174455053@qtp-1957175487-3] DEBUG com.imooc.o2o.dao.ShopDao.queryByShopId -==> Parameters: 8(Long)
+2021-01-26 12:24:11.924 [1174455053@qtp-1957175487-3] DEBUG com.imooc.o2o.dao.ShopDao.queryByShopId -<==      Total: 1
+2021-01-26 12:24:11.924 [1174455053@qtp-1957175487-3] DEBUG c.imooc.o2o.dao.split.DynamicDataSourceInterceptor -设置方法[com.imooc.o2o.dao.AreaDao.queryArea] use[slave] Strategy,SqlCommandType[SELECT]...
+2021-01-26 12:24:11.924 [1174455053@qtp-1957175487-3] DEBUG com.imooc.o2o.dao.split.DynamicDataSourceHolder -所使用的数据源为：slave
+2021-01-26 12:24:11.925 [1174455053@qtp-1957175487-3] DEBUG com.imooc.o2o.dao.AreaDao.queryArea -==>  Preparing: select area_id,area_name,priority,create_time,last_edit_time from tb_area order by priority desc; 
+2021-01-26 12:24:11.925 [1174455053@qtp-1957175487-3] DEBUG com.imooc.o2o.dao.AreaDao.queryArea -==> Parameters: 
+2021-01-26 12:24:11.928 [1174455053@qtp-1957175487-3] DEBUG com.imooc.o2o.dao.AreaDao.queryArea -<==      Total: 3
+2021-01-26 13:57:57.388 [main] DEBUG c.imooc.o2o.dao.split.DynamicDataSourceInterceptor -设置方法[com.imooc.o2o.dao.ShopDao.queryShopList] use[slave] Strategy,SqlCommandType[SELECT]...
+2021-01-26 13:57:57.390 [main] DEBUG com.imooc.o2o.dao.split.DynamicDataSourceHolder -所使用的数据源为：slave
+2021-01-26 13:57:57.413 [main] DEBUG com.imooc.o2o.dao.ShopDao.queryShopList -==>  Preparing: select s.shop_id, s.shop_name, s.shop_desc, s.shop_addr, s.phone, s.shop_img, s.priority, s.enable_status, s.create_time, s.last_edit_time, s.advice, a.area_id, a.area_name, sc.shop_category_id, sc.shop_category_name FROM tb_shop s, tb_shop_category sc, tb_area a WHERE s.area_id = ? and s.shop_category_id = sc.shop_category_id and s.area_id = a.area_id ORDER BY s.priority DESC LIMIT ?, ?; 
+2021-01-26 13:57:57.489 [main] DEBUG com.imooc.o2o.dao.ShopDao.queryShopList -==> Parameters: 2(Integer), 0(Integer), 5(Integer)
+2021-01-26 13:57:57.524 [main] DEBUG com.imooc.o2o.dao.ShopDao.queryShopList -<==      Total: 5
+2021-01-26 13:57:57.533 [main] DEBUG c.imooc.o2o.dao.split.DynamicDataSourceInterceptor -设置方法[com.imooc.o2o.dao.ShopDao.queryShopCount] use[slave] Strategy,SqlCommandType[SELECT]...
+2021-01-26 13:57:57.533 [main] DEBUG com.imooc.o2o.dao.split.DynamicDataSourceHolder -所使用的数据源为：slave
+2021-01-26 13:57:57.534 [main] DEBUG com.imooc.o2o.dao.ShopDao.queryShopCount -==>  Preparing: SELECT COUNT(*) FROM tb_shop s, tb_shop_category sc, tb_area a WHERE s.shop_category_id = sc.shop_category_id and s.area_id = a.area_id and s.area_id = ? ORDER BY s.priority DESC; 
+2021-01-26 13:57:57.534 [main] DEBUG com.imooc.o2o.dao.ShopDao.queryShopCount -==> Parameters: 2(Integer)
+2021-01-26 13:57:57.538 [main] DEBUG com.imooc.o2o.dao.ShopDao.queryShopCount -<==      Total: 1
+2021-01-26 14:34:23.853 [1812442475@qtp-549160372-0] DEBUG c.imooc.o2o.dao.split.DynamicDataSourceInterceptor -设置方法[com.imooc.o2o.dao.ShopDao.queryShopList] use[slave] Strategy,SqlCommandType[SELECT]...
+2021-01-26 14:34:23.855 [1812442475@qtp-549160372-0] DEBUG com.imooc.o2o.dao.split.DynamicDataSourceHolder -所使用的数据源为：slave
+2021-01-26 14:34:23.882 [1812442475@qtp-549160372-0] DEBUG com.imooc.o2o.dao.ShopDao.queryShopList -==>  Preparing: select s.shop_id, s.shop_name, s.shop_desc, s.shop_addr, s.phone, s.shop_img, s.priority, s.enable_status, s.create_time, s.last_edit_time, s.advice, a.area_id, a.area_name, sc.shop_category_id, sc.shop_category_name FROM tb_shop s, tb_shop_category sc, tb_area a WHERE s.owner_id = ? and s.shop_category_id = sc.shop_category_id and s.area_id = a.area_id ORDER BY s.priority DESC LIMIT ?, ?; 
+2021-01-26 14:34:23.991 [1812442475@qtp-549160372-0] DEBUG com.imooc.o2o.dao.ShopDao.queryShopList -==> Parameters: 1(Long), 0(Integer), 100(Integer)
+2021-01-26 14:34:24.076 [1812442475@qtp-549160372-0] DEBUG com.imooc.o2o.dao.ShopDao.queryShopList -<==      Total: 50
+2021-01-26 14:34:24.090 [1812442475@qtp-549160372-0] DEBUG c.imooc.o2o.dao.split.DynamicDataSourceInterceptor -设置方法[com.imooc.o2o.dao.ShopDao.queryShopCount] use[slave] Strategy,SqlCommandType[SELECT]...
+2021-01-26 14:34:24.091 [1812442475@qtp-549160372-0] DEBUG com.imooc.o2o.dao.split.DynamicDataSourceHolder -所使用的数据源为：slave
+2021-01-26 14:34:24.092 [1812442475@qtp-549160372-0] DEBUG com.imooc.o2o.dao.ShopDao.queryShopCount -==>  Preparing: SELECT COUNT(*) FROM tb_shop s, tb_shop_category sc, tb_area a WHERE s.shop_category_id = sc.shop_category_id and s.area_id = a.area_id and s.owner_id = ? ORDER BY s.priority DESC; 
+2021-01-26 14:34:24.093 [1812442475@qtp-549160372-0] DEBUG com.imooc.o2o.dao.ShopDao.queryShopCount -==> Parameters: 1(Long)
+2021-01-26 14:34:24.099 [1812442475@qtp-549160372-0] DEBUG com.imooc.o2o.dao.ShopDao.queryShopCount -<==      Total: 1
+2021-01-26 14:35:33.787 [2141849216@qtp-588389652-0] DEBUG c.imooc.o2o.dao.split.DynamicDataSourceInterceptor -设置方法[com.imooc.o2o.dao.ShopDao.queryShopList] use[slave] Strategy,SqlCommandType[SELECT]...
+2021-01-26 14:35:33.788 [2141849216@qtp-588389652-0] DEBUG com.imooc.o2o.dao.split.DynamicDataSourceHolder -所使用的数据源为：slave
+2021-01-26 14:35:33.810 [2141849216@qtp-588389652-0] DEBUG com.imooc.o2o.dao.ShopDao.queryShopList -==>  Preparing: select s.shop_id, s.shop_name, s.shop_desc, s.shop_addr, s.phone, s.shop_img, s.priority, s.enable_status, s.create_time, s.last_edit_time, s.advice, a.area_id, a.area_name, sc.shop_category_id, sc.shop_category_name FROM tb_shop s, tb_shop_category sc, tb_area a WHERE s.owner_id = ? and s.shop_category_id = sc.shop_category_id and s.area_id = a.area_id ORDER BY s.priority DESC LIMIT ?, ?; 
+2021-01-26 14:35:33.898 [2141849216@qtp-588389652-0] DEBUG com.imooc.o2o.dao.ShopDao.queryShopList -==> Parameters: 1(Long), 0(Integer), 100(Integer)
+2021-01-26 14:35:34.005 [2141849216@qtp-588389652-0] DEBUG com.imooc.o2o.dao.ShopDao.queryShopList -<==      Total: 50
+2021-01-26 14:35:34.018 [2141849216@qtp-588389652-0] DEBUG c.imooc.o2o.dao.split.DynamicDataSourceInterceptor -设置方法[com.imooc.o2o.dao.ShopDao.queryShopCount] use[slave] Strategy,SqlCommandType[SELECT]...
+2021-01-26 14:35:34.019 [2141849216@qtp-588389652-0] DEBUG com.imooc.o2o.dao.split.DynamicDataSourceHolder -所使用的数据源为：slave
+2021-01-26 14:35:34.019 [2141849216@qtp-588389652-0] DEBUG com.imooc.o2o.dao.ShopDao.queryShopCount -==>  Preparing: SELECT COUNT(*) FROM tb_shop s, tb_shop_category sc, tb_area a WHERE s.shop_category_id = sc.shop_category_id and s.area_id = a.area_id and s.owner_id = ? ORDER BY s.priority DESC; 
+2021-01-26 14:35:34.020 [2141849216@qtp-588389652-0] DEBUG com.imooc.o2o.dao.ShopDao.queryShopCount -==> Parameters: 1(Long)
+2021-01-26 14:35:34.024 [2141849216@qtp-588389652-0] DEBUG com.imooc.o2o.dao.ShopDao.queryShopCount -<==      Total: 1
+2021-01-26 16:03:38.752 [1645316844@qtp-1545308588-2] DEBUG c.imooc.o2o.dao.split.DynamicDataSourceInterceptor -设置方法[com.imooc.o2o.dao.ShopDao.queryShopList] use[slave] Strategy,SqlCommandType[SELECT]...
+2021-01-26 16:03:38.753 [1645316844@qtp-1545308588-2] DEBUG com.imooc.o2o.dao.split.DynamicDataSourceHolder -所使用的数据源为：slave
+2021-01-26 16:03:38.784 [1645316844@qtp-1545308588-2] DEBUG com.imooc.o2o.dao.ShopDao.queryShopList -==>  Preparing: select s.shop_id, s.shop_name, s.shop_desc, s.shop_addr, s.phone, s.shop_img, s.priority, s.enable_status, s.create_time, s.last_edit_time, s.advice, a.area_id, a.area_name, sc.shop_category_id, sc.shop_category_name FROM tb_shop s, tb_shop_category sc, tb_area a WHERE s.owner_id = ? and s.shop_category_id = sc.shop_category_id and s.area_id = a.area_id ORDER BY s.priority DESC LIMIT ?, ?; 
+2021-01-26 16:03:38.892 [1645316844@qtp-1545308588-2] DEBUG com.imooc.o2o.dao.ShopDao.queryShopList -==> Parameters: 1(Long), 0(Integer), 100(Integer)
+2021-01-26 16:03:39.091 [1645316844@qtp-1545308588-2] DEBUG com.imooc.o2o.dao.ShopDao.queryShopList -<==      Total: 50
+2021-01-26 16:03:39.108 [1645316844@qtp-1545308588-2] DEBUG c.imooc.o2o.dao.split.DynamicDataSourceInterceptor -设置方法[com.imooc.o2o.dao.ShopDao.queryShopCount] use[slave] Strategy,SqlCommandType[SELECT]...
+2021-01-26 16:03:39.108 [1645316844@qtp-1545308588-2] DEBUG com.imooc.o2o.dao.split.DynamicDataSourceHolder -所使用的数据源为：slave
+2021-01-26 16:03:39.109 [1645316844@qtp-1545308588-2] DEBUG com.imooc.o2o.dao.ShopDao.queryShopCount -==>  Preparing: SELECT COUNT(*) FROM tb_shop s, tb_shop_category sc, tb_area a WHERE s.shop_category_id = sc.shop_category_id and s.area_id = a.area_id and s.owner_id = ? ORDER BY s.priority DESC; 
+2021-01-26 16:03:39.110 [1645316844@qtp-1545308588-2] DEBUG com.imooc.o2o.dao.ShopDao.queryShopCount -==> Parameters: 1(Long)
+2021-01-26 16:03:39.114 [1645316844@qtp-1545308588-2] DEBUG com.imooc.o2o.dao.ShopDao.queryShopCount -<==      Total: 1
+2021-01-26 16:03:50.684 [1645316844@qtp-1545308588-2] DEBUG c.imooc.o2o.dao.split.DynamicDataSourceInterceptor -设置方法[com.imooc.o2o.dao.ShopDao.queryShopList] use[slave] Strategy,SqlCommandType[SELECT]...
+2021-01-26 16:03:50.684 [1645316844@qtp-1545308588-2] DEBUG com.imooc.o2o.dao.split.DynamicDataSourceHolder -所使用的数据源为：slave
+2021-01-26 16:03:50.685 [1645316844@qtp-1545308588-2] DEBUG com.imooc.o2o.dao.ShopDao.queryShopList -==>  Preparing: select s.shop_id, s.shop_name, s.shop_desc, s.shop_addr, s.phone, s.shop_img, s.priority, s.enable_status, s.create_time, s.last_edit_time, s.advice, a.area_id, a.area_name, sc.shop_category_id, sc.shop_category_name FROM tb_shop s, tb_shop_category sc, tb_area a WHERE s.owner_id = ? and s.shop_category_id = sc.shop_category_id and s.area_id = a.area_id ORDER BY s.priority DESC LIMIT ?, ?; 
+2021-01-26 16:03:50.685 [1645316844@qtp-1545308588-2] DEBUG com.imooc.o2o.dao.ShopDao.queryShopList -==> Parameters: 1(Long), 0(Integer), 100(Integer)
+2021-01-26 16:03:50.699 [1645316844@qtp-1545308588-2] DEBUG com.imooc.o2o.dao.ShopDao.queryShopList -<==      Total: 50
+2021-01-26 16:03:50.700 [1645316844@qtp-1545308588-2] DEBUG c.imooc.o2o.dao.split.DynamicDataSourceInterceptor -设置方法[com.imooc.o2o.dao.ShopDao.queryShopCount] use[slave] Strategy,SqlCommandType[SELECT]...
+2021-01-26 16:03:50.700 [1645316844@qtp-1545308588-2] DEBUG com.imooc.o2o.dao.split.DynamicDataSourceHolder -所使用的数据源为：slave
+2021-01-26 16:03:50.701 [1645316844@qtp-1545308588-2] DEBUG com.imooc.o2o.dao.ShopDao.queryShopCount -==>  Preparing: SELECT COUNT(*) FROM tb_shop s, tb_shop_category sc, tb_area a WHERE s.shop_category_id = sc.shop_category_id and s.area_id = a.area_id and s.owner_id = ? ORDER BY s.priority DESC; 
+2021-01-26 16:03:50.701 [1645316844@qtp-1545308588-2] DEBUG com.imooc.o2o.dao.ShopDao.queryShopCount -==> Parameters: 1(Long)
+2021-01-26 16:03:50.704 [1645316844@qtp-1545308588-2] DEBUG com.imooc.o2o.dao.ShopDao.queryShopCount -<==      Total: 1
+2021-01-26 16:05:16.509 [1645316844@qtp-1545308588-2] DEBUG c.imooc.o2o.dao.split.DynamicDataSourceInterceptor -设置方法[com.imooc.o2o.dao.ShopDao.queryShopList] use[slave] Strategy,SqlCommandType[SELECT]...
+2021-01-26 16:05:16.509 [1645316844@qtp-1545308588-2] DEBUG com.imooc.o2o.dao.split.DynamicDataSourceHolder -所使用的数据源为：slave
+2021-01-26 16:05:16.510 [1645316844@qtp-1545308588-2] DEBUG com.imooc.o2o.dao.ShopDao.queryShopList -==>  Preparing: select s.shop_id, s.shop_name, s.shop_desc, s.shop_addr, s.phone, s.shop_img, s.priority, s.enable_status, s.create_time, s.last_edit_time, s.advice, a.area_id, a.area_name, sc.shop_category_id, sc.shop_category_name FROM tb_shop s, tb_shop_category sc, tb_area a WHERE s.owner_id = ? and s.shop_category_id = sc.shop_category_id and s.area_id = a.area_id ORDER BY s.priority DESC LIMIT ?, ?; 
+2021-01-26 16:05:16.511 [1645316844@qtp-1545308588-2] DEBUG com.imooc.o2o.dao.ShopDao.queryShopList -==> Parameters: 1(Long), 0(Integer), 100(Integer)
+2021-01-26 16:05:16.522 [1645316844@qtp-1545308588-2] DEBUG com.imooc.o2o.dao.ShopDao.queryShopList -<==      Total: 50
+2021-01-26 16:05:16.524 [1645316844@qtp-1545308588-2] DEBUG c.imooc.o2o.dao.split.DynamicDataSourceInterceptor -设置方法[com.imooc.o2o.dao.ShopDao.queryShopCount] use[slave] Strategy,SqlCommandType[SELECT]...
+2021-01-26 16:05:16.524 [1645316844@qtp-1545308588-2] DEBUG com.imooc.o2o.dao.split.DynamicDataSourceHolder -所使用的数据源为：slave
+2021-01-26 16:05:16.525 [1645316844@qtp-1545308588-2] DEBUG com.imooc.o2o.dao.ShopDao.queryShopCount -==>  Preparing: SELECT COUNT(*) FROM tb_shop s, tb_shop_category sc, tb_area a WHERE s.shop_category_id = sc.shop_category_id and s.area_id = a.area_id and s.owner_id = ? ORDER BY s.priority DESC; 
+2021-01-26 16:05:16.525 [1645316844@qtp-1545308588-2] DEBUG com.imooc.o2o.dao.ShopDao.queryShopCount -==> Parameters: 1(Long)
+2021-01-26 16:05:16.528 [1645316844@qtp-1545308588-2] DEBUG com.imooc.o2o.dao.ShopDao.queryShopCount -<==      Total: 1
+2021-01-26 16:07:34.877 [1645316844@qtp-1545308588-2] DEBUG c.imooc.o2o.dao.split.DynamicDataSourceInterceptor -设置方法[com.imooc.o2o.dao.ShopDao.queryShopList] use[slave] Strategy,SqlCommandType[SELECT]...
+2021-01-26 16:07:34.878 [1645316844@qtp-1545308588-2] DEBUG com.imooc.o2o.dao.split.DynamicDataSourceHolder -所使用的数据源为：slave
+2021-01-26 16:07:34.879 [1645316844@qtp-1545308588-2] DEBUG com.imooc.o2o.dao.ShopDao.queryShopList -==>  Preparing: select s.shop_id, s.shop_name, s.shop_desc, s.shop_addr, s.phone, s.shop_img, s.priority, s.enable_status, s.create_time, s.last_edit_time, s.advice, a.area_id, a.area_name, sc.shop_category_id, sc.shop_category_name FROM tb_shop s, tb_shop_category sc, tb_area a WHERE s.owner_id = ? and s.shop_category_id = sc.shop_category_id and s.area_id = a.area_id ORDER BY s.priority DESC LIMIT ?, ?; 
+2021-01-26 16:07:34.879 [1645316844@qtp-1545308588-2] DEBUG com.imooc.o2o.dao.ShopDao.queryShopList -==> Parameters: 1(Long), 0(Integer), 100(Integer)
+2021-01-26 16:07:34.887 [1645316844@qtp-1545308588-2] DEBUG com.imooc.o2o.dao.ShopDao.queryShopList -<==      Total: 50
+2021-01-26 16:07:34.888 [1645316844@qtp-1545308588-2] DEBUG c.imooc.o2o.dao.split.DynamicDataSourceInterceptor -设置方法[com.imooc.o2o.dao.ShopDao.queryShopCount] use[slave] Strategy,SqlCommandType[SELECT]...
+2021-01-26 16:07:34.888 [1645316844@qtp-1545308588-2] DEBUG com.imooc.o2o.dao.split.DynamicDataSourceHolder -所使用的数据源为：slave
+2021-01-26 16:07:34.888 [1645316844@qtp-1545308588-2] DEBUG com.imooc.o2o.dao.ShopDao.queryShopCount -==>  Preparing: SELECT COUNT(*) FROM tb_shop s, tb_shop_category sc, tb_area a WHERE s.shop_category_id = sc.shop_category_id and s.area_id = a.area_id and s.owner_id = ? ORDER BY s.priority DESC; 
+2021-01-26 16:07:34.889 [1645316844@qtp-1545308588-2] DEBUG com.imooc.o2o.dao.ShopDao.queryShopCount -==> Parameters: 1(Long)
+2021-01-26 16:07:34.892 [1645316844@qtp-1545308588-2] DEBUG com.imooc.o2o.dao.ShopDao.queryShopCount -<==      Total: 1
+2021-01-26 16:08:24.826 [1645316844@qtp-1545308588-2] DEBUG c.imooc.o2o.dao.split.DynamicDataSourceInterceptor -设置方法[com.imooc.o2o.dao.ShopDao.queryShopList] use[slave] Strategy,SqlCommandType[SELECT]...
+2021-01-26 16:08:24.826 [1645316844@qtp-1545308588-2] DEBUG com.imooc.o2o.dao.split.DynamicDataSourceHolder -所使用的数据源为：slave
+2021-01-26 16:08:24.827 [1645316844@qtp-1545308588-2] DEBUG com.imooc.o2o.dao.ShopDao.queryShopList -==>  Preparing: select s.shop_id, s.shop_name, s.shop_desc, s.shop_addr, s.phone, s.shop_img, s.priority, s.enable_status, s.create_time, s.last_edit_time, s.advice, a.area_id, a.area_name, sc.shop_category_id, sc.shop_category_name FROM tb_shop s, tb_shop_category sc, tb_area a WHERE s.owner_id = ? and s.shop_category_id = sc.shop_category_id and s.area_id = a.area_id ORDER BY s.priority DESC LIMIT ?, ?; 
+2021-01-26 16:08:24.827 [1645316844@qtp-1545308588-2] DEBUG com.imooc.o2o.dao.ShopDao.queryShopList -==> Parameters: 1(Long), 0(Integer), 100(Integer)
+2021-01-26 16:08:24.833 [1645316844@qtp-1545308588-2] DEBUG com.imooc.o2o.dao.ShopDao.queryShopList -<==      Total: 50
+2021-01-26 16:08:24.834 [1645316844@qtp-1545308588-2] DEBUG c.imooc.o2o.dao.split.DynamicDataSourceInterceptor -设置方法[com.imooc.o2o.dao.ShopDao.queryShopCount] use[slave] Strategy,SqlCommandType[SELECT]...
+2021-01-26 16:08:24.834 [1645316844@qtp-1545308588-2] DEBUG com.imooc.o2o.dao.split.DynamicDataSourceHolder -所使用的数据源为：slave
+2021-01-26 16:08:24.834 [1645316844@qtp-1545308588-2] DEBUG com.imooc.o2o.dao.ShopDao.queryShopCount -==>  Preparing: SELECT COUNT(*) FROM tb_shop s, tb_shop_category sc, tb_area a WHERE s.shop_category_id = sc.shop_category_id and s.area_id = a.area_id and s.owner_id = ? ORDER BY s.priority DESC; 
+2021-01-26 16:08:24.834 [1645316844@qtp-1545308588-2] DEBUG com.imooc.o2o.dao.ShopDao.queryShopCount -==> Parameters: 1(Long)
+2021-01-26 16:08:24.838 [1645316844@qtp-1545308588-2] DEBUG com.imooc.o2o.dao.ShopDao.queryShopCount -<==      Total: 1
+2021-01-26 16:08:33.460 [1645316844@qtp-1545308588-2] DEBUG c.imooc.o2o.dao.split.DynamicDataSourceInterceptor -设置方法[com.imooc.o2o.dao.ShopDao.queryShopList] use[slave] Strategy,SqlCommandType[SELECT]...
+2021-01-26 16:08:33.460 [1645316844@qtp-1545308588-2] DEBUG com.imooc.o2o.dao.split.DynamicDataSourceHolder -所使用的数据源为：slave
+2021-01-26 16:08:33.461 [1645316844@qtp-1545308588-2] DEBUG com.imooc.o2o.dao.ShopDao.queryShopList -==>  Preparing: select s.shop_id, s.shop_name, s.shop_desc, s.shop_addr, s.phone, s.shop_img, s.priority, s.enable_status, s.create_time, s.last_edit_time, s.advice, a.area_id, a.area_name, sc.shop_category_id, sc.shop_category_name FROM tb_shop s, tb_shop_category sc, tb_area a WHERE s.owner_id = ? and s.shop_category_id = sc.shop_category_id and s.area_id = a.area_id ORDER BY s.priority DESC LIMIT ?, ?; 
+2021-01-26 16:08:33.461 [1645316844@qtp-1545308588-2] DEBUG com.imooc.o2o.dao.ShopDao.queryShopList -==> Parameters: 1(Long), 0(Integer), 100(Integer)
+2021-01-26 16:08:33.470 [1645316844@qtp-1545308588-2] DEBUG com.imooc.o2o.dao.ShopDao.queryShopList -<==      Total: 50
+2021-01-26 16:08:33.471 [1645316844@qtp-1545308588-2] DEBUG c.imooc.o2o.dao.split.DynamicDataSourceInterceptor -设置方法[com.imooc.o2o.dao.ShopDao.queryShopCount] use[slave] Strategy,SqlCommandType[SELECT]...
+2021-01-26 16:08:33.471 [1645316844@qtp-1545308588-2] DEBUG com.imooc.o2o.dao.split.DynamicDataSourceHolder -所使用的数据源为：slave
+2021-01-26 16:08:33.472 [1645316844@qtp-1545308588-2] DEBUG com.imooc.o2o.dao.ShopDao.queryShopCount -==>  Preparing: SELECT COUNT(*) FROM tb_shop s, tb_shop_category sc, tb_area a WHERE s.shop_category_id = sc.shop_category_id and s.area_id = a.area_id and s.owner_id = ? ORDER BY s.priority DESC; 
+2021-01-26 16:08:33.472 [1645316844@qtp-1545308588-2] DEBUG com.imooc.o2o.dao.ShopDao.queryShopCount -==> Parameters: 1(Long)
+2021-01-26 16:08:33.475 [1645316844@qtp-1545308588-2] DEBUG com.imooc.o2o.dao.ShopDao.queryShopCount -<==      Total: 1
+2021-01-26 16:09:40.057 [1645316844@qtp-1545308588-2] DEBUG c.imooc.o2o.dao.split.DynamicDataSourceInterceptor -设置方法[com.imooc.o2o.dao.ShopDao.queryShopList] use[slave] Strategy,SqlCommandType[SELECT]...
+2021-01-26 16:09:40.057 [1645316844@qtp-1545308588-2] DEBUG com.imooc.o2o.dao.split.DynamicDataSourceHolder -所使用的数据源为：slave
+2021-01-26 16:09:40.057 [1645316844@qtp-1545308588-2] DEBUG com.imooc.o2o.dao.ShopDao.queryShopList -==>  Preparing: select s.shop_id, s.shop_name, s.shop_desc, s.shop_addr, s.phone, s.shop_img, s.priority, s.enable_status, s.create_time, s.last_edit_time, s.advice, a.area_id, a.area_name, sc.shop_category_id, sc.shop_category_name FROM tb_shop s, tb_shop_category sc, tb_area a WHERE s.owner_id = ? and s.shop_category_id = sc.shop_category_id and s.area_id = a.area_id ORDER BY s.priority DESC LIMIT ?, ?; 
+2021-01-26 16:09:40.058 [1645316844@qtp-1545308588-2] DEBUG com.imooc.o2o.dao.ShopDao.queryShopList -==> Parameters: 1(Long), 0(Integer), 100(Integer)
+2021-01-26 16:09:40.064 [1645316844@qtp-1545308588-2] DEBUG com.imooc.o2o.dao.ShopDao.queryShopList -<==      Total: 50
+2021-01-26 16:09:40.065 [1645316844@qtp-1545308588-2] DEBUG c.imooc.o2o.dao.split.DynamicDataSourceInterceptor -设置方法[com.imooc.o2o.dao.ShopDao.queryShopCount] use[slave] Strategy,SqlCommandType[SELECT]...
+2021-01-26 16:09:40.065 [1645316844@qtp-1545308588-2] DEBUG com.imooc.o2o.dao.split.DynamicDataSourceHolder -所使用的数据源为：slave
+2021-01-26 16:09:40.066 [1645316844@qtp-1545308588-2] DEBUG com.imooc.o2o.dao.ShopDao.queryShopCount -==>  Preparing: SELECT COUNT(*) FROM tb_shop s, tb_shop_category sc, tb_area a WHERE s.shop_category_id = sc.shop_category_id and s.area_id = a.area_id and s.owner_id = ? ORDER BY s.priority DESC; 
+2021-01-26 16:09:40.066 [1645316844@qtp-1545308588-2] DEBUG com.imooc.o2o.dao.ShopDao.queryShopCount -==> Parameters: 1(Long)
+2021-01-26 16:09:40.069 [1645316844@qtp-1545308588-2] DEBUG com.imooc.o2o.dao.ShopDao.queryShopCount -<==      Total: 1
+2021-01-26 16:09:45.882 [1645316844@qtp-1545308588-2] DEBUG c.imooc.o2o.dao.split.DynamicDataSourceInterceptor -设置方法[com.imooc.o2o.dao.ShopDao.queryShopList] use[slave] Strategy,SqlCommandType[SELECT]...
+2021-01-26 16:09:45.882 [1645316844@qtp-1545308588-2] DEBUG com.imooc.o2o.dao.split.DynamicDataSourceHolder -所使用的数据源为：slave
+2021-01-26 16:09:45.882 [1645316844@qtp-1545308588-2] DEBUG com.imooc.o2o.dao.ShopDao.queryShopList -==>  Preparing: select s.shop_id, s.shop_name, s.shop_desc, s.shop_addr, s.phone, s.shop_img, s.priority, s.enable_status, s.create_time, s.last_edit_time, s.advice, a.area_id, a.area_name, sc.shop_category_id, sc.shop_category_name FROM tb_shop s, tb_shop_category sc, tb_area a WHERE s.owner_id = ? and s.shop_category_id = sc.shop_category_id and s.area_id = a.area_id ORDER BY s.priority DESC LIMIT ?, ?; 
+2021-01-26 16:09:45.883 [1645316844@qtp-1545308588-2] DEBUG com.imooc.o2o.dao.ShopDao.queryShopList -==> Parameters: 1(Long), 0(Integer), 100(Integer)
+2021-01-26 16:09:45.889 [1645316844@qtp-1545308588-2] DEBUG com.imooc.o2o.dao.ShopDao.queryShopList -<==      Total: 50
+2021-01-26 16:09:45.890 [1645316844@qtp-1545308588-2] DEBUG c.imooc.o2o.dao.split.DynamicDataSourceInterceptor -设置方法[com.imooc.o2o.dao.ShopDao.queryShopCount] use[slave] Strategy,SqlCommandType[SELECT]...
+2021-01-26 16:09:45.890 [1645316844@qtp-1545308588-2] DEBUG com.imooc.o2o.dao.split.DynamicDataSourceHolder -所使用的数据源为：slave
+2021-01-26 16:09:45.891 [1645316844@qtp-1545308588-2] DEBUG com.imooc.o2o.dao.ShopDao.queryShopCount -==>  Preparing: SELECT COUNT(*) FROM tb_shop s, tb_shop_category sc, tb_area a WHERE s.shop_category_id = sc.shop_category_id and s.area_id = a.area_id and s.owner_id = ? ORDER BY s.priority DESC; 
+2021-01-26 16:09:45.892 [1645316844@qtp-1545308588-2] DEBUG com.imooc.o2o.dao.ShopDao.queryShopCount -==> Parameters: 1(Long)
+2021-01-26 16:09:45.896 [1645316844@qtp-1545308588-2] DEBUG com.imooc.o2o.dao.ShopDao.queryShopCount -<==      Total: 1
+2021-01-26 16:11:25.977 [1645316844@qtp-1545308588-2] DEBUG c.imooc.o2o.dao.split.DynamicDataSourceInterceptor -设置方法[com.imooc.o2o.dao.ShopDao.queryShopList] use[slave] Strategy,SqlCommandType[SELECT]...
+2021-01-26 16:11:25.977 [1645316844@qtp-1545308588-2] DEBUG com.imooc.o2o.dao.split.DynamicDataSourceHolder -所使用的数据源为：slave
+2021-01-26 16:11:25.978 [1645316844@qtp-1545308588-2] DEBUG com.imooc.o2o.dao.ShopDao.queryShopList -==>  Preparing: select s.shop_id, s.shop_name, s.shop_desc, s.shop_addr, s.phone, s.shop_img, s.priority, s.enable_status, s.create_time, s.last_edit_time, s.advice, a.area_id, a.area_name, sc.shop_category_id, sc.shop_category_name FROM tb_shop s, tb_shop_category sc, tb_area a WHERE s.owner_id = ? and s.shop_category_id = sc.shop_category_id and s.area_id = a.area_id ORDER BY s.priority DESC LIMIT ?, ?; 
+2021-01-26 16:11:25.978 [1645316844@qtp-1545308588-2] DEBUG com.imooc.o2o.dao.ShopDao.queryShopList -==> Parameters: 1(Long), 0(Integer), 100(Integer)
+2021-01-26 16:11:25.986 [1645316844@qtp-1545308588-2] DEBUG com.imooc.o2o.dao.ShopDao.queryShopList -<==      Total: 50
+2021-01-26 16:11:25.988 [1645316844@qtp-1545308588-2] DEBUG c.imooc.o2o.dao.split.DynamicDataSourceInterceptor -设置方法[com.imooc.o2o.dao.ShopDao.queryShopCount] use[slave] Strategy,SqlCommandType[SELECT]...
+2021-01-26 16:11:25.988 [1645316844@qtp-1545308588-2] DEBUG com.imooc.o2o.dao.split.DynamicDataSourceHolder -所使用的数据源为：slave
+2021-01-26 16:11:25.988 [1645316844@qtp-1545308588-2] DEBUG com.imooc.o2o.dao.ShopDao.queryShopCount -==>  Preparing: SELECT COUNT(*) FROM tb_shop s, tb_shop_category sc, tb_area a WHERE s.shop_category_id = sc.shop_category_id and s.area_id = a.area_id and s.owner_id = ? ORDER BY s.priority DESC; 
+2021-01-26 16:11:25.989 [1645316844@qtp-1545308588-2] DEBUG com.imooc.o2o.dao.ShopDao.queryShopCount -==> Parameters: 1(Long)
+2021-01-26 16:11:25.993 [1645316844@qtp-1545308588-2] DEBUG com.imooc.o2o.dao.ShopDao.queryShopCount -<==      Total: 1
+2021-01-26 21:18:44.015 [2030398685@qtp-1087989112-2] DEBUG c.imooc.o2o.dao.split.DynamicDataSourceInterceptor -设置方法[com.imooc.o2o.dao.ShopDao.queryShopList] use[slave] Strategy,SqlCommandType[SELECT]...
+2021-01-26 21:18:44.017 [2030398685@qtp-1087989112-2] DEBUG com.imooc.o2o.dao.split.DynamicDataSourceHolder -所使用的数据源为：slave
+2021-01-26 21:18:44.030 [2030398685@qtp-1087989112-2] DEBUG com.imooc.o2o.dao.ShopDao.queryShopList -==>  Preparing: select s.shop_id, s.shop_name, s.shop_desc, s.shop_addr, s.phone, s.shop_img, s.priority, s.enable_status, s.create_time, s.last_edit_time, s.advice, a.area_id, a.area_name, sc.shop_category_id, sc.shop_category_name FROM tb_shop s, tb_shop_category sc, tb_area a WHERE s.owner_id = ? and s.shop_category_id = sc.shop_category_id and s.area_id = a.area_id ORDER BY s.priority DESC LIMIT ?, ?; 
+2021-01-26 21:18:44.099 [2030398685@qtp-1087989112-2] DEBUG com.imooc.o2o.dao.ShopDao.queryShopList -==> Parameters: 1(Long), 0(Integer), 100(Integer)
+2021-01-26 21:18:44.147 [2030398685@qtp-1087989112-2] DEBUG com.imooc.o2o.dao.ShopDao.queryShopList -<==      Total: 50
+2021-01-26 21:18:44.154 [2030398685@qtp-1087989112-2] DEBUG c.imooc.o2o.dao.split.DynamicDataSourceInterceptor -设置方法[com.imooc.o2o.dao.ShopDao.queryShopCount] use[slave] Strategy,SqlCommandType[SELECT]...
+2021-01-26 21:18:44.154 [2030398685@qtp-1087989112-2] DEBUG com.imooc.o2o.dao.split.DynamicDataSourceHolder -所使用的数据源为：slave
+2021-01-26 21:18:44.155 [2030398685@qtp-1087989112-2] DEBUG com.imooc.o2o.dao.ShopDao.queryShopCount -==>  Preparing: SELECT COUNT(*) FROM tb_shop s, tb_shop_category sc, tb_area a WHERE s.shop_category_id = sc.shop_category_id and s.area_id = a.area_id and s.owner_id = ? ORDER BY s.priority DESC; 
+2021-01-26 21:18:44.155 [2030398685@qtp-1087989112-2] DEBUG com.imooc.o2o.dao.ShopDao.queryShopCount -==> Parameters: 1(Long)
+2021-01-26 21:18:44.158 [2030398685@qtp-1087989112-2] DEBUG com.imooc.o2o.dao.ShopDao.queryShopCount -<==      Total: 1
+2021-01-26 21:18:48.373 [2030398685@qtp-1087989112-2] DEBUG c.imooc.o2o.dao.split.DynamicDataSourceInterceptor -设置方法[com.imooc.o2o.dao.ShopDao.queryShopList] use[slave] Strategy,SqlCommandType[SELECT]...
+2021-01-26 21:18:48.373 [2030398685@qtp-1087989112-2] DEBUG com.imooc.o2o.dao.split.DynamicDataSourceHolder -所使用的数据源为：slave
+2021-01-26 21:18:48.374 [2030398685@qtp-1087989112-2] DEBUG com.imooc.o2o.dao.ShopDao.queryShopList -==>  Preparing: select s.shop_id, s.shop_name, s.shop_desc, s.shop_addr, s.phone, s.shop_img, s.priority, s.enable_status, s.create_time, s.last_edit_time, s.advice, a.area_id, a.area_name, sc.shop_category_id, sc.shop_category_name FROM tb_shop s, tb_shop_category sc, tb_area a WHERE s.owner_id = ? and s.shop_category_id = sc.shop_category_id and s.area_id = a.area_id ORDER BY s.priority DESC LIMIT ?, ?; 
+2021-01-26 21:18:48.375 [2030398685@qtp-1087989112-2] DEBUG com.imooc.o2o.dao.ShopDao.queryShopList -==> Parameters: 1(Long), 0(Integer), 100(Integer)
+2021-01-26 21:18:48.390 [2030398685@qtp-1087989112-2] DEBUG com.imooc.o2o.dao.ShopDao.queryShopList -<==      Total: 50
+2021-01-26 21:18:48.391 [2030398685@qtp-1087989112-2] DEBUG c.imooc.o2o.dao.split.DynamicDataSourceInterceptor -设置方法[com.imooc.o2o.dao.ShopDao.queryShopCount] use[slave] Strategy,SqlCommandType[SELECT]...
+2021-01-26 21:18:48.391 [2030398685@qtp-1087989112-2] DEBUG com.imooc.o2o.dao.split.DynamicDataSourceHolder -所使用的数据源为：slave
+2021-01-26 21:18:48.392 [2030398685@qtp-1087989112-2] DEBUG com.imooc.o2o.dao.ShopDao.queryShopCount -==>  Preparing: SELECT COUNT(*) FROM tb_shop s, tb_shop_category sc, tb_area a WHERE s.shop_category_id = sc.shop_category_id and s.area_id = a.area_id and s.owner_id = ? ORDER BY s.priority DESC; 
+2021-01-26 21:18:48.393 [2030398685@qtp-1087989112-2] DEBUG com.imooc.o2o.dao.ShopDao.queryShopCount -==> Parameters: 1(Long)
+2021-01-26 21:18:48.396 [2030398685@qtp-1087989112-2] DEBUG com.imooc.o2o.dao.ShopDao.queryShopCount -<==      Total: 1
+2021-01-26 21:20:42.152 [2030398685@qtp-1087989112-2] DEBUG c.imooc.o2o.dao.split.DynamicDataSourceInterceptor -设置方法[com.imooc.o2o.dao.ShopDao.queryShopList] use[slave] Strategy,SqlCommandType[SELECT]...
+2021-01-26 21:20:42.152 [2030398685@qtp-1087989112-2] DEBUG com.imooc.o2o.dao.split.DynamicDataSourceHolder -所使用的数据源为：slave
+2021-01-26 21:20:42.152 [2030398685@qtp-1087989112-2] DEBUG com.imooc.o2o.dao.ShopDao.queryShopList -==>  Preparing: select s.shop_id, s.shop_name, s.shop_desc, s.shop_addr, s.phone, s.shop_img, s.priority, s.enable_status, s.create_time, s.last_edit_time, s.advice, a.area_id, a.area_name, sc.shop_category_id, sc.shop_category_name FROM tb_shop s, tb_shop_category sc, tb_area a WHERE s.owner_id = ? and s.shop_category_id = sc.shop_category_id and s.area_id = a.area_id ORDER BY s.priority DESC LIMIT ?, ?; 
+2021-01-26 21:20:42.153 [2030398685@qtp-1087989112-2] DEBUG com.imooc.o2o.dao.ShopDao.queryShopList -==> Parameters: 1(Long), 0(Integer), 100(Integer)
+2021-01-26 21:20:42.162 [2030398685@qtp-1087989112-2] DEBUG com.imooc.o2o.dao.ShopDao.queryShopList -<==      Total: 50
+2021-01-26 21:20:42.163 [2030398685@qtp-1087989112-2] DEBUG c.imooc.o2o.dao.split.DynamicDataSourceInterceptor -设置方法[com.imooc.o2o.dao.ShopDao.queryShopCount] use[slave] Strategy,SqlCommandType[SELECT]...
+2021-01-26 21:20:42.164 [2030398685@qtp-1087989112-2] DEBUG com.imooc.o2o.dao.split.DynamicDataSourceHolder -所使用的数据源为：slave
+2021-01-26 21:20:42.164 [2030398685@qtp-1087989112-2] DEBUG com.imooc.o2o.dao.ShopDao.queryShopCount -==>  Preparing: SELECT COUNT(*) FROM tb_shop s, tb_shop_category sc, tb_area a WHERE s.shop_category_id = sc.shop_category_id and s.area_id = a.area_id and s.owner_id = ? ORDER BY s.priority DESC; 
+2021-01-26 21:20:42.164 [2030398685@qtp-1087989112-2] DEBUG com.imooc.o2o.dao.ShopDao.queryShopCount -==> Parameters: 1(Long)
+2021-01-26 21:20:42.167 [2030398685@qtp-1087989112-2] DEBUG com.imooc.o2o.dao.ShopDao.queryShopCount -<==      Total: 1
+2021-01-26 21:20:45.787 [499316344@qtp-1087989112-4] DEBUG c.imooc.o2o.dao.split.DynamicDataSourceInterceptor -设置方法[com.imooc.o2o.dao.ShopCategoryDao.queryShopCategory] use[slave] Strategy,SqlCommandType[SELECT]...
+2021-01-26 21:20:45.788 [499316344@qtp-1087989112-4] DEBUG com.imooc.o2o.dao.split.DynamicDataSourceHolder -所使用的数据源为：slave
+2021-01-26 21:20:45.788 [499316344@qtp-1087989112-4] DEBUG c.imooc.o2o.dao.ShopCategoryDao.queryShopCategory -==>  Preparing: SELECT shop_category_id,shop_category_name,shop_category_desc,shop_category_img, priority,create_time,last_edit_time,parent_id FROM tb_shop_category WHERE parent_id is not null ORDER BY priority DESC; 
+2021-01-26 21:20:45.789 [499316344@qtp-1087989112-4] DEBUG c.imooc.o2o.dao.ShopCategoryDao.queryShopCategory -==> Parameters: 
+2021-01-26 21:20:45.793 [499316344@qtp-1087989112-4] DEBUG c.imooc.o2o.dao.ShopCategoryDao.queryShopCategory -<==      Total: 1
+2021-01-26 21:20:45.794 [499316344@qtp-1087989112-4] DEBUG c.imooc.o2o.dao.split.DynamicDataSourceInterceptor -设置方法[com.imooc.o2o.dao.AreaDao.queryArea] use[slave] Strategy,SqlCommandType[SELECT]...
+2021-01-26 21:20:45.794 [499316344@qtp-1087989112-4] DEBUG com.imooc.o2o.dao.split.DynamicDataSourceHolder -所使用的数据源为：slave
+2021-01-26 21:20:45.794 [499316344@qtp-1087989112-4] DEBUG com.imooc.o2o.dao.AreaDao.queryArea -==>  Preparing: select area_id,area_name,priority,create_time,last_edit_time from tb_area order by priority desc; 
+2021-01-26 21:20:45.794 [499316344@qtp-1087989112-4] DEBUG com.imooc.o2o.dao.AreaDao.queryArea -==> Parameters: 
+2021-01-26 21:20:45.797 [499316344@qtp-1087989112-4] DEBUG com.imooc.o2o.dao.AreaDao.queryArea -<==      Total: 3
+2021-01-26 21:20:53.891 [2030398685@qtp-1087989112-2] DEBUG c.imooc.o2o.dao.split.DynamicDataSourceInterceptor -设置方法[com.imooc.o2o.dao.ShopDao.queryShopList] use[slave] Strategy,SqlCommandType[SELECT]...
+2021-01-26 21:20:53.892 [2030398685@qtp-1087989112-2] DEBUG com.imooc.o2o.dao.split.DynamicDataSourceHolder -所使用的数据源为：slave
+2021-01-26 21:20:53.892 [2030398685@qtp-1087989112-2] DEBUG com.imooc.o2o.dao.ShopDao.queryShopList -==>  Preparing: select s.shop_id, s.shop_name, s.shop_desc, s.shop_addr, s.phone, s.shop_img, s.priority, s.enable_status, s.create_time, s.last_edit_time, s.advice, a.area_id, a.area_name, sc.shop_category_id, sc.shop_category_name FROM tb_shop s, tb_shop_category sc, tb_area a WHERE s.owner_id = ? and s.shop_category_id = sc.shop_category_id and s.area_id = a.area_id ORDER BY s.priority DESC LIMIT ?, ?; 
+2021-01-26 21:20:53.892 [2030398685@qtp-1087989112-2] DEBUG com.imooc.o2o.dao.ShopDao.queryShopList -==> Parameters: 1(Long), 0(Integer), 100(Integer)
+2021-01-26 21:20:53.900 [2030398685@qtp-1087989112-2] DEBUG com.imooc.o2o.dao.ShopDao.queryShopList -<==      Total: 50
+2021-01-26 21:20:53.901 [2030398685@qtp-1087989112-2] DEBUG c.imooc.o2o.dao.split.DynamicDataSourceInterceptor -设置方法[com.imooc.o2o.dao.ShopDao.queryShopCount] use[slave] Strategy,SqlCommandType[SELECT]...
+2021-01-26 21:20:53.901 [2030398685@qtp-1087989112-2] DEBUG com.imooc.o2o.dao.split.DynamicDataSourceHolder -所使用的数据源为：slave
+2021-01-26 21:20:53.902 [2030398685@qtp-1087989112-2] DEBUG com.imooc.o2o.dao.ShopDao.queryShopCount -==>  Preparing: SELECT COUNT(*) FROM tb_shop s, tb_shop_category sc, tb_area a WHERE s.shop_category_id = sc.shop_category_id and s.area_id = a.area_id and s.owner_id = ? ORDER BY s.priority DESC; 
+2021-01-26 21:20:53.902 [2030398685@qtp-1087989112-2] DEBUG com.imooc.o2o.dao.ShopDao.queryShopCount -==> Parameters: 1(Long)
+2021-01-26 21:20:53.906 [2030398685@qtp-1087989112-2] DEBUG com.imooc.o2o.dao.ShopDao.queryShopCount -<==      Total: 1
+2021-01-26 21:20:58.190 [2030398685@qtp-1087989112-2] DEBUG c.imooc.o2o.dao.split.DynamicDataSourceInterceptor -设置方法[com.imooc.o2o.dao.ShopCategoryDao.queryShopCategory] use[slave] Strategy,SqlCommandType[SELECT]...
+2021-01-26 21:20:58.190 [2030398685@qtp-1087989112-2] DEBUG com.imooc.o2o.dao.split.DynamicDataSourceHolder -所使用的数据源为：slave
+2021-01-26 21:20:58.190 [2030398685@qtp-1087989112-2] DEBUG c.imooc.o2o.dao.ShopCategoryDao.queryShopCategory -==>  Preparing: SELECT shop_category_id,shop_category_name,shop_category_desc,shop_category_img, priority,create_time,last_edit_time,parent_id FROM tb_shop_category WHERE parent_id is not null ORDER BY priority DESC; 
+2021-01-26 21:20:58.190 [2030398685@qtp-1087989112-2] DEBUG c.imooc.o2o.dao.ShopCategoryDao.queryShopCategory -==> Parameters: 
+2021-01-26 21:20:58.193 [2030398685@qtp-1087989112-2] DEBUG c.imooc.o2o.dao.ShopCategoryDao.queryShopCategory -<==      Total: 1
+2021-01-26 21:20:58.193 [2030398685@qtp-1087989112-2] DEBUG c.imooc.o2o.dao.split.DynamicDataSourceInterceptor -设置方法[com.imooc.o2o.dao.AreaDao.queryArea] use[slave] Strategy,SqlCommandType[SELECT]...
+2021-01-26 21:20:58.193 [2030398685@qtp-1087989112-2] DEBUG com.imooc.o2o.dao.split.DynamicDataSourceHolder -所使用的数据源为：slave
+2021-01-26 21:20:58.194 [2030398685@qtp-1087989112-2] DEBUG com.imooc.o2o.dao.AreaDao.queryArea -==>  Preparing: select area_id,area_name,priority,create_time,last_edit_time from tb_area order by priority desc; 
+2021-01-26 21:20:58.194 [2030398685@qtp-1087989112-2] DEBUG com.imooc.o2o.dao.AreaDao.queryArea -==> Parameters: 
+2021-01-26 21:20:58.197 [2030398685@qtp-1087989112-2] DEBUG com.imooc.o2o.dao.AreaDao.queryArea -<==      Total: 3
+2021-01-26 21:21:01.497 [2030398685@qtp-1087989112-2] DEBUG c.imooc.o2o.dao.split.DynamicDataSourceInterceptor -设置方法[com.imooc.o2o.dao.ShopDao.queryShopList] use[slave] Strategy,SqlCommandType[SELECT]...
+2021-01-26 21:21:01.497 [2030398685@qtp-1087989112-2] DEBUG com.imooc.o2o.dao.split.DynamicDataSourceHolder -所使用的数据源为：slave
+2021-01-26 21:21:01.497 [2030398685@qtp-1087989112-2] DEBUG com.imooc.o2o.dao.ShopDao.queryShopList -==>  Preparing: select s.shop_id, s.shop_name, s.shop_desc, s.shop_addr, s.phone, s.shop_img, s.priority, s.enable_status, s.create_time, s.last_edit_time, s.advice, a.area_id, a.area_name, sc.shop_category_id, sc.shop_category_name FROM tb_shop s, tb_shop_category sc, tb_area a WHERE s.owner_id = ? and s.shop_category_id = sc.shop_category_id and s.area_id = a.area_id ORDER BY s.priority DESC LIMIT ?, ?; 
+2021-01-26 21:21:01.498 [2030398685@qtp-1087989112-2] DEBUG com.imooc.o2o.dao.ShopDao.queryShopList -==> Parameters: 1(Long), 0(Integer), 100(Integer)
+2021-01-26 21:21:01.505 [2030398685@qtp-1087989112-2] DEBUG com.imooc.o2o.dao.ShopDao.queryShopList -<==      Total: 50
+2021-01-26 21:21:01.506 [2030398685@qtp-1087989112-2] DEBUG c.imooc.o2o.dao.split.DynamicDataSourceInterceptor -设置方法[com.imooc.o2o.dao.ShopDao.queryShopCount] use[slave] Strategy,SqlCommandType[SELECT]...
+2021-01-26 21:21:01.506 [2030398685@qtp-1087989112-2] DEBUG com.imooc.o2o.dao.split.DynamicDataSourceHolder -所使用的数据源为：slave
+2021-01-26 21:21:01.507 [2030398685@qtp-1087989112-2] DEBUG com.imooc.o2o.dao.ShopDao.queryShopCount -==>  Preparing: SELECT COUNT(*) FROM tb_shop s, tb_shop_category sc, tb_area a WHERE s.shop_category_id = sc.shop_category_id and s.area_id = a.area_id and s.owner_id = ? ORDER BY s.priority DESC; 
+2021-01-26 21:21:01.508 [2030398685@qtp-1087989112-2] DEBUG com.imooc.o2o.dao.ShopDao.queryShopCount -==> Parameters: 1(Long)
+2021-01-26 21:21:01.511 [2030398685@qtp-1087989112-2] DEBUG com.imooc.o2o.dao.ShopDao.queryShopCount -<==      Total: 1
+2021-01-26 21:21:05.916 [2030398685@qtp-1087989112-2] DEBUG c.imooc.o2o.dao.split.DynamicDataSourceInterceptor -设置方法[com.imooc.o2o.dao.ShopCategoryDao.queryShopCategory] use[slave] Strategy,SqlCommandType[SELECT]...
+2021-01-26 21:21:05.916 [2030398685@qtp-1087989112-2] DEBUG com.imooc.o2o.dao.split.DynamicDataSourceHolder -所使用的数据源为：slave
+2021-01-26 21:21:05.916 [2030398685@qtp-1087989112-2] DEBUG c.imooc.o2o.dao.ShopCategoryDao.queryShopCategory -==>  Preparing: SELECT shop_category_id,shop_category_name,shop_category_desc,shop_category_img, priority,create_time,last_edit_time,parent_id FROM tb_shop_category WHERE parent_id is not null ORDER BY priority DESC; 
+2021-01-26 21:21:05.917 [2030398685@qtp-1087989112-2] DEBUG c.imooc.o2o.dao.ShopCategoryDao.queryShopCategory -==> Parameters: 
+2021-01-26 21:21:05.919 [2030398685@qtp-1087989112-2] DEBUG c.imooc.o2o.dao.ShopCategoryDao.queryShopCategory -<==      Total: 1
+2021-01-26 21:21:05.920 [2030398685@qtp-1087989112-2] DEBUG c.imooc.o2o.dao.split.DynamicDataSourceInterceptor -设置方法[com.imooc.o2o.dao.AreaDao.queryArea] use[slave] Strategy,SqlCommandType[SELECT]...
+2021-01-26 21:21:05.920 [2030398685@qtp-1087989112-2] DEBUG com.imooc.o2o.dao.split.DynamicDataSourceHolder -所使用的数据源为：slave
+2021-01-26 21:21:05.921 [2030398685@qtp-1087989112-2] DEBUG com.imooc.o2o.dao.AreaDao.queryArea -==>  Preparing: select area_id,area_name,priority,create_time,last_edit_time from tb_area order by priority desc; 
+2021-01-26 21:21:05.921 [2030398685@qtp-1087989112-2] DEBUG com.imooc.o2o.dao.AreaDao.queryArea -==> Parameters: 
+2021-01-26 21:21:05.924 [2030398685@qtp-1087989112-2] DEBUG com.imooc.o2o.dao.AreaDao.queryArea -<==      Total: 3
+2021-01-26 21:21:45.862 [499316344@qtp-1087989112-4] DEBUG c.imooc.o2o.dao.split.DynamicDataSourceInterceptor -设置方法[com.imooc.o2o.dao.ShopCategoryDao.queryShopCategory] use[slave] Strategy,SqlCommandType[SELECT]...
+2021-01-26 21:21:45.862 [499316344@qtp-1087989112-4] DEBUG com.imooc.o2o.dao.split.DynamicDataSourceHolder -所使用的数据源为：slave
+2021-01-26 21:21:45.863 [499316344@qtp-1087989112-4] DEBUG c.imooc.o2o.dao.ShopCategoryDao.queryShopCategory -==>  Preparing: SELECT shop_category_id,shop_category_name,shop_category_desc,shop_category_img, priority,create_time,last_edit_time,parent_id FROM tb_shop_category WHERE parent_id is not null ORDER BY priority DESC; 
+2021-01-26 21:21:45.863 [499316344@qtp-1087989112-4] DEBUG c.imooc.o2o.dao.ShopCategoryDao.queryShopCategory -==> Parameters: 
+2021-01-26 21:21:45.865 [499316344@qtp-1087989112-4] DEBUG c.imooc.o2o.dao.ShopCategoryDao.queryShopCategory -<==      Total: 1
+2021-01-26 21:21:45.866 [499316344@qtp-1087989112-4] DEBUG c.imooc.o2o.dao.split.DynamicDataSourceInterceptor -设置方法[com.imooc.o2o.dao.AreaDao.queryArea] use[slave] Strategy,SqlCommandType[SELECT]...
+2021-01-26 21:21:45.866 [499316344@qtp-1087989112-4] DEBUG com.imooc.o2o.dao.split.DynamicDataSourceHolder -所使用的数据源为：slave
+2021-01-26 21:21:45.866 [499316344@qtp-1087989112-4] DEBUG com.imooc.o2o.dao.AreaDao.queryArea -==>  Preparing: select area_id,area_name,priority,create_time,last_edit_time from tb_area order by priority desc; 
+2021-01-26 21:21:45.867 [499316344@qtp-1087989112-4] DEBUG com.imooc.o2o.dao.AreaDao.queryArea -==> Parameters: 
+2021-01-26 21:21:45.869 [499316344@qtp-1087989112-4] DEBUG com.imooc.o2o.dao.AreaDao.queryArea -<==      Total: 3
+2021-01-26 21:21:55.161 [499316344@qtp-1087989112-4] DEBUG c.imooc.o2o.dao.split.DynamicDataSourceInterceptor -设置方法[com.imooc.o2o.dao.ShopCategoryDao.queryShopCategory] use[slave] Strategy,SqlCommandType[SELECT]...
+2021-01-26 21:21:55.161 [499316344@qtp-1087989112-4] DEBUG com.imooc.o2o.dao.split.DynamicDataSourceHolder -所使用的数据源为：slave
+2021-01-26 21:21:55.161 [499316344@qtp-1087989112-4] DEBUG c.imooc.o2o.dao.ShopCategoryDao.queryShopCategory -==>  Preparing: SELECT shop_category_id,shop_category_name,shop_category_desc,shop_category_img, priority,create_time,last_edit_time,parent_id FROM tb_shop_category WHERE parent_id is not null ORDER BY priority DESC; 
+2021-01-26 21:21:55.161 [499316344@qtp-1087989112-4] DEBUG c.imooc.o2o.dao.ShopCategoryDao.queryShopCategory -==> Parameters: 
+2021-01-26 21:21:55.164 [499316344@qtp-1087989112-4] DEBUG c.imooc.o2o.dao.ShopCategoryDao.queryShopCategory -<==      Total: 1
+2021-01-26 21:21:55.164 [499316344@qtp-1087989112-4] DEBUG c.imooc.o2o.dao.split.DynamicDataSourceInterceptor -设置方法[com.imooc.o2o.dao.AreaDao.queryArea] use[slave] Strategy,SqlCommandType[SELECT]...
+2021-01-26 21:21:55.164 [499316344@qtp-1087989112-4] DEBUG com.imooc.o2o.dao.split.DynamicDataSourceHolder -所使用的数据源为：slave
+2021-01-26 21:21:55.164 [499316344@qtp-1087989112-4] DEBUG com.imooc.o2o.dao.AreaDao.queryArea -==>  Preparing: select area_id,area_name,priority,create_time,last_edit_time from tb_area order by priority desc; 
+2021-01-26 21:21:55.165 [499316344@qtp-1087989112-4] DEBUG com.imooc.o2o.dao.AreaDao.queryArea -==> Parameters: 
+2021-01-26 21:21:55.167 [499316344@qtp-1087989112-4] DEBUG com.imooc.o2o.dao.AreaDao.queryArea -<==      Total: 3
+2021-01-26 21:21:57.850 [499316344@qtp-1087989112-4] DEBUG c.imooc.o2o.dao.split.DynamicDataSourceInterceptor -设置方法[com.imooc.o2o.dao.ShopCategoryDao.queryShopCategory] use[slave] Strategy,SqlCommandType[SELECT]...
+2021-01-26 21:21:57.850 [499316344@qtp-1087989112-4] DEBUG com.imooc.o2o.dao.split.DynamicDataSourceHolder -所使用的数据源为：slave
+2021-01-26 21:21:57.850 [499316344@qtp-1087989112-4] DEBUG c.imooc.o2o.dao.ShopCategoryDao.queryShopCategory -==>  Preparing: SELECT shop_category_id,shop_category_name,shop_category_desc,shop_category_img, priority,create_time,last_edit_time,parent_id FROM tb_shop_category WHERE parent_id is not null ORDER BY priority DESC; 
+2021-01-26 21:21:57.850 [499316344@qtp-1087989112-4] DEBUG c.imooc.o2o.dao.ShopCategoryDao.queryShopCategory -==> Parameters: 
+2021-01-26 21:21:57.852 [499316344@qtp-1087989112-4] DEBUG c.imooc.o2o.dao.ShopCategoryDao.queryShopCategory -<==      Total: 1
+2021-01-26 21:21:57.852 [499316344@qtp-1087989112-4] DEBUG c.imooc.o2o.dao.split.DynamicDataSourceInterceptor -设置方法[com.imooc.o2o.dao.AreaDao.queryArea] use[slave] Strategy,SqlCommandType[SELECT]...
+2021-01-26 21:21:57.853 [499316344@qtp-1087989112-4] DEBUG com.imooc.o2o.dao.split.DynamicDataSourceHolder -所使用的数据源为：slave
+2021-01-26 21:21:57.853 [499316344@qtp-1087989112-4] DEBUG com.imooc.o2o.dao.AreaDao.queryArea -==>  Preparing: select area_id,area_name,priority,create_time,last_edit_time from tb_area order by priority desc; 
+2021-01-26 21:21:57.853 [499316344@qtp-1087989112-4] DEBUG com.imooc.o2o.dao.AreaDao.queryArea -==> Parameters: 
+2021-01-26 21:21:57.855 [499316344@qtp-1087989112-4] DEBUG com.imooc.o2o.dao.AreaDao.queryArea -<==      Total: 3
+2021-01-26 21:22:04.998 [499316344@qtp-1087989112-4] DEBUG c.imooc.o2o.dao.split.DynamicDataSourceInterceptor -设置方法[com.imooc.o2o.dao.ShopCategoryDao.queryShopCategory] use[slave] Strategy,SqlCommandType[SELECT]...
+2021-01-26 21:22:04.998 [499316344@qtp-1087989112-4] DEBUG com.imooc.o2o.dao.split.DynamicDataSourceHolder -所使用的数据源为：slave
+2021-01-26 21:22:04.998 [499316344@qtp-1087989112-4] DEBUG c.imooc.o2o.dao.ShopCategoryDao.queryShopCategory -==>  Preparing: SELECT shop_category_id,shop_category_name,shop_category_desc,shop_category_img, priority,create_time,last_edit_time,parent_id FROM tb_shop_category WHERE parent_id is not null ORDER BY priority DESC; 
+2021-01-26 21:22:04.998 [499316344@qtp-1087989112-4] DEBUG c.imooc.o2o.dao.ShopCategoryDao.queryShopCategory -==> Parameters: 
+2021-01-26 21:22:05.001 [499316344@qtp-1087989112-4] DEBUG c.imooc.o2o.dao.ShopCategoryDao.queryShopCategory -<==      Total: 1
+2021-01-26 21:22:05.002 [499316344@qtp-1087989112-4] DEBUG c.imooc.o2o.dao.split.DynamicDataSourceInterceptor -设置方法[com.imooc.o2o.dao.AreaDao.queryArea] use[slave] Strategy,SqlCommandType[SELECT]...
+2021-01-26 21:22:05.002 [499316344@qtp-1087989112-4] DEBUG com.imooc.o2o.dao.split.DynamicDataSourceHolder -所使用的数据源为：slave
+2021-01-26 21:22:05.002 [499316344@qtp-1087989112-4] DEBUG com.imooc.o2o.dao.AreaDao.queryArea -==>  Preparing: select area_id,area_name,priority,create_time,last_edit_time from tb_area order by priority desc; 
+2021-01-26 21:22:05.002 [499316344@qtp-1087989112-4] DEBUG com.imooc.o2o.dao.AreaDao.queryArea -==> Parameters: 
+2021-01-26 21:22:05.005 [499316344@qtp-1087989112-4] DEBUG com.imooc.o2o.dao.AreaDao.queryArea -<==      Total: 3
+2021-01-26 21:23:01.641 [499316344@qtp-1087989112-4] DEBUG c.imooc.o2o.dao.split.DynamicDataSourceInterceptor -设置方法[com.imooc.o2o.dao.ShopCategoryDao.queryShopCategory] use[slave] Strategy,SqlCommandType[SELECT]...
+2021-01-26 21:23:01.641 [499316344@qtp-1087989112-4] DEBUG com.imooc.o2o.dao.split.DynamicDataSourceHolder -所使用的数据源为：slave
+2021-01-26 21:23:01.642 [499316344@qtp-1087989112-4] DEBUG c.imooc.o2o.dao.ShopCategoryDao.queryShopCategory -==>  Preparing: SELECT shop_category_id,shop_category_name,shop_category_desc,shop_category_img, priority,create_time,last_edit_time,parent_id FROM tb_shop_category WHERE parent_id is not null ORDER BY priority DESC; 
+2021-01-26 21:23:01.642 [499316344@qtp-1087989112-4] DEBUG c.imooc.o2o.dao.ShopCategoryDao.queryShopCategory -==> Parameters: 
+2021-01-26 21:23:01.644 [499316344@qtp-1087989112-4] DEBUG c.imooc.o2o.dao.ShopCategoryDao.queryShopCategory -<==      Total: 1
+2021-01-26 21:23:01.645 [499316344@qtp-1087989112-4] DEBUG c.imooc.o2o.dao.split.DynamicDataSourceInterceptor -设置方法[com.imooc.o2o.dao.AreaDao.queryArea] use[slave] Strategy,SqlCommandType[SELECT]...
+2021-01-26 21:23:01.645 [499316344@qtp-1087989112-4] DEBUG com.imooc.o2o.dao.split.DynamicDataSourceHolder -所使用的数据源为：slave
+2021-01-26 21:23:01.645 [499316344@qtp-1087989112-4] DEBUG com.imooc.o2o.dao.AreaDao.queryArea -==>  Preparing: select area_id,area_name,priority,create_time,last_edit_time from tb_area order by priority desc; 
+2021-01-26 21:23:01.645 [499316344@qtp-1087989112-4] DEBUG com.imooc.o2o.dao.AreaDao.queryArea -==> Parameters: 
+2021-01-26 21:23:01.647 [499316344@qtp-1087989112-4] DEBUG com.imooc.o2o.dao.AreaDao.queryArea -<==      Total: 3
+2021-01-26 21:24:24.669 [499316344@qtp-1087989112-4] DEBUG c.imooc.o2o.dao.split.DynamicDataSourceInterceptor -设置方法[com.imooc.o2o.dao.ShopDao.queryShopList] use[slave] Strategy,SqlCommandType[SELECT]...
+2021-01-26 21:24:24.669 [499316344@qtp-1087989112-4] DEBUG com.imooc.o2o.dao.split.DynamicDataSourceHolder -所使用的数据源为：slave
+2021-01-26 21:24:24.669 [499316344@qtp-1087989112-4] DEBUG com.imooc.o2o.dao.ShopDao.queryShopList -==>  Preparing: select s.shop_id, s.shop_name, s.shop_desc, s.shop_addr, s.phone, s.shop_img, s.priority, s.enable_status, s.create_time, s.last_edit_time, s.advice, a.area_id, a.area_name, sc.shop_category_id, sc.shop_category_name FROM tb_shop s, tb_shop_category sc, tb_area a WHERE s.owner_id = ? and s.shop_category_id = sc.shop_category_id and s.area_id = a.area_id ORDER BY s.priority DESC LIMIT ?, ?; 
+2021-01-26 21:24:24.670 [499316344@qtp-1087989112-4] DEBUG com.imooc.o2o.dao.ShopDao.queryShopList -==> Parameters: 1(Long), 0(Integer), 100(Integer)
+2021-01-26 21:24:24.677 [499316344@qtp-1087989112-4] DEBUG com.imooc.o2o.dao.ShopDao.queryShopList -<==      Total: 50
+2021-01-26 21:24:24.678 [499316344@qtp-1087989112-4] DEBUG c.imooc.o2o.dao.split.DynamicDataSourceInterceptor -设置方法[com.imooc.o2o.dao.ShopDao.queryShopCount] use[slave] Strategy,SqlCommandType[SELECT]...
+2021-01-26 21:24:24.679 [499316344@qtp-1087989112-4] DEBUG com.imooc.o2o.dao.split.DynamicDataSourceHolder -所使用的数据源为：slave
+2021-01-26 21:24:24.679 [499316344@qtp-1087989112-4] DEBUG com.imooc.o2o.dao.ShopDao.queryShopCount -==>  Preparing: SELECT COUNT(*) FROM tb_shop s, tb_shop_category sc, tb_area a WHERE s.shop_category_id = sc.shop_category_id and s.area_id = a.area_id and s.owner_id = ? ORDER BY s.priority DESC; 
+2021-01-26 21:24:24.680 [499316344@qtp-1087989112-4] DEBUG com.imooc.o2o.dao.ShopDao.queryShopCount -==> Parameters: 1(Long)
+2021-01-26 21:24:24.683 [499316344@qtp-1087989112-4] DEBUG com.imooc.o2o.dao.ShopDao.queryShopCount -<==      Total: 1
+2021-01-26 21:25:13.713 [499316344@qtp-1087989112-4] DEBUG c.imooc.o2o.dao.split.DynamicDataSourceInterceptor -设置方法[com.imooc.o2o.dao.ShopDao.queryShopList] use[slave] Strategy,SqlCommandType[SELECT]...
+2021-01-26 21:25:13.714 [499316344@qtp-1087989112-4] DEBUG com.imooc.o2o.dao.split.DynamicDataSourceHolder -所使用的数据源为：slave
+2021-01-26 21:25:13.714 [499316344@qtp-1087989112-4] DEBUG com.imooc.o2o.dao.ShopDao.queryShopList -==>  Preparing: select s.shop_id, s.shop_name, s.shop_desc, s.shop_addr, s.phone, s.shop_img, s.priority, s.enable_status, s.create_time, s.last_edit_time, s.advice, a.area_id, a.area_name, sc.shop_category_id, sc.shop_category_name FROM tb_shop s, tb_shop_category sc, tb_area a WHERE s.owner_id = ? and s.shop_category_id = sc.shop_category_id and s.area_id = a.area_id ORDER BY s.priority DESC LIMIT ?, ?; 
+2021-01-26 21:25:13.714 [499316344@qtp-1087989112-4] DEBUG com.imooc.o2o.dao.ShopDao.queryShopList -==> Parameters: 1(Long), 0(Integer), 100(Integer)
+2021-01-26 21:25:13.721 [499316344@qtp-1087989112-4] DEBUG com.imooc.o2o.dao.ShopDao.queryShopList -<==      Total: 50
+2021-01-26 21:25:13.722 [499316344@qtp-1087989112-4] DEBUG c.imooc.o2o.dao.split.DynamicDataSourceInterceptor -设置方法[com.imooc.o2o.dao.ShopDao.queryShopCount] use[slave] Strategy,SqlCommandType[SELECT]...
+2021-01-26 21:25:13.722 [499316344@qtp-1087989112-4] DEBUG com.imooc.o2o.dao.split.DynamicDataSourceHolder -所使用的数据源为：slave
+2021-01-26 21:25:13.722 [499316344@qtp-1087989112-4] DEBUG com.imooc.o2o.dao.ShopDao.queryShopCount -==>  Preparing: SELECT COUNT(*) FROM tb_shop s, tb_shop_category sc, tb_area a WHERE s.shop_category_id = sc.shop_category_id and s.area_id = a.area_id and s.owner_id = ? ORDER BY s.priority DESC; 
+2021-01-26 21:25:13.722 [499316344@qtp-1087989112-4] DEBUG com.imooc.o2o.dao.ShopDao.queryShopCount -==> Parameters: 1(Long)
+2021-01-26 21:25:13.725 [499316344@qtp-1087989112-4] DEBUG com.imooc.o2o.dao.ShopDao.queryShopCount -<==      Total: 1
+2021-01-26 21:25:32.727 [872742741@qtp-1087989112-7] DEBUG c.imooc.o2o.dao.split.DynamicDataSourceInterceptor -设置方法[com.imooc.o2o.dao.ShopCategoryDao.queryShopCategory] use[slave] Strategy,SqlCommandType[SELECT]...
+2021-01-26 21:25:32.727 [872742741@qtp-1087989112-7] DEBUG com.imooc.o2o.dao.split.DynamicDataSourceHolder -所使用的数据源为：slave
+2021-01-26 21:25:32.727 [872742741@qtp-1087989112-7] DEBUG c.imooc.o2o.dao.ShopCategoryDao.queryShopCategory -==>  Preparing: SELECT shop_category_id,shop_category_name,shop_category_desc,shop_category_img, priority,create_time,last_edit_time,parent_id FROM tb_shop_category WHERE parent_id is not null ORDER BY priority DESC; 
+2021-01-26 21:25:32.727 [872742741@qtp-1087989112-7] DEBUG c.imooc.o2o.dao.ShopCategoryDao.queryShopCategory -==> Parameters: 
+2021-01-26 21:25:32.730 [872742741@qtp-1087989112-7] DEBUG c.imooc.o2o.dao.ShopCategoryDao.queryShopCategory -<==      Total: 1
+2021-01-26 21:25:32.730 [872742741@qtp-1087989112-7] DEBUG c.imooc.o2o.dao.split.DynamicDataSourceInterceptor -设置方法[com.imooc.o2o.dao.AreaDao.queryArea] use[slave] Strategy,SqlCommandType[SELECT]...
+2021-01-26 21:25:32.730 [872742741@qtp-1087989112-7] DEBUG com.imooc.o2o.dao.split.DynamicDataSourceHolder -所使用的数据源为：slave
+2021-01-26 21:25:32.731 [872742741@qtp-1087989112-7] DEBUG com.imooc.o2o.dao.AreaDao.queryArea -==>  Preparing: select area_id,area_name,priority,create_time,last_edit_time from tb_area order by priority desc; 
+2021-01-26 21:25:32.731 [872742741@qtp-1087989112-7] DEBUG com.imooc.o2o.dao.AreaDao.queryArea -==> Parameters: 
+2021-01-26 21:25:32.733 [872742741@qtp-1087989112-7] DEBUG com.imooc.o2o.dao.AreaDao.queryArea -<==      Total: 3
+2021-01-26 21:29:51.585 [1743982327@qtp-1087989112-9] DEBUG c.imooc.o2o.dao.split.DynamicDataSourceInterceptor -设置方法[com.imooc.o2o.dao.ShopDao.queryShopList] use[slave] Strategy,SqlCommandType[SELECT]...
+2021-01-26 21:29:51.585 [1743982327@qtp-1087989112-9] DEBUG com.imooc.o2o.dao.split.DynamicDataSourceHolder -所使用的数据源为：slave
+2021-01-26 21:29:51.586 [1743982327@qtp-1087989112-9] DEBUG com.imooc.o2o.dao.ShopDao.queryShopList -==>  Preparing: select s.shop_id, s.shop_name, s.shop_desc, s.shop_addr, s.phone, s.shop_img, s.priority, s.enable_status, s.create_time, s.last_edit_time, s.advice, a.area_id, a.area_name, sc.shop_category_id, sc.shop_category_name FROM tb_shop s, tb_shop_category sc, tb_area a WHERE s.owner_id = ? and s.shop_category_id = sc.shop_category_id and s.area_id = a.area_id ORDER BY s.priority DESC LIMIT ?, ?; 
+2021-01-26 21:29:51.587 [1743982327@qtp-1087989112-9] DEBUG com.imooc.o2o.dao.ShopDao.queryShopList -==> Parameters: 1(Long), 0(Integer), 100(Integer)
+2021-01-26 21:29:51.594 [1743982327@qtp-1087989112-9] DEBUG com.imooc.o2o.dao.ShopDao.queryShopList -<==      Total: 50
+2021-01-26 21:29:51.595 [1743982327@qtp-1087989112-9] DEBUG c.imooc.o2o.dao.split.DynamicDataSourceInterceptor -设置方法[com.imooc.o2o.dao.ShopDao.queryShopCount] use[slave] Strategy,SqlCommandType[SELECT]...
+2021-01-26 21:29:51.595 [1743982327@qtp-1087989112-9] DEBUG com.imooc.o2o.dao.split.DynamicDataSourceHolder -所使用的数据源为：slave
+2021-01-26 21:29:51.595 [1743982327@qtp-1087989112-9] DEBUG com.imooc.o2o.dao.ShopDao.queryShopCount -==>  Preparing: SELECT COUNT(*) FROM tb_shop s, tb_shop_category sc, tb_area a WHERE s.shop_category_id = sc.shop_category_id and s.area_id = a.area_id and s.owner_id = ? ORDER BY s.priority DESC; 
+2021-01-26 21:29:51.596 [1743982327@qtp-1087989112-9] DEBUG com.imooc.o2o.dao.ShopDao.queryShopCount -==> Parameters: 1(Long)
+2021-01-26 21:29:51.598 [1743982327@qtp-1087989112-9] DEBUG com.imooc.o2o.dao.ShopDao.queryShopCount -<==      Total: 1
+2021-01-26 21:29:55.206 [1743982327@qtp-1087989112-9] DEBUG c.imooc.o2o.dao.split.DynamicDataSourceInterceptor -设置方法[com.imooc.o2o.dao.ShopDao.queryShopList] use[slave] Strategy,SqlCommandType[SELECT]...
+2021-01-26 21:29:55.206 [1743982327@qtp-1087989112-9] DEBUG com.imooc.o2o.dao.split.DynamicDataSourceHolder -所使用的数据源为：slave
+2021-01-26 21:29:55.206 [1743982327@qtp-1087989112-9] DEBUG com.imooc.o2o.dao.ShopDao.queryShopList -==>  Preparing: select s.shop_id, s.shop_name, s.shop_desc, s.shop_addr, s.phone, s.shop_img, s.priority, s.enable_status, s.create_time, s.last_edit_time, s.advice, a.area_id, a.area_name, sc.shop_category_id, sc.shop_category_name FROM tb_shop s, tb_shop_category sc, tb_area a WHERE s.owner_id = ? and s.shop_category_id = sc.shop_category_id and s.area_id = a.area_id ORDER BY s.priority DESC LIMIT ?, ?; 
+2021-01-26 21:29:55.206 [1743982327@qtp-1087989112-9] DEBUG com.imooc.o2o.dao.ShopDao.queryShopList -==> Parameters: 1(Long), 0(Integer), 100(Integer)
+2021-01-26 21:29:55.212 [1743982327@qtp-1087989112-9] DEBUG com.imooc.o2o.dao.ShopDao.queryShopList -<==      Total: 50
+2021-01-26 21:29:55.213 [1743982327@qtp-1087989112-9] DEBUG c.imooc.o2o.dao.split.DynamicDataSourceInterceptor -设置方法[com.imooc.o2o.dao.ShopDao.queryShopCount] use[slave] Strategy,SqlCommandType[SELECT]...
+2021-01-26 21:29:55.213 [1743982327@qtp-1087989112-9] DEBUG com.imooc.o2o.dao.split.DynamicDataSourceHolder -所使用的数据源为：slave
+2021-01-26 21:29:55.213 [1743982327@qtp-1087989112-9] DEBUG com.imooc.o2o.dao.ShopDao.queryShopCount -==>  Preparing: SELECT COUNT(*) FROM tb_shop s, tb_shop_category sc, tb_area a WHERE s.shop_category_id = sc.shop_category_id and s.area_id = a.area_id and s.owner_id = ? ORDER BY s.priority DESC; 
+2021-01-26 21:29:55.213 [1743982327@qtp-1087989112-9] DEBUG com.imooc.o2o.dao.ShopDao.queryShopCount -==> Parameters: 1(Long)
+2021-01-26 21:29:55.216 [1743982327@qtp-1087989112-9] DEBUG com.imooc.o2o.dao.ShopDao.queryShopCount -<==      Total: 1
+2021-01-26 21:30:00.262 [1743982327@qtp-1087989112-9] DEBUG c.imooc.o2o.dao.split.DynamicDataSourceInterceptor -设置方法[com.imooc.o2o.dao.ShopDao.queryShopList] use[slave] Strategy,SqlCommandType[SELECT]...
+2021-01-26 21:30:00.262 [1743982327@qtp-1087989112-9] DEBUG com.imooc.o2o.dao.split.DynamicDataSourceHolder -所使用的数据源为：slave
+2021-01-26 21:30:00.263 [1743982327@qtp-1087989112-9] DEBUG com.imooc.o2o.dao.ShopDao.queryShopList -==>  Preparing: select s.shop_id, s.shop_name, s.shop_desc, s.shop_addr, s.phone, s.shop_img, s.priority, s.enable_status, s.create_time, s.last_edit_time, s.advice, a.area_id, a.area_name, sc.shop_category_id, sc.shop_category_name FROM tb_shop s, tb_shop_category sc, tb_area a WHERE s.owner_id = ? and s.shop_category_id = sc.shop_category_id and s.area_id = a.area_id ORDER BY s.priority DESC LIMIT ?, ?; 
+2021-01-26 21:30:00.263 [1743982327@qtp-1087989112-9] DEBUG com.imooc.o2o.dao.ShopDao.queryShopList -==> Parameters: 1(Long), 0(Integer), 100(Integer)
+2021-01-26 21:30:00.268 [1743982327@qtp-1087989112-9] DEBUG com.imooc.o2o.dao.ShopDao.queryShopList -<==      Total: 50
+2021-01-26 21:30:00.269 [1743982327@qtp-1087989112-9] DEBUG c.imooc.o2o.dao.split.DynamicDataSourceInterceptor -设置方法[com.imooc.o2o.dao.ShopDao.queryShopCount] use[slave] Strategy,SqlCommandType[SELECT]...
+2021-01-26 21:30:00.270 [1743982327@qtp-1087989112-9] DEBUG com.imooc.o2o.dao.split.DynamicDataSourceHolder -所使用的数据源为：slave
+2021-01-26 21:30:00.270 [1743982327@qtp-1087989112-9] DEBUG com.imooc.o2o.dao.ShopDao.queryShopCount -==>  Preparing: SELECT COUNT(*) FROM tb_shop s, tb_shop_category sc, tb_area a WHERE s.shop_category_id = sc.shop_category_id and s.area_id = a.area_id and s.owner_id = ? ORDER BY s.priority DESC; 
+2021-01-26 21:30:00.270 [1743982327@qtp-1087989112-9] DEBUG com.imooc.o2o.dao.ShopDao.queryShopCount -==> Parameters: 1(Long)
+2021-01-26 21:30:00.273 [1743982327@qtp-1087989112-9] DEBUG com.imooc.o2o.dao.ShopDao.queryShopCount -<==      Total: 1
+2021-01-26 21:30:15.707 [1743982327@qtp-1087989112-9] DEBUG c.imooc.o2o.dao.split.DynamicDataSourceInterceptor -设置方法[com.imooc.o2o.dao.ShopDao.queryShopList] use[slave] Strategy,SqlCommandType[SELECT]...
+2021-01-26 21:30:15.707 [1743982327@qtp-1087989112-9] DEBUG com.imooc.o2o.dao.split.DynamicDataSourceHolder -所使用的数据源为：slave
+2021-01-26 21:30:15.708 [1743982327@qtp-1087989112-9] DEBUG com.imooc.o2o.dao.ShopDao.queryShopList -==>  Preparing: select s.shop_id, s.shop_name, s.shop_desc, s.shop_addr, s.phone, s.shop_img, s.priority, s.enable_status, s.create_time, s.last_edit_time, s.advice, a.area_id, a.area_name, sc.shop_category_id, sc.shop_category_name FROM tb_shop s, tb_shop_category sc, tb_area a WHERE s.owner_id = ? and s.shop_category_id = sc.shop_category_id and s.area_id = a.area_id ORDER BY s.priority DESC LIMIT ?, ?; 
+2021-01-26 21:30:15.708 [1743982327@qtp-1087989112-9] DEBUG com.imooc.o2o.dao.ShopDao.queryShopList -==> Parameters: 1(Long), 0(Integer), 100(Integer)
+2021-01-26 21:30:15.712 [1743982327@qtp-1087989112-9] DEBUG com.imooc.o2o.dao.ShopDao.queryShopList -<==      Total: 50
+2021-01-26 21:30:15.713 [1743982327@qtp-1087989112-9] DEBUG c.imooc.o2o.dao.split.DynamicDataSourceInterceptor -设置方法[com.imooc.o2o.dao.ShopDao.queryShopCount] use[slave] Strategy,SqlCommandType[SELECT]...
+2021-01-26 21:30:15.713 [1743982327@qtp-1087989112-9] DEBUG com.imooc.o2o.dao.split.DynamicDataSourceHolder -所使用的数据源为：slave
+2021-01-26 21:30:15.713 [1743982327@qtp-1087989112-9] DEBUG com.imooc.o2o.dao.ShopDao.queryShopCount -==>  Preparing: SELECT COUNT(*) FROM tb_shop s, tb_shop_category sc, tb_area a WHERE s.shop_category_id = sc.shop_category_id and s.area_id = a.area_id and s.owner_id = ? ORDER BY s.priority DESC; 
+2021-01-26 21:30:15.714 [1743982327@qtp-1087989112-9] DEBUG com.imooc.o2o.dao.ShopDao.queryShopCount -==> Parameters: 1(Long)
+2021-01-26 21:30:15.716 [1743982327@qtp-1087989112-9] DEBUG com.imooc.o2o.dao.ShopDao.queryShopCount -<==      Total: 1
+2021-01-26 21:30:18.678 [1743982327@qtp-1087989112-9] DEBUG c.imooc.o2o.dao.split.DynamicDataSourceInterceptor -设置方法[com.imooc.o2o.dao.ShopDao.queryShopList] use[slave] Strategy,SqlCommandType[SELECT]...
+2021-01-26 21:30:18.678 [1743982327@qtp-1087989112-9] DEBUG com.imooc.o2o.dao.split.DynamicDataSourceHolder -所使用的数据源为：slave
+2021-01-26 21:30:18.678 [1743982327@qtp-1087989112-9] DEBUG com.imooc.o2o.dao.ShopDao.queryShopList -==>  Preparing: select s.shop_id, s.shop_name, s.shop_desc, s.shop_addr, s.phone, s.shop_img, s.priority, s.enable_status, s.create_time, s.last_edit_time, s.advice, a.area_id, a.area_name, sc.shop_category_id, sc.shop_category_name FROM tb_shop s, tb_shop_category sc, tb_area a WHERE s.owner_id = ? and s.shop_category_id = sc.shop_category_id and s.area_id = a.area_id ORDER BY s.priority DESC LIMIT ?, ?; 
+2021-01-26 21:30:18.678 [1743982327@qtp-1087989112-9] DEBUG com.imooc.o2o.dao.ShopDao.queryShopList -==> Parameters: 1(Long), 0(Integer), 100(Integer)
+2021-01-26 21:30:18.683 [1743982327@qtp-1087989112-9] DEBUG com.imooc.o2o.dao.ShopDao.queryShopList -<==      Total: 50
+2021-01-26 21:30:18.684 [1743982327@qtp-1087989112-9] DEBUG c.imooc.o2o.dao.split.DynamicDataSourceInterceptor -设置方法[com.imooc.o2o.dao.ShopDao.queryShopCount] use[slave] Strategy,SqlCommandType[SELECT]...
+2021-01-26 21:30:18.684 [1743982327@qtp-1087989112-9] DEBUG com.imooc.o2o.dao.split.DynamicDataSourceHolder -所使用的数据源为：slave
+2021-01-26 21:30:18.684 [1743982327@qtp-1087989112-9] DEBUG com.imooc.o2o.dao.ShopDao.queryShopCount -==>  Preparing: SELECT COUNT(*) FROM tb_shop s, tb_shop_category sc, tb_area a WHERE s.shop_category_id = sc.shop_category_id and s.area_id = a.area_id and s.owner_id = ? ORDER BY s.priority DESC; 
+2021-01-26 21:30:18.684 [1743982327@qtp-1087989112-9] DEBUG com.imooc.o2o.dao.ShopDao.queryShopCount -==> Parameters: 1(Long)
+2021-01-26 21:30:18.687 [1743982327@qtp-1087989112-9] DEBUG com.imooc.o2o.dao.ShopDao.queryShopCount -<==      Total: 1
+2021-01-26 21:30:41.015 [1743982327@qtp-1087989112-9] DEBUG c.imooc.o2o.dao.split.DynamicDataSourceInterceptor -设置方法[com.imooc.o2o.dao.ShopDao.queryShopList] use[slave] Strategy,SqlCommandType[SELECT]...
+2021-01-26 21:30:41.016 [1743982327@qtp-1087989112-9] DEBUG com.imooc.o2o.dao.split.DynamicDataSourceHolder -所使用的数据源为：slave
+2021-01-26 21:30:41.016 [1743982327@qtp-1087989112-9] DEBUG com.imooc.o2o.dao.ShopDao.queryShopList -==>  Preparing: select s.shop_id, s.shop_name, s.shop_desc, s.shop_addr, s.phone, s.shop_img, s.priority, s.enable_status, s.create_time, s.last_edit_time, s.advice, a.area_id, a.area_name, sc.shop_category_id, sc.shop_category_name FROM tb_shop s, tb_shop_category sc, tb_area a WHERE s.owner_id = ? and s.shop_category_id = sc.shop_category_id and s.area_id = a.area_id ORDER BY s.priority DESC LIMIT ?, ?; 
+2021-01-26 21:30:41.016 [1743982327@qtp-1087989112-9] DEBUG com.imooc.o2o.dao.ShopDao.queryShopList -==> Parameters: 1(Long), 0(Integer), 100(Integer)
+2021-01-26 21:30:41.020 [1743982327@qtp-1087989112-9] DEBUG com.imooc.o2o.dao.ShopDao.queryShopList -<==      Total: 50
+2021-01-26 21:30:41.021 [1743982327@qtp-1087989112-9] DEBUG c.imooc.o2o.dao.split.DynamicDataSourceInterceptor -设置方法[com.imooc.o2o.dao.ShopDao.queryShopCount] use[slave] Strategy,SqlCommandType[SELECT]...
+2021-01-26 21:30:41.021 [1743982327@qtp-1087989112-9] DEBUG com.imooc.o2o.dao.split.DynamicDataSourceHolder -所使用的数据源为：slave
+2021-01-26 21:30:41.021 [1743982327@qtp-1087989112-9] DEBUG com.imooc.o2o.dao.ShopDao.queryShopCount -==>  Preparing: SELECT COUNT(*) FROM tb_shop s, tb_shop_category sc, tb_area a WHERE s.shop_category_id = sc.shop_category_id and s.area_id = a.area_id and s.owner_id = ? ORDER BY s.priority DESC; 
+2021-01-26 21:30:41.021 [1743982327@qtp-1087989112-9] DEBUG com.imooc.o2o.dao.ShopDao.queryShopCount -==> Parameters: 1(Long)
+2021-01-26 21:30:41.024 [1743982327@qtp-1087989112-9] DEBUG com.imooc.o2o.dao.ShopDao.queryShopCount -<==      Total: 1
+2021-01-26 21:30:43.529 [1743982327@qtp-1087989112-9] DEBUG c.imooc.o2o.dao.split.DynamicDataSourceInterceptor -设置方法[com.imooc.o2o.dao.ShopDao.queryShopList] use[slave] Strategy,SqlCommandType[SELECT]...
+2021-01-26 21:30:43.529 [1743982327@qtp-1087989112-9] DEBUG com.imooc.o2o.dao.split.DynamicDataSourceHolder -所使用的数据源为：slave
+2021-01-26 21:30:43.529 [1743982327@qtp-1087989112-9] DEBUG com.imooc.o2o.dao.ShopDao.queryShopList -==>  Preparing: select s.shop_id, s.shop_name, s.shop_desc, s.shop_addr, s.phone, s.shop_img, s.priority, s.enable_status, s.create_time, s.last_edit_time, s.advice, a.area_id, a.area_name, sc.shop_category_id, sc.shop_category_name FROM tb_shop s, tb_shop_category sc, tb_area a WHERE s.owner_id = ? and s.shop_category_id = sc.shop_category_id and s.area_id = a.area_id ORDER BY s.priority DESC LIMIT ?, ?; 
+2021-01-26 21:30:43.530 [1743982327@qtp-1087989112-9] DEBUG com.imooc.o2o.dao.ShopDao.queryShopList -==> Parameters: 1(Long), 0(Integer), 100(Integer)
+2021-01-26 21:30:43.534 [1743982327@qtp-1087989112-9] DEBUG com.imooc.o2o.dao.ShopDao.queryShopList -<==      Total: 50
+2021-01-26 21:30:43.534 [1743982327@qtp-1087989112-9] DEBUG c.imooc.o2o.dao.split.DynamicDataSourceInterceptor -设置方法[com.imooc.o2o.dao.ShopDao.queryShopCount] use[slave] Strategy,SqlCommandType[SELECT]...
+2021-01-26 21:30:43.534 [1743982327@qtp-1087989112-9] DEBUG com.imooc.o2o.dao.split.DynamicDataSourceHolder -所使用的数据源为：slave
+2021-01-26 21:30:43.535 [1743982327@qtp-1087989112-9] DEBUG com.imooc.o2o.dao.ShopDao.queryShopCount -==>  Preparing: SELECT COUNT(*) FROM tb_shop s, tb_shop_category sc, tb_area a WHERE s.shop_category_id = sc.shop_category_id and s.area_id = a.area_id and s.owner_id = ? ORDER BY s.priority DESC; 
+2021-01-26 21:30:43.535 [1743982327@qtp-1087989112-9] DEBUG com.imooc.o2o.dao.ShopDao.queryShopCount -==> Parameters: 1(Long)
+2021-01-26 21:30:43.537 [1743982327@qtp-1087989112-9] DEBUG com.imooc.o2o.dao.ShopDao.queryShopCount -<==      Total: 1
+2021-01-26 21:30:46.314 [1743982327@qtp-1087989112-9] DEBUG c.imooc.o2o.dao.split.DynamicDataSourceInterceptor -设置方法[com.imooc.o2o.dao.ShopDao.queryShopList] use[slave] Strategy,SqlCommandType[SELECT]...
+2021-01-26 21:30:46.314 [1743982327@qtp-1087989112-9] DEBUG com.imooc.o2o.dao.split.DynamicDataSourceHolder -所使用的数据源为：slave
+2021-01-26 21:30:46.315 [1743982327@qtp-1087989112-9] DEBUG com.imooc.o2o.dao.ShopDao.queryShopList -==>  Preparing: select s.shop_id, s.shop_name, s.shop_desc, s.shop_addr, s.phone, s.shop_img, s.priority, s.enable_status, s.create_time, s.last_edit_time, s.advice, a.area_id, a.area_name, sc.shop_category_id, sc.shop_category_name FROM tb_shop s, tb_shop_category sc, tb_area a WHERE s.owner_id = ? and s.shop_category_id = sc.shop_category_id and s.area_id = a.area_id ORDER BY s.priority DESC LIMIT ?, ?; 
+2021-01-26 21:30:46.315 [1743982327@qtp-1087989112-9] DEBUG com.imooc.o2o.dao.ShopDao.queryShopList -==> Parameters: 1(Long), 0(Integer), 100(Integer)
+2021-01-26 21:30:46.319 [1743982327@qtp-1087989112-9] DEBUG com.imooc.o2o.dao.ShopDao.queryShopList -<==      Total: 50
+2021-01-26 21:30:46.319 [1743982327@qtp-1087989112-9] DEBUG c.imooc.o2o.dao.split.DynamicDataSourceInterceptor -设置方法[com.imooc.o2o.dao.ShopDao.queryShopCount] use[slave] Strategy,SqlCommandType[SELECT]...
+2021-01-26 21:30:46.319 [1743982327@qtp-1087989112-9] DEBUG com.imooc.o2o.dao.split.DynamicDataSourceHolder -所使用的数据源为：slave
+2021-01-26 21:30:46.319 [1743982327@qtp-1087989112-9] DEBUG com.imooc.o2o.dao.ShopDao.queryShopCount -==>  Preparing: SELECT COUNT(*) FROM tb_shop s, tb_shop_category sc, tb_area a WHERE s.shop_category_id = sc.shop_category_id and s.area_id = a.area_id and s.owner_id = ? ORDER BY s.priority DESC; 
+2021-01-26 21:30:46.319 [1743982327@qtp-1087989112-9] DEBUG com.imooc.o2o.dao.ShopDao.queryShopCount -==> Parameters: 1(Long)
+2021-01-26 21:30:46.322 [1743982327@qtp-1087989112-9] DEBUG com.imooc.o2o.dao.ShopDao.queryShopCount -<==      Total: 1
+2021-01-26 21:30:49.275 [1743982327@qtp-1087989112-9] DEBUG c.imooc.o2o.dao.split.DynamicDataSourceInterceptor -设置方法[com.imooc.o2o.dao.ShopDao.queryShopList] use[slave] Strategy,SqlCommandType[SELECT]...
+2021-01-26 21:30:49.275 [1743982327@qtp-1087989112-9] DEBUG com.imooc.o2o.dao.split.DynamicDataSourceHolder -所使用的数据源为：slave
+2021-01-26 21:30:49.275 [1743982327@qtp-1087989112-9] DEBUG com.imooc.o2o.dao.ShopDao.queryShopList -==>  Preparing: select s.shop_id, s.shop_name, s.shop_desc, s.shop_addr, s.phone, s.shop_img, s.priority, s.enable_status, s.create_time, s.last_edit_time, s.advice, a.area_id, a.area_name, sc.shop_category_id, sc.shop_category_name FROM tb_shop s, tb_shop_category sc, tb_area a WHERE s.owner_id = ? and s.shop_category_id = sc.shop_category_id and s.area_id = a.area_id ORDER BY s.priority DESC LIMIT ?, ?; 
+2021-01-26 21:30:49.275 [1743982327@qtp-1087989112-9] DEBUG com.imooc.o2o.dao.ShopDao.queryShopList -==> Parameters: 1(Long), 0(Integer), 100(Integer)
+2021-01-26 21:30:49.279 [1743982327@qtp-1087989112-9] DEBUG com.imooc.o2o.dao.ShopDao.queryShopList -<==      Total: 50
+2021-01-26 21:30:49.280 [1743982327@qtp-1087989112-9] DEBUG c.imooc.o2o.dao.split.DynamicDataSourceInterceptor -设置方法[com.imooc.o2o.dao.ShopDao.queryShopCount] use[slave] Strategy,SqlCommandType[SELECT]...
+2021-01-26 21:30:49.280 [1743982327@qtp-1087989112-9] DEBUG com.imooc.o2o.dao.split.DynamicDataSourceHolder -所使用的数据源为：slave
+2021-01-26 21:30:49.281 [1743982327@qtp-1087989112-9] DEBUG com.imooc.o2o.dao.ShopDao.queryShopCount -==>  Preparing: SELECT COUNT(*) FROM tb_shop s, tb_shop_category sc, tb_area a WHERE s.shop_category_id = sc.shop_category_id and s.area_id = a.area_id and s.owner_id = ? ORDER BY s.priority DESC; 
+2021-01-26 21:30:49.281 [1743982327@qtp-1087989112-9] DEBUG com.imooc.o2o.dao.ShopDao.queryShopCount -==> Parameters: 1(Long)
+2021-01-26 21:30:49.283 [1743982327@qtp-1087989112-9] DEBUG com.imooc.o2o.dao.ShopDao.queryShopCount -<==      Total: 1
+2021-01-26 21:32:42.056 [435059448@qtp-876420389-2] DEBUG c.imooc.o2o.dao.split.DynamicDataSourceInterceptor -设置方法[com.imooc.o2o.dao.ShopDao.queryShopList] use[slave] Strategy,SqlCommandType[SELECT]...
+2021-01-26 21:32:42.059 [435059448@qtp-876420389-2] DEBUG com.imooc.o2o.dao.split.DynamicDataSourceHolder -所使用的数据源为：slave
+2021-01-26 21:32:42.084 [435059448@qtp-876420389-2] DEBUG com.imooc.o2o.dao.ShopDao.queryShopList -==>  Preparing: select s.shop_id, s.shop_name, s.shop_desc, s.shop_addr, s.phone, s.shop_img, s.priority, s.enable_status, s.create_time, s.last_edit_time, s.advice, a.area_id, a.area_name, sc.shop_category_id, sc.shop_category_name FROM tb_shop s, tb_shop_category sc, tb_area a WHERE s.owner_id = ? and s.shop_category_id = sc.shop_category_id and s.area_id = a.area_id ORDER BY s.priority DESC LIMIT ?, ?; 
+2021-01-26 21:32:42.268 [435059448@qtp-876420389-2] DEBUG com.imooc.o2o.dao.ShopDao.queryShopList -==> Parameters: 1(Long), 0(Integer), 100(Integer)
+2021-01-26 21:32:42.340 [435059448@qtp-876420389-2] DEBUG com.imooc.o2o.dao.ShopDao.queryShopList -<==      Total: 50
+2021-01-26 21:32:42.349 [435059448@qtp-876420389-2] DEBUG c.imooc.o2o.dao.split.DynamicDataSourceInterceptor -设置方法[com.imooc.o2o.dao.ShopDao.queryShopCount] use[slave] Strategy,SqlCommandType[SELECT]...
+2021-01-26 21:32:42.349 [435059448@qtp-876420389-2] DEBUG com.imooc.o2o.dao.split.DynamicDataSourceHolder -所使用的数据源为：slave
+2021-01-26 21:32:42.350 [435059448@qtp-876420389-2] DEBUG com.imooc.o2o.dao.ShopDao.queryShopCount -==>  Preparing: SELECT COUNT(*) FROM tb_shop s, tb_shop_category sc, tb_area a WHERE s.shop_category_id = sc.shop_category_id and s.area_id = a.area_id and s.owner_id = ? ORDER BY s.priority DESC; 
+2021-01-26 21:32:42.350 [435059448@qtp-876420389-2] DEBUG com.imooc.o2o.dao.ShopDao.queryShopCount -==> Parameters: 1(Long)
+2021-01-26 21:32:42.353 [435059448@qtp-876420389-2] DEBUG com.imooc.o2o.dao.ShopDao.queryShopCount -<==      Total: 1
+2021-01-26 21:35:17.828 [1733815280@qtp-1114375302-3] DEBUG c.imooc.o2o.dao.split.DynamicDataSourceInterceptor -设置方法[com.imooc.o2o.dao.ShopDao.queryShopList] use[slave] Strategy,SqlCommandType[SELECT]...
+2021-01-26 21:35:17.829 [1733815280@qtp-1114375302-3] DEBUG com.imooc.o2o.dao.split.DynamicDataSourceHolder -所使用的数据源为：slave
+2021-01-26 21:35:17.844 [1733815280@qtp-1114375302-3] DEBUG com.imooc.o2o.dao.ShopDao.queryShopList -==>  Preparing: select s.shop_id, s.shop_name, s.shop_desc, s.shop_addr, s.phone, s.shop_img, s.priority, s.enable_status, s.create_time, s.last_edit_time, s.advice, a.area_id, a.area_name, sc.shop_category_id, sc.shop_category_name FROM tb_shop s, tb_shop_category sc, tb_area a WHERE s.owner_id = ? and s.shop_category_id = sc.shop_category_id and s.area_id = a.area_id ORDER BY s.priority DESC LIMIT ?, ?; 
+2021-01-26 21:35:17.907 [1733815280@qtp-1114375302-3] DEBUG com.imooc.o2o.dao.ShopDao.queryShopList -==> Parameters: 1(Long), 0(Integer), 100(Integer)
+2021-01-26 21:35:17.957 [1733815280@qtp-1114375302-3] DEBUG com.imooc.o2o.dao.ShopDao.queryShopList -<==      Total: 50
+2021-01-26 21:35:17.965 [1733815280@qtp-1114375302-3] DEBUG c.imooc.o2o.dao.split.DynamicDataSourceInterceptor -设置方法[com.imooc.o2o.dao.ShopDao.queryShopCount] use[slave] Strategy,SqlCommandType[SELECT]...
+2021-01-26 21:35:17.965 [1733815280@qtp-1114375302-3] DEBUG com.imooc.o2o.dao.split.DynamicDataSourceHolder -所使用的数据源为：slave
+2021-01-26 21:35:17.966 [1733815280@qtp-1114375302-3] DEBUG com.imooc.o2o.dao.ShopDao.queryShopCount -==>  Preparing: SELECT COUNT(*) FROM tb_shop s, tb_shop_category sc, tb_area a WHERE s.shop_category_id = sc.shop_category_id and s.area_id = a.area_id and s.owner_id = ? ORDER BY s.priority DESC; 
+2021-01-26 21:35:17.966 [1733815280@qtp-1114375302-3] DEBUG com.imooc.o2o.dao.ShopDao.queryShopCount -==> Parameters: 1(Long)
+2021-01-26 21:35:17.969 [1733815280@qtp-1114375302-3] DEBUG com.imooc.o2o.dao.ShopDao.queryShopCount -<==      Total: 1
+2021-01-26 21:35:21.004 [1733815280@qtp-1114375302-3] DEBUG c.imooc.o2o.dao.split.DynamicDataSourceInterceptor -设置方法[com.imooc.o2o.dao.ShopDao.queryShopList] use[slave] Strategy,SqlCommandType[SELECT]...
+2021-01-26 21:35:21.004 [1733815280@qtp-1114375302-3] DEBUG com.imooc.o2o.dao.split.DynamicDataSourceHolder -所使用的数据源为：slave
+2021-01-26 21:35:21.004 [1733815280@qtp-1114375302-3] DEBUG com.imooc.o2o.dao.ShopDao.queryShopList -==>  Preparing: select s.shop_id, s.shop_name, s.shop_desc, s.shop_addr, s.phone, s.shop_img, s.priority, s.enable_status, s.create_time, s.last_edit_time, s.advice, a.area_id, a.area_name, sc.shop_category_id, sc.shop_category_name FROM tb_shop s, tb_shop_category sc, tb_area a WHERE s.owner_id = ? and s.shop_category_id = sc.shop_category_id and s.area_id = a.area_id ORDER BY s.priority DESC LIMIT ?, ?; 
+2021-01-26 21:35:21.004 [1733815280@qtp-1114375302-3] DEBUG com.imooc.o2o.dao.ShopDao.queryShopList -==> Parameters: 1(Long), 0(Integer), 100(Integer)
+2021-01-26 21:35:21.017 [1733815280@qtp-1114375302-3] DEBUG com.imooc.o2o.dao.ShopDao.queryShopList -<==      Total: 50
+2021-01-26 21:35:21.018 [1733815280@qtp-1114375302-3] DEBUG c.imooc.o2o.dao.split.DynamicDataSourceInterceptor -设置方法[com.imooc.o2o.dao.ShopDao.queryShopCount] use[slave] Strategy,SqlCommandType[SELECT]...
+2021-01-26 21:35:21.018 [1733815280@qtp-1114375302-3] DEBUG com.imooc.o2o.dao.split.DynamicDataSourceHolder -所使用的数据源为：slave
+2021-01-26 21:35:21.018 [1733815280@qtp-1114375302-3] DEBUG com.imooc.o2o.dao.ShopDao.queryShopCount -==>  Preparing: SELECT COUNT(*) FROM tb_shop s, tb_shop_category sc, tb_area a WHERE s.shop_category_id = sc.shop_category_id and s.area_id = a.area_id and s.owner_id = ? ORDER BY s.priority DESC; 
+2021-01-26 21:35:21.018 [1733815280@qtp-1114375302-3] DEBUG com.imooc.o2o.dao.ShopDao.queryShopCount -==> Parameters: 1(Long)
+2021-01-26 21:35:21.021 [1733815280@qtp-1114375302-3] DEBUG com.imooc.o2o.dao.ShopDao.queryShopCount -<==      Total: 1
+2021-01-26 21:35:24.566 [1733815280@qtp-1114375302-3] DEBUG c.imooc.o2o.dao.split.DynamicDataSourceInterceptor -设置方法[com.imooc.o2o.dao.ShopDao.queryShopList] use[slave] Strategy,SqlCommandType[SELECT]...
+2021-01-26 21:35:24.566 [1733815280@qtp-1114375302-3] DEBUG com.imooc.o2o.dao.split.DynamicDataSourceHolder -所使用的数据源为：slave
+2021-01-26 21:35:24.567 [1733815280@qtp-1114375302-3] DEBUG com.imooc.o2o.dao.ShopDao.queryShopList -==>  Preparing: select s.shop_id, s.shop_name, s.shop_desc, s.shop_addr, s.phone, s.shop_img, s.priority, s.enable_status, s.create_time, s.last_edit_time, s.advice, a.area_id, a.area_name, sc.shop_category_id, sc.shop_category_name FROM tb_shop s, tb_shop_category sc, tb_area a WHERE s.owner_id = ? and s.shop_category_id = sc.shop_category_id and s.area_id = a.area_id ORDER BY s.priority DESC LIMIT ?, ?; 
+2021-01-26 21:35:24.567 [1733815280@qtp-1114375302-3] DEBUG com.imooc.o2o.dao.ShopDao.queryShopList -==> Parameters: 1(Long), 0(Integer), 100(Integer)
+2021-01-26 21:35:24.577 [1733815280@qtp-1114375302-3] DEBUG com.imooc.o2o.dao.ShopDao.queryShopList -<==      Total: 50
+2021-01-26 21:35:24.578 [1733815280@qtp-1114375302-3] DEBUG c.imooc.o2o.dao.split.DynamicDataSourceInterceptor -设置方法[com.imooc.o2o.dao.ShopDao.queryShopCount] use[slave] Strategy,SqlCommandType[SELECT]...
+2021-01-26 21:35:24.578 [1733815280@qtp-1114375302-3] DEBUG com.imooc.o2o.dao.split.DynamicDataSourceHolder -所使用的数据源为：slave
+2021-01-26 21:35:24.579 [1733815280@qtp-1114375302-3] DEBUG com.imooc.o2o.dao.ShopDao.queryShopCount -==>  Preparing: SELECT COUNT(*) FROM tb_shop s, tb_shop_category sc, tb_area a WHERE s.shop_category_id = sc.shop_category_id and s.area_id = a.area_id and s.owner_id = ? ORDER BY s.priority DESC; 
+2021-01-26 21:35:24.579 [1733815280@qtp-1114375302-3] DEBUG com.imooc.o2o.dao.ShopDao.queryShopCount -==> Parameters: 1(Long)
+2021-01-26 21:35:24.582 [1733815280@qtp-1114375302-3] DEBUG com.imooc.o2o.dao.ShopDao.queryShopCount -<==      Total: 1
+2021-01-26 21:35:57.611 [1203836143@qtp-876420389-2] DEBUG c.imooc.o2o.dao.split.DynamicDataSourceInterceptor -设置方法[com.imooc.o2o.dao.ShopDao.queryShopList] use[slave] Strategy,SqlCommandType[SELECT]...
+2021-01-26 21:35:57.613 [1203836143@qtp-876420389-2] DEBUG com.imooc.o2o.dao.split.DynamicDataSourceHolder -所使用的数据源为：slave
+2021-01-26 21:35:57.633 [1203836143@qtp-876420389-2] DEBUG com.imooc.o2o.dao.ShopDao.queryShopList -==>  Preparing: select s.shop_id, s.shop_name, s.shop_desc, s.shop_addr, s.phone, s.shop_img, s.priority, s.enable_status, s.create_time, s.last_edit_time, s.advice, a.area_id, a.area_name, sc.shop_category_id, sc.shop_category_name FROM tb_shop s, tb_shop_category sc, tb_area a WHERE s.owner_id = ? and s.shop_category_id = sc.shop_category_id and s.area_id = a.area_id ORDER BY s.priority DESC LIMIT ?, ?; 
+2021-01-26 21:35:57.766 [1203836143@qtp-876420389-2] DEBUG com.imooc.o2o.dao.ShopDao.queryShopList -==> Parameters: 1(Long), 0(Integer), 100(Integer)
+2021-01-26 21:35:57.837 [1203836143@qtp-876420389-2] DEBUG com.imooc.o2o.dao.ShopDao.queryShopList -<==      Total: 50
+2021-01-26 21:35:57.848 [1203836143@qtp-876420389-2] DEBUG c.imooc.o2o.dao.split.DynamicDataSourceInterceptor -设置方法[com.imooc.o2o.dao.ShopDao.queryShopCount] use[slave] Strategy,SqlCommandType[SELECT]...
+2021-01-26 21:35:57.848 [1203836143@qtp-876420389-2] DEBUG com.imooc.o2o.dao.split.DynamicDataSourceHolder -所使用的数据源为：slave
+2021-01-26 21:35:57.849 [1203836143@qtp-876420389-2] DEBUG com.imooc.o2o.dao.ShopDao.queryShopCount -==>  Preparing: SELECT COUNT(*) FROM tb_shop s, tb_shop_category sc, tb_area a WHERE s.shop_category_id = sc.shop_category_id and s.area_id = a.area_id and s.owner_id = ? ORDER BY s.priority DESC; 
+2021-01-26 21:35:57.849 [1203836143@qtp-876420389-2] DEBUG com.imooc.o2o.dao.ShopDao.queryShopCount -==> Parameters: 1(Long)
+2021-01-26 21:35:57.853 [1203836143@qtp-876420389-2] DEBUG com.imooc.o2o.dao.ShopDao.queryShopCount -<==      Total: 1

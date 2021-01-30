@@ -3,6 +3,11 @@ function changeVerifyCode(img) {
     img.src = "/o2o/Kaptcha?" + Math.floor(Math.random() * 100);
 }
 
+function handleClick(button) {
+    var id = button.id;
+    console.log(id);
+}
+
 //找出地址栏中是否有指定名字的参数，例如shopId
 function getQueryString(parameter) {
     let reg = new RegExp("(^|&)" + parameter + "=([^&]*)(&|$)", "i");

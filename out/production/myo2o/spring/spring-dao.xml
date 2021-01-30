@@ -2,7 +2,7 @@
 <beans xmlns="http://www.springframework.org/schema/beans"
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xmlns:context="http://www.springframework.org/schema/context"
-       xmlns:p="http://www.springframework.org/schema/p" xmlns:bean="http://www.springframework.org/schema/context"
+       xmlns:p="http://www.springframework.org/schema/p"
        xsi:schemaLocation="http://www.springframework.org/schema/beans
        http://www.springframework.org/schema/beans/spring-beans.xsd
        http://www.springframework.org/schema/context
@@ -15,7 +15,7 @@
 
     <!--数据库连接池，设置为abstract，便于后面继承属性配置主从库-->
     <bean id="abstractDataSource" class="com.mchange.v2.c3p0.ComboPooledDataSource"
-        abstract="true" destroy-method="close">
+          abstract="true" destroy-method="close">
         <!--c3p0连接池的私有属性-->
         <property name="maxPoolSize" value="30"/>
         <property name="minPoolSize" value="10"/>
@@ -59,7 +59,7 @@
     <!--懒加载，需要在SQL语句正式执行的时候才指定出来dataSource-->
     <bean id="dataSource" class="org.springframework.jdbc.datasource.LazyConnectionDataSourceProxy">
         <property name="targetDataSource">
-            <ref bean="dynamicDataSource"></ref>
+            <ref bean="dynamicDataSource"/>
         </property>
     </bean>
 

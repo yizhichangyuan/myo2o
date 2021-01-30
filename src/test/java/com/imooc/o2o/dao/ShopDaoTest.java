@@ -84,6 +84,7 @@ public class ShopDaoTest extends BaseTest {
         PersonInfo owner = new PersonInfo();
         owner.setUserId(1L);
         shopCondition.setOwner(owner);
+        shopCondition.setShopName("测试");
         List<Shop> shopList = shopDao.queryShopList(shopCondition, 0, 5);
         System.out.println("查询到的分页大小：" + shopList.size());
     }

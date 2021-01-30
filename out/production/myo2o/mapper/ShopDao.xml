@@ -107,7 +107,7 @@
         tb_area a
         <where>
             <if test="shopCondition.shopName != null">
-                and s.shop_name like '%#{shopCondition.shopName%}'
+                and s.shop_name like concat('%', #{shopCondition.shopName}, '%')
             </if>
             <if test="shopCondition.shopId != null">
                 and s.shop_id = #{shopCondition.shopId}
@@ -144,7 +144,7 @@
             and
             s.area_id = a.area_id
             <if test="shopCondition.shopName != null">
-                and s.shop_name like '%#{shopCondition.shopName%}'
+                and s.shop_name like concat('%', #{shopCondition.shopName}, '%')
             </if>
             <if test="shopCondition.shopId != null">
                 and s.shop_id = #{shopCondition.shopId}

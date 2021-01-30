@@ -20,7 +20,7 @@ $(function () {
     function handleShopList(shopList) {
         var shopListHtml = "";
         shopList.map(function (shop, index) {
-            shopListHtml += "<div class='row row-shop'>" + "<div class='col-40'>" + shop.shopName + "</div>"
+            shopListHtml += "<div class='row row-shop'>" + "<div class='col-40 shop-name'>" + shop.shopName + "</div>"
                 + "<div class='col-40'>" + shopStatus(shop.enableStatus) + "</div>"
                 + "<div class='col-20'>" + goShop(shop.enableStatus, shop.shopId) + "</div></div>"
 

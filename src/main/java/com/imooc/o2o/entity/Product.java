@@ -17,8 +17,16 @@ public class Product {
     // 管理信息
     private Integer priority;
     private Date createTime;
+    private Date lastEditTime;
     private Integer enableStatus; //商品状态，0表示下架不可用，1表示上架
 
+    public Date getLastEditTime() {
+        return lastEditTime;
+    }
+
+    public void setLastEditTime(Date lastEditTime) {
+        this.lastEditTime = lastEditTime;
+    }
 
     public Long getProductId() {
         return productId;

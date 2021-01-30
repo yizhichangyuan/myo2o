@@ -9,6 +9,7 @@ import com.imooc.o2o.entity.ShopCategory;
 import com.imooc.o2o.enums.ShopStateEnum;
 import com.imooc.o2o.exceptions.ShopOperationException;
 import com.imooc.o2o.service.AreaService;
+import com.imooc.o2o.service.ProductCategoryService;
 import com.imooc.o2o.service.ShopCategoryService;
 import com.imooc.o2o.service.ShopService;
 import com.imooc.o2o.util.CodeUtil;
@@ -38,6 +39,8 @@ public class ShopManagementController {
     private ShopCategoryService shopCategoryService;
     @Autowired
     private AreaService areaService;
+    @Autowired
+    private ProductCategoryService productCategoryService;
 
     // 从用户的店铺列表点击进入js发送请求的路由
     @RequestMapping(value = "getshopmanagementinfo", method = RequestMethod.GET)

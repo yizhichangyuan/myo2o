@@ -5,7 +5,6 @@ import com.imooc.o2o.entity.Area;
 import com.imooc.o2o.entity.PersonInfo;
 import com.imooc.o2o.entity.Shop;
 import com.imooc.o2o.entity.ShopCategory;
-import org.junit.Ignore;
 import org.junit.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 
@@ -20,7 +19,6 @@ public class ShopDaoTest extends BaseTest {
     private ShopDao shopDao;
 
     @Test
-    @Ignore
     public void testInsertShop() {
         Shop shop = new Shop();
         PersonInfo owner = new PersonInfo();
@@ -45,7 +43,6 @@ public class ShopDaoTest extends BaseTest {
     }
 
     @Test
-    @Ignore //忽略该测试
     public void testUpdateShop() {
         Shop shop = new Shop();
         shop.setShopId(8L);
@@ -71,7 +68,6 @@ public class ShopDaoTest extends BaseTest {
     }
 
     @Test
-    @Ignore
     public void testQueryShopById() {
         long shopId = 8;
         Shop shop = shopDao.queryByShopId(shopId);

@@ -38,4 +38,14 @@ public class PathUtil {
         String imagePath = "/upload/item/shop/" + shopId + "/";
         return imagePath.replace("/", System.getProperty("file.separator"));
     }
+
+    public static String getProductSimpleImgPath(long shopId, long productId) {
+        String productPath = "/upload/item/shop/" + shopId + "/" + productId + "/";
+        return productPath.replaceAll("/", System.getProperty("file.separator"));
+    }
+
+    public static String getProductDetailImgPath(long shopId, long productId) {
+        String productPath = "/upload/item/shop/" + shopId + "/" + productId + "/detail/";
+        return productPath.replaceAll("/", System.getProperty("file.separator"));
+    }
 }

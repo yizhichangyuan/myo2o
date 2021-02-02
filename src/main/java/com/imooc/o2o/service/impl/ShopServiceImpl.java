@@ -1,6 +1,7 @@
 package com.imooc.o2o.service.impl;
 
 import com.imooc.o2o.dao.ShopDao;
+import com.imooc.o2o.dto.ImageHolder;
 import com.imooc.o2o.dto.ShopExecution;
 import com.imooc.o2o.entity.Shop;
 import com.imooc.o2o.enums.ShopStateEnum;
@@ -14,7 +15,6 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.io.IOException;
-import java.io.InputStream;
 import java.util.Date;
 import java.util.List;
 
@@ -25,7 +25,7 @@ public class ShopServiceImpl implements ShopService {
 
     @Override
     @Transactional
-    public ShopExecution addShop(Shop shop, InputStream shopImgInputStream, String originalFileName) {
+    public ShopExecution addShop(Shop shop, ImageHolder thumbnail) {
         if (shop == null) {
             return new ShopExecution(ShopStateEnum.NULL_SHOP);
         }
@@ -42,10 +42,10 @@ public class ShopServiceImpl implements ShopService {
                 // 这里如果是Exception，则事务发生错误还是会提交
                 throw new ShopOperationException("店铺创建失败");
             } else {
-                if (shopImgInputStream != null) {
+                if (thumbnail.getImage() != null) {
                     // 存储图片，传入的shop是引用类型，里面会给shop赋予图片的地址
                     try {
-                        addShopImg(shop, shopImgInputStream, originalFileName);
+                        addShopImg(shop, thumbnail);
                     } catch (Exception e) {
                         throw new ShopOperationException("addShopImg error:" + e.getMessage());
                     }
@@ -69,17 +69,17 @@ public class ShopServiceImpl implements ShopService {
 
     @Override
     @Transactional
-    public ShopExecution modifyShop(Shop shop, InputStream shopImgInputStream, String originalFileName) {
+    public ShopExecution modifyShop(Shop shop, ImageHolder thumbnail) {
         if (shop == null || shop.getShopId() == null) {
             return new ShopExecution(ShopStateEnum.NULL_SHOP);
         }
         try {
             //1.更新店铺图片，如果确实有新的图片上传，则删除该店铺旧的图片，并添加水印更新shop.addr
-            if (shopImgInputStream != null && originalFileName != null && !"".equals(originalFileName)) {
+            if (thumbnail.getImage() != null && thumbnail.getImageName() != null && !"".equals(thumbnail.getImageName())) {
                 Shop tempShop = shopDao.queryByShopId(shop.getShopId());
                 ImageUtil.deleteFileOrPath(tempShop.getShopImg());
                 try {
-                    addShopImg(shop, shopImgInputStream, originalFileName);
+                    addShopImg(shop, thumbnail);
                 } catch (IOException e) {
                     throw new IOException("存储图片失败" + e.getMessage());
                 } catch (Exception e) {
@@ -119,10 +119,10 @@ public class ShopServiceImpl implements ShopService {
     }
 
 
-    private void addShopImg(Shop shop, InputStream shopImgInputStream, String fileName) throws IOException {
+    private void addShopImg(Shop shop, ImageHolder imageHolder) throws IOException {
         // 获取shop图片目录的相对值的路径
         String targetAddr = PathUtil.getShopImgPath(shop.getShopId());
-        String shopImgAddr = ImageUtil.generateThumbnail(shopImgInputStream, targetAddr, fileName);
+        String shopImgAddr = ImageUtil.generateThumbnail(imageHolder, targetAddr);
         shop.setShopImg(shopImgAddr);
     }
 }

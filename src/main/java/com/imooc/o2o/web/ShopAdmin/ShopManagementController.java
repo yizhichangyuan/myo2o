@@ -1,6 +1,7 @@
 package com.imooc.o2o.web.ShopAdmin;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.imooc.o2o.dto.ImageHolder;
 import com.imooc.o2o.dto.ShopExecution;
 import com.imooc.o2o.entity.Area;
 import com.imooc.o2o.entity.PersonInfo;
@@ -157,9 +158,10 @@ public class ShopManagementController {
             try {
                 ShopExecution shopExecution;
                 if (fileImg != null) {
-                    shopExecution = shopService.modifyShop(shop, fileImg.getInputStream(), fileImg.getOriginalFilename());
+                    ImageHolder thumbnail = new ImageHolder(fileImg.getInputStream(), fileImg.getOriginalFilename());
+                    shopExecution = shopService.modifyShop(shop, thumbnail);
                 } else {
-                    shopExecution = shopService.modifyShop(shop, null, "");
+                    shopExecution = shopService.modifyShop(shop, null);
                 }
                 if (shopExecution.getState() == ShopStateEnum.SUCCESS.getState()) {
                     modelMap.put("success", true);
@@ -220,13 +222,14 @@ public class ShopManagementController {
             PersonInfo owner = (PersonInfo) request.getSession().getAttribute("user");
             shop.setOwner(owner);
             try {
-                ShopExecution shopExecution = shopService.addShop(shop, shopImg.getInputStream(), shopImg.getOriginalFilename());
+                ImageHolder thumbnail = new ImageHolder(shopImg.getInputStream(), shopImg.getOriginalFilename());
+                ShopExecution shopExecution = shopService.addShop(shop, thumbnail);
                 if (shopExecution.getState() == ShopStateEnum.CHECK.getState()) {
                     modelMap.put("success", true);
                     // 该用户可以操作的店铺列表，放入到session中，便于店家在创建成功后再管理页面查看自己的店铺
                     List<Shop> shopList = (List<Shop>) request.getSession().getAttribute("shopList");
                     if (shopList == null && shopList.size() == 0) {
-                        shopList = new ArrayList<>();
+                        shopList = new ArrayList<Shop>();
                     }
                     shopList.add(shop);
                     request.getSession().setAttribute("shopList", shopList);

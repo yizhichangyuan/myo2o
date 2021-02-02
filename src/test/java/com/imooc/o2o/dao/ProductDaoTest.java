@@ -10,6 +10,7 @@ import org.junit.runners.MethodSorters;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import java.util.Date;
+import java.util.List;
 
 import static org.junit.Assert.assertEquals;
 
@@ -38,5 +39,47 @@ public class ProductDaoTest extends BaseTest {
         product.setProductCategory(productCategory);
         int effectNum = productDao.insertProduct(product);
         assertEquals(effectNum, 1);
+    }
+
+    @Test
+    public void testBGetProductById() {
+        Product product = productDao.getProductById(22L);
+        System.out.println(product.getProductImgList().size());
+        System.out.println(product.getShop().getOwner().getUserId());
+        System.out.println(product.getProductImgList().get(0).getImgAddr());
+    }
+
+    @Test
+    public void testCQueryProductList() {
+        Product productCondition1 = new Product();
+        Shop shop = new Shop();
+        shop.setShopId(8L);
+        productCondition1.setShop(shop);
+        List<Product> list1 = productDao.queryProductList(productCondition1, 0, 10);
+        System.out.println(list1.size());
+        Product productCondition2 = new Product();
+        productCondition2.setProductName("修改");
+        List<Product> list2 = productDao.queryProductList(productCondition2, 0, 10);
+        System.out.println(list2.size());
+        Product productCondition3 = new Product();
+        ProductCategory productCategory = new ProductCategory();
+        productCategory.setProductCategoryId(32L);
+        productCondition3.setProductCategory(productCategory);
+        List<Product> list3 = productDao.queryProductList(productCondition3, 0, 10);
+        System.out.println(list3.size());
+        Product productCondition4 = new Product();
+        Shop shop2 = new Shop();
+        shop2.setShopId(8L);
+        productCondition4.setShop(shop2);
+        productCondition4.setProductName("修改");
+        int count = productDao.queryProductCount(productCondition4);
+        System.out.println(count);
+    }
+
+    @Test
+    public void testDAlterProductCategoryToNull() {
+        long productCategoryId = 32L;
+        int effectNum = productDao.alterProductCategoryToNull(productCategoryId);
+        System.out.println("将商品的商品类别置空的商品数量为：" + effectNum);
     }
 }

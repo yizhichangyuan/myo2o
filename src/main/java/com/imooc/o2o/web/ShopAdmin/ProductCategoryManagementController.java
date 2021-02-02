@@ -35,6 +35,7 @@ public class ProductCategoryManagementController {
         if (currentShop == null) {
             currentShop = new Shop();
             currentShop.setShopId(8L);
+            request.getSession().setAttribute("currentShop", currentShop);
         }
         long shopId = currentShop.getShopId();
         ProductCategory productCategory = new ProductCategory();
@@ -44,7 +45,7 @@ public class ProductCategoryManagementController {
             modelMap.put("errMsg", "传入的店铺Id非法");
         } else {
             try {
-                ProductCategoryExecution pce = productCategoryService.getProductCategoryList(productCategory, 1, 10);
+                ProductCategoryExecution pce = productCategoryService.getProductCategoryList(productCategory, 1, 100);
                 List<ProductCategory> productCategoryList = pce.getProductCategoryList();
                 if (productCategoryList == null || productCategoryList.size() == 0) {
                     modelMap.put("success", false);

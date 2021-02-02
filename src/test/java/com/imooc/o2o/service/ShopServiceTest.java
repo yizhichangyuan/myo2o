@@ -1,6 +1,7 @@
 package com.imooc.o2o.service;
 
 import com.imooc.o2o.BaseTest;
+import com.imooc.o2o.dto.ImageHolder;
 import com.imooc.o2o.dto.ShopExecution;
 import com.imooc.o2o.entity.Area;
 import com.imooc.o2o.entity.PersonInfo;
@@ -8,7 +9,6 @@ import com.imooc.o2o.entity.Shop;
 import com.imooc.o2o.entity.ShopCategory;
 import com.imooc.o2o.enums.ShopStateEnum;
 import com.imooc.o2o.exceptions.ShopOperationException;
-import org.junit.Ignore;
 import org.junit.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 
@@ -21,7 +21,6 @@ public class ShopServiceTest extends BaseTest {
     private ShopService shopService;
 
     @Test
-    @Ignore
     public void testAddShop() throws IOException, ShopOperationException {
         Shop shop = new Shop();
         Area area = new Area();
@@ -39,18 +38,19 @@ public class ShopServiceTest extends BaseTest {
         shop.setPhone("1234");
         File shopImg = new File("/Users/yizhichangyuan/Downloads/IMG_20170930_164953.jpg");
         InputStream is = new FileInputStream(shopImg);
-        ShopExecution shopExecution = shopService.addShop(shop, is, shopImg.getName());
+        ImageHolder thumbnail = new ImageHolder(is, shopImg.getName());
+        ShopExecution shopExecution = shopService.addShop(shop, thumbnail);
         assertEquals(shopExecution.getState(), ShopStateEnum.CHECK.getState());
     }
 
     @Test
-    @Ignore
     public void testModifyShop() throws ShopOperationException, FileNotFoundException {
         Shop shop = new Shop();
         shop.setShopId(75L);
         shop.setShopName("修改后的店铺名称");
         File file = new File("/Users/yizhichangyuan/Desktop/截屏:录屏.nosync/截屏2020-12-21 00.02.29.png");
-        ShopExecution shopExecution = shopService.modifyShop(shop, new FileInputStream(file), file.getName());
+        ImageHolder thumbnail = new ImageHolder(new FileInputStream(file), file.getName());
+        ShopExecution shopExecution = shopService.modifyShop(shop, thumbnail);
         System.out.println(shopExecution.getShop().getShopImg());
     }
 

@@ -17,3 +17,8 @@ function getQueryString(parameter) {
     }
     return null;
 }
+
+//回退到上一页
+function goBack() {
+    history.go(-1);
+}

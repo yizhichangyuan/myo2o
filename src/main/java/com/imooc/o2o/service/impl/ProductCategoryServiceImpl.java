@@ -1,10 +1,12 @@
 package com.imooc.o2o.service.impl;
 
 import com.imooc.o2o.dao.ProductCategoryDao;
+import com.imooc.o2o.dao.ProductDao;
 import com.imooc.o2o.dto.ProductCategoryExecution;
 import com.imooc.o2o.entity.ProductCategory;
 import com.imooc.o2o.enums.ProductCategoryStateEnum;
 import com.imooc.o2o.exceptions.ProductCategoryException;
+import com.imooc.o2o.exceptions.ProductException;
 import com.imooc.o2o.service.ProductCategoryService;
 import com.imooc.o2o.util.RowIndexCalculator;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -18,6 +20,8 @@ import java.util.List;
 public class ProductCategoryServiceImpl implements ProductCategoryService {
     @Autowired
     private ProductCategoryDao productCategoryDao;
+    @Autowired
+    private ProductDao productDao;
 
     @Override
     public ProductCategoryExecution getProductCategoryList(ProductCategory productCategoryCondition, int pageIndex, int pageSize) {
@@ -55,7 +59,11 @@ public class ProductCategoryServiceImpl implements ProductCategoryService {
         }
         // todo 首先将对应商品的商品类别设置为未分类
         try {
-            int effectNum = productCategoryDao.deleteProductCategory(productCategory);
+            int effectNum = productDao.alterProductCategoryToNull(productCategory.getProductCategoryId());
+            if (effectNum <= 0) {
+                throw new ProductException("商品的商品类别置空失败");
+            }
+            effectNum = productCategoryDao.deleteProductCategory(productCategory);
             if (effectNum > 0) {
                 return new ProductCategoryExecution(ProductCategoryStateEnum.SUCCESS);
             } else {

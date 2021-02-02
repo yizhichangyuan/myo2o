@@ -33,7 +33,6 @@ public class ProductCategoryDaoTest extends BaseTest {
     }
 
     @Test
-    @Ignore
     public void testQueryProductCategory() {
         ProductCategory productCategory = new ProductCategory();
 //        productCategory.setProductCategoryName("试");

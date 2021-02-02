@@ -55,7 +55,7 @@ $(function () {
     }
 
     $('#submit').click(function () {
-        var shop = {}
+        var shop = {};
         if (urlHaveShopId) {
             shop.shopId = shopId;
         }

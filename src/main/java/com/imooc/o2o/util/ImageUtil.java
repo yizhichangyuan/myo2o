@@ -1,12 +1,12 @@
 package com.imooc.o2o.util;
 
+import com.imooc.o2o.dto.ImageHolder;
 import net.coobird.thumbnailator.Thumbnails;
 import net.coobird.thumbnailator.geometry.Positions;
 
 import javax.imageio.ImageIO;
 import java.io.File;
 import java.io.IOException;
-import java.io.InputStream;
 import java.io.UnsupportedEncodingException;
 import java.net.URLDecoder;
 import java.text.SimpleDateFormat;
@@ -33,15 +33,29 @@ public class ImageUtil {
      * @param targetAddr 相对路径，是与店铺id相关的相对路径，可以通过PathUtil中的getImagePath()
      * @return
      */
-    public static String generateThumbnail(InputStream thumbnail, String targetAddr, String originalFileName) throws IOException {
+    public static String generateThumbnail(ImageHolder thumbnail, String targetAddr) throws IOException {
         String fileName = getRandomFileName();
-        String extension = getFileExtension(originalFileName);
+        String extension = getFileExtension(thumbnail.getImageName());
         makeDirPath(targetAddr); //传入包括店铺
         File filePath = new File(PathUtil.getImgBasePath() + targetAddr + fileName + extension);
         try {
-            Thumbnails.of(thumbnail).size(200, 200)
+            Thumbnails.of(thumbnail.getImage()).size(200, 200)
                     .watermark(Positions.BOTTOM_RIGHT, ImageIO.read(new File(basePath)), 0.2f)
                     .outputQuality(0.8f).toFile(filePath);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return targetAddr + fileName + extension;
+    }
+
+    public static String saveDetailImg(ImageHolder detailImg, String targetAddr) throws IOException {
+        String fileName = getRandomFileName();
+        String extension = getFileExtension(detailImg.getImageName());
+        makeDirPath(targetAddr);
+        File filePath = new File(PathUtil.getImgBasePath() + targetAddr + fileName + extension);
+        try {
+            Thumbnails.of(detailImg.getImage()).size(337, 400).watermark(Positions.BOTTOM_RIGHT, ImageIO.read(new File(basePath)), 0.2f)
+                    .outputQuality(0.9f).toFile(filePath);
         } catch (Exception e) {
             e.printStackTrace();
         }

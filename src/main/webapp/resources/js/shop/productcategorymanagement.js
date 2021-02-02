@@ -50,7 +50,7 @@ $(function () {
     });
 
     $(".deleteNewAddProductCategory").live("click", function () {
-        var parent = $(this).parent().parent().parent();
+        var parent = $(this).parent().parent();
         $(parent).find("*").map(function (index, term) {
             $(term).remove();
         }); //找到所有直接或非直接后代

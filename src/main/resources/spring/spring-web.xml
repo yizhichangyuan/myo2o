@@ -16,6 +16,9 @@
     <!--允许使用/做整体映射-->
     <!--要求相对于根目录resources的为静态文件，dispatchServlet不拦截-->
     <mvc:resources mapping="/resources/**" location="/resources/"/>
+    <!--拦截html中img的src中含有upload的url，导向的文件位置为本地绝对路径的位置，
+    不是在该项目路径下，所以用到了file:字符，用于访问绝对路径-->
+    <mvc:resources mapping="/upload/**" location="file:/Users/yizhichangyuan/Image/upload/"/>
     <!--静态文件交给默认的servlet来处理-->
     <mvc:default-servlet-handler/>
 

@@ -61,7 +61,7 @@ public class ProductController {
 
         // 3.获取缩略图和详情图
         CommonsMultipartResolver resolver = new CommonsMultipartResolver(request.getSession().getServletContext());
-        ImageHolder thumbnail = null;
+        ImageHolder thumbnail = new ImageHolder();
         List<ImageHolder> detailImgList = new ArrayList<>();
         if (resolver.isMultipart(request)) {
             try {

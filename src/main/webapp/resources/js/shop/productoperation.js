@@ -65,9 +65,6 @@ $(function () {
         formData.append("thumbnail", thumbnail);
 
         $(".detail-img").map(function (index, term) {
-            console.log(index);
-            console.log(term);
-            console.log($(".detail-img")[index].files);
             if ($('.detail-img')[index].files.length > 0) {
                 formData.append("productDetailImg-" + index, $(".detail-img")[index].files[0]);
             }

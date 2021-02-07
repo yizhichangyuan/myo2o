@@ -60,6 +60,11 @@ public class ProductServiceImpl implements ProductService {
     }
 
     @Override
+    public int queryProductCount(Product product) {
+        return productDao.queryProductCount(product);
+    }
+
+    @Override
     @Transactional
     public ProductExecution modifyProduct(Product product, ImageHolder thumbnail, List<ImageHolder> detailImgList) {
         if ((product == null && thumbnail == null) && (detailImgList == null || detailImgList.size() == 0)) {

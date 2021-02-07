@@ -101,6 +101,16 @@ public class ShopServiceImpl implements ShopService {
     }
 
     @Override
+    public int getShopCount(Shop shopCondition) {
+        try {
+            int count = shopDao.queryShopCount(shopCondition);
+            return count;
+        } catch (Exception e) {
+            throw new ShopOperationException("getShopCount error:" + e.getMessage());
+        }
+    }
+
+    @Override
     public ShopExecution getShopList(Shop shopCondition, int pageIndex, int pageSize) {
         int rowIndex = RowIndexCalculator.calRowIndex(pageIndex, pageSize);
         List<Shop> shopList = shopDao.queryShopList(shopCondition, rowIndex, pageSize);

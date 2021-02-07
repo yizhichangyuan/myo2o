@@ -43,4 +43,5 @@ public interface ProductCategoryDao {
      * @return
      */
     int insertBatchProductCategory(List<ProductCategory> productCategoryList);
+
 }

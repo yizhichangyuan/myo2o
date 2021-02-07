@@ -2,6 +2,7 @@ package com.imooc.o2o.service.impl;
 
 import com.imooc.o2o.dao.ShopCategoryDao;
 import com.imooc.o2o.entity.ShopCategory;
+import com.imooc.o2o.exceptions.ShopCategoryException;
 import com.imooc.o2o.service.ShopCategoryService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -15,6 +16,11 @@ public class ShopCategoryServiceImpl implements ShopCategoryService {
 
     @Override
     public List<ShopCategory> queryShopCategory(ShopCategory shopCategoryCondition) {
-        return shopCategoryDao.queryShopCategory(shopCategoryCondition);
+        try {
+            List<ShopCategory> list = shopCategoryDao.queryShopCategory(shopCategoryCondition);
+            return list;
+        } catch (Exception e) {
+            throw new ShopCategoryException("queryShopCategory error:" + e.getMessage());
+        }
     }
 }

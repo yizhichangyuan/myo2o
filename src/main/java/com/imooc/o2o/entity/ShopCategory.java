@@ -13,6 +13,15 @@ public class ShopCategory {
     private Integer priority;
     private Date createTime;
     private Date lastEditTime;
+    private String shopCategoryImg;
+
+    public String getShopCategoryImg() {
+        return shopCategoryImg;
+    }
+
+    public void setShopCategoryImg(String shopCategoryImg) {
+        this.shopCategoryImg = shopCategoryImg;
+    }
 
     public Long getShopCategoryId() {
         return shopCategoryId;

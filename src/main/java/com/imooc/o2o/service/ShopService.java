@@ -38,4 +38,12 @@ public interface ShopService {
      * @return
      */
     ShopExecution getShopList(Shop shopCondition, int pageIndex, int pageSize);
+
+    /**
+     * 查询同条件的所有shop总数
+     *
+     * @param shopCondition
+     * @return
+     */
+    int getShopCount(Shop shopCondition);
 }

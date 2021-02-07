@@ -111,10 +111,6 @@ public class ProductCategoryManagementController {
     private Map<String, Object> addBatchProductCategory(@RequestBody List<ProductCategory> productCategoryList, HttpServletRequest request) {
         Map<String, Object> modelMap = new HashMap<>();
         Shop currentShop = (Shop) request.getSession().getAttribute("currentShop");
-        if (currentShop == null) {
-            currentShop = new Shop();
-            currentShop.setShopId(8L);
-        }
         Long shopId = currentShop.getShopId();
         for (ProductCategory productCategory : productCategoryList) {
             productCategory.setShopId(shopId);
@@ -128,7 +124,7 @@ public class ProductCategoryManagementController {
                 modelMap.put("errMsg", execution.getStateInfo());
             }
         } catch (Exception e) {
-            modelMap.put("success", true);
+            modelMap.put("success", false);
             modelMap.put("errMsg", e.getMessage());
         }
         return modelMap;

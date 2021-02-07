@@ -29,21 +29,15 @@ public class ProductCategoryServiceImpl implements ProductCategoryService {
         ProductCategoryExecution productCategoryExecution = new ProductCategoryExecution();
         try {
             List<ProductCategory> productCategoryList = productCategoryDao.queryProductCategoryList(productCategoryCondition, rowIndex, pageSize);
-            if (productCategoryList.size() == 0 || productCategoryList == null) {
-                productCategoryExecution.setState(ProductCategoryStateEnum.NULL_PRODUCT_CATEGORY.getState());
-                productCategoryExecution.setStateInfo(ProductCategoryStateEnum.NULL_PRODUCT_CATEGORY.getStateInfo());
-            } else {
-                int count = productCategoryDao.queryProductCategoryCount(productCategoryCondition);
-                productCategoryExecution.setState(ProductCategoryStateEnum.SUCCESS.getState());
-                productCategoryExecution.setStateInfo(ProductCategoryStateEnum.SUCCESS.getStateInfo());
-                productCategoryExecution.setProductCategoryList(productCategoryList);
-                productCategoryExecution.setCount(count);
-                return new ProductCategoryExecution(ProductCategoryStateEnum.SUCCESS, productCategoryList);
-            }
+            int count = productCategoryDao.queryProductCategoryCount(productCategoryCondition);
+            productCategoryExecution.setState(ProductCategoryStateEnum.SUCCESS.getState());
+            productCategoryExecution.setStateInfo(ProductCategoryStateEnum.SUCCESS.getStateInfo());
+            productCategoryExecution.setProductCategoryList(productCategoryList);
+            productCategoryExecution.setCount(count);
+            return new ProductCategoryExecution(ProductCategoryStateEnum.SUCCESS, productCategoryList);
         } catch (Exception e) {
             throw new ProductCategoryException("getProductCategoryList error: " + e.getMessage());
         }
-        return productCategoryExecution;
     }
 
     /**

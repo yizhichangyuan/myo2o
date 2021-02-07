@@ -44,7 +44,7 @@ public class ShopManagementController {
     private ProductCategoryService productCategoryService;
 
     // 从用户的店铺列表点击进入js发送请求的路由
-    @RequestMapping(value = "getshopmanagementinfo", method = RequestMethod.GET)
+    @RequestMapping(value = "/getshopmanagementinfo", method = RequestMethod.GET)
     @ResponseBody
     private Map<String, Object> getShopManagementInfo(HttpServletRequest request) {
         Map<String, Object> modelMap = new HashMap<String, Object>();
@@ -68,7 +68,7 @@ public class ShopManagementController {
         return modelMap;
     }
 
-    @RequestMapping(value = "getshoplist", method = RequestMethod.GET)
+    @RequestMapping(value = "/getshoplist", method = RequestMethod.GET)
     @ResponseBody
     private Map<String, Object> getShopList(HttpServletRequest request) {
         Map<String, Object> modelMap = new HashMap<String, Object>();
@@ -228,7 +228,7 @@ public class ShopManagementController {
                     modelMap.put("success", true);
                     // 该用户可以操作的店铺列表，放入到session中，便于店家在创建成功后再管理页面查看自己的店铺
                     List<Shop> shopList = (List<Shop>) request.getSession().getAttribute("shopList");
-                    if (shopList == null && shopList.size() == 0) {
+                    if (shopList == null || shopList.size() == 0) {
                         shopList = new ArrayList<Shop>();
                     }
                     shopList.add(shop);

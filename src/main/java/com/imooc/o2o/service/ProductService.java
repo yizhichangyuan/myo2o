@@ -14,4 +14,6 @@ public interface ProductService {
     ProductExecution queryProductById(long productId);
 
     ProductExecution queryProductList(Product product, int pageIndex, int pageSize);
+
+    int queryProductCount(Product product);
 }

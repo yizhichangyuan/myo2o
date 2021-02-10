@@ -10,7 +10,6 @@ import com.imooc.o2o.entity.ShopCategory;
 import com.imooc.o2o.enums.ShopStateEnum;
 import com.imooc.o2o.exceptions.ShopOperationException;
 import com.imooc.o2o.service.AreaService;
-import com.imooc.o2o.service.ProductCategoryService;
 import com.imooc.o2o.service.ShopCategoryService;
 import com.imooc.o2o.service.ShopService;
 import com.imooc.o2o.util.CodeUtil;
@@ -25,7 +24,7 @@ import org.springframework.web.multipart.commons.CommonsMultipartFile;
 import org.springframework.web.multipart.commons.CommonsMultipartResolver;
 
 import javax.servlet.http.HttpServletRequest;
-import java.io.*;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -40,14 +39,12 @@ public class ShopManagementController {
     private ShopCategoryService shopCategoryService;
     @Autowired
     private AreaService areaService;
-    @Autowired
-    private ProductCategoryService productCategoryService;
 
     // 从用户的店铺列表点击进入js发送请求的路由
     @RequestMapping(value = "/getshopmanagementinfo", method = RequestMethod.GET)
     @ResponseBody
     private Map<String, Object> getShopManagementInfo(HttpServletRequest request) {
-        Map<String, Object> modelMap = new HashMap<String, Object>();
+        Map<String, Object> modelMap = new HashMap<>();
         long shopId = HttpServletRequestUtil.getLong(request, "shopId");
         if (shopId <= 0) {
             Shop currentShop = (Shop) request.getSession().getAttribute("currentShop");
@@ -71,12 +68,14 @@ public class ShopManagementController {
     @RequestMapping(value = "/getshoplist", method = RequestMethod.GET)
     @ResponseBody
     private Map<String, Object> getShopList(HttpServletRequest request) {
-        Map<String, Object> modelMap = new HashMap<String, Object>();
-        PersonInfo owner = new PersonInfo();
-        owner.setUserId(1L);
-        owner.setName("test");
-        request.getSession().setAttribute("user", owner);
-        owner = (PersonInfo) request.getSession().getAttribute("user");
+        Map<String, Object> modelMap = new HashMap<>();
+        PersonInfo owner = (PersonInfo) request.getSession().getAttribute("user");
+        if (owner == null) {
+            owner = new PersonInfo();
+            owner.setUserId(1L);
+            owner.setName("test");
+            request.getSession().setAttribute("user", owner);
+        }
         try {
             Shop shopCondition = new Shop();
             shopCondition.setOwner(owner);
@@ -131,7 +130,7 @@ public class ShopManagementController {
             return modelMap;
         }
         // 2.转为Shop对象和图片流
-        Shop shop = null;
+        Shop shop;
         ObjectMapper objectMapper = new ObjectMapper();
         try {
             String shopStr = HttpServletRequestUtil.getString(request, "shopStr");
@@ -185,7 +184,7 @@ public class ShopManagementController {
     @RequestMapping(value = "/registershop", method = RequestMethod.POST)
     @ResponseBody
     public Map<String, Object> registerShop(HttpServletRequest request) {
-        Map<String, Object> modelMap = new HashMap<String, Object>();
+        Map<String, Object> modelMap = new HashMap<>();
         // 验证码校验
         if (!CodeUtil.checkVerifyCode(request)) {
             modelMap.put("success", false);
@@ -196,7 +195,7 @@ public class ShopManagementController {
         // 1.接收并转化相应的参数，包括店铺信息及图片信息
         String shopStr = HttpServletRequestUtil.getString(request, "shopStr");
         ObjectMapper mapper = new ObjectMapper();
-        Shop shop = null;
+        Shop shop;
         try {
             shop = mapper.readValue(shopStr, Shop.class);
         } catch (Exception e) {
@@ -206,7 +205,7 @@ public class ShopManagementController {
         }
 
         // 图片文件接收
-        CommonsMultipartFile shopImg = null;
+        CommonsMultipartFile shopImg;
         CommonsMultipartResolver commonsMultipartResolver = new CommonsMultipartResolver(request.getSession().getServletContext());
         if (commonsMultipartResolver.isMultipart(request)) {
             MultipartHttpServletRequest multipartHttpServletRequest = (MultipartHttpServletRequest) request;
@@ -229,7 +228,7 @@ public class ShopManagementController {
                     // 该用户可以操作的店铺列表，放入到session中，便于店家在创建成功后再管理页面查看自己的店铺
                     List<Shop> shopList = (List<Shop>) request.getSession().getAttribute("shopList");
                     if (shopList == null || shopList.size() == 0) {
-                        shopList = new ArrayList<Shop>();
+                        shopList = new ArrayList<>();
                     }
                     shopList.add(shop);
                     request.getSession().setAttribute("shopList", shopList);
@@ -254,37 +253,37 @@ public class ShopManagementController {
         }
     }
 
-    private static void inputStreamToFile(InputStream inputStream, File file) {
-        OutputStream outputStream = null;
-        int bytesRead = 0;
-        byte[] bytesBuffer = new byte[1024];
-        try {
-            outputStream = new FileOutputStream(file);
-            while (inputStream != null && (bytesRead = inputStream.read(bytesBuffer)) != -1) {
-                outputStream.write(bytesBuffer, 0, bytesRead);
-            }
-        } catch (Exception e) {
-            throw new RuntimeException("调用InputStreamToFile发生异常:" + e.getMessage());
-        } finally {
-            try {
-                if (outputStream != null) {
-                    outputStream.close();
-                }
-                if (inputStream != null) {
-                    inputStream.close();
-                }
-            } catch (Exception e) {
-                throw new RuntimeException("inputStreamToFile关闭异常:" + e.getMessage());
-            }
-        }
-    }
+//    private static void inputStreamToFile(InputStream inputStream, File file) {
+//        OutputStream outputStream = null;
+//        int bytesRead;
+//        byte[] bytesBuffer = new byte[1024];
+//        try {
+//            outputStream = new FileOutputStream(file);
+//            while (inputStream != null && (bytesRead = inputStream.read(bytesBuffer)) != -1) {
+//                outputStream.write(bytesBuffer, 0, bytesRead);
+//            }
+//        } catch (Exception e) {
+//            throw new RuntimeException("调用InputStreamToFile发生异常:" + e.getMessage());
+//        } finally {
+//            try {
+//                if (outputStream != null) {
+//                    outputStream.close();
+//                }
+//                if (inputStream != null) {
+//                    inputStream.close();
+//                }
+//            } catch (Exception e) {
+//                throw new RuntimeException("inputStreamToFile关闭异常:" + e.getMessage());
+//            }
+//        }
+//    }
 
     @RequestMapping(value = "/getshopinitinfo", method = RequestMethod.GET)
     @ResponseBody
     private Map<String, Object> getShopInitInfo() {
-        Map<String, Object> modelMap = new HashMap<String, Object>();
-        List<ShopCategory> shopCategoryList = new ArrayList<ShopCategory>();
-        List<Area> areaList = new ArrayList<Area>();
+        Map<String, Object> modelMap = new HashMap<>();
+        List<ShopCategory> shopCategoryList;
+        List<Area> areaList;
 
         try {
             shopCategoryList = shopCategoryService.queryShopCategory(new ShopCategory());

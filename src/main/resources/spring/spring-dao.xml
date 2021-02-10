@@ -25,6 +25,15 @@
         <property name="checkoutTimeout" value="10000"/>
         <!--当获取连接失败重试次数-->
         <property name="acquireRetryAttempts" value="10"/>
+
+        <!--mysql中使用show variables like '%timeout%'可以看到wait_timeout为8小时-->
+        <!--在超过8小时连接未使用，就会将数据库中得到的连接失效，这时候项目访问就是报错
+        The last packet sent successfully to the server 47,795,922s ago,
+        is longer than the server configured value of 'wait_timeout'-->
+        <!--解决办法：定期18000秒使用连接，使得连接不会因为timeout被Mysql断开-->
+        <property name="preferredTestQuery" value="SELECT 1"/>
+        <property name="idleConnectionTestPeriod" value="18000"/>
+        <property name="testConnectionOnCheckout" value="true"/>
     </bean>
 
     <!--主库-->
@@ -67,11 +76,15 @@
     <!--MyBatis全局配置文件-->
     <!--扫描entity包，将取出结果包装成entity对象-->
     <!--扫描Sql配置文件-->
+    <!--因为项目部署是打包成jar或者war，为了部署在jar中文件进行查找所以用到了classpath*:-->
+    <!--classpath 和 classpath* 区别：
+　　      classpath：只会到你的class路径中查找找文件;
+　　      classpath*：不仅包含class路径，还包括jar文件中(class路径)进行查找.-->
     <bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean"
           p:dataSource-ref="dataSource"
           p:configLocation="classpath:mybatis-config.xml"
           p:typeAliasesPackage="com.imooc.o2o.entity"
-          p:mapperLocations="classpath:mapper/*.xml"/>
+          p:mapperLocations="classpath*:mapper/*.xml"/>
     <!--配置扫描Dao接口包，动态实现Dao接口，注入到Spring容器中-->
     <bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
         <!--注入SqlSessionFactory-->

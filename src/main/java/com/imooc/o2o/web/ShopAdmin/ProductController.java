@@ -49,7 +49,7 @@ public class ProductController {
 
         // 2.获取product对象
         ObjectMapper objectMapper = new ObjectMapper();
-        Product product = null;
+        Product product;
         try {
             String productStr = HttpServletRequestUtil.getString(request, "productStr");
             product = objectMapper.readValue(productStr, Product.class);
@@ -120,7 +120,7 @@ public class ProductController {
     private Map<String, Object> modifyProduct(HttpServletRequest request) {
         Map<String, Object> modelMap = new HashMap<>();
         String isPullDown = HttpServletRequestUtil.getString(request, "isPullDown");
-        Boolean doPullDown = false;
+        boolean doPullDown = false;
         if (isPullDown != null && isPullDown.equals("true")) {
             doPullDown = true;
         }
@@ -135,7 +135,7 @@ public class ProductController {
         ObjectMapper objectMapper = new ObjectMapper();
         try {
             String productStr = HttpServletRequestUtil.getString(request, "productStr");
-            if (productStr != null || !"".equals(productStr)) {
+            if (productStr != null || !productStr.equals("")) {
                 product = objectMapper.readValue(productStr, Product.class);
                 Shop shop = (Shop) request.getSession().getAttribute("currentShop");
                 if (shop == null) {

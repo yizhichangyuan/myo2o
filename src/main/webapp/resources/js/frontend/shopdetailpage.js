@@ -21,7 +21,7 @@ $(function () {
                 });
                 $(".product-category-button").html(buttonHtml);
                 var shop = data.shop;
-                $(".demo-card-header-pic div img").attr("src", "../" + shop.shopImg);
+                $(".demo-card-header-pic div img").attr("src", ".." + shop.shopImg);
                 $(".bar-nav .title").text(shop.shopName);
                 $(".lastEditTime").text(transfer(shop.lastEditTime));
                 $(".shop-desc").text(shop.shopDesc);
@@ -53,7 +53,7 @@ $(function () {
                             "                                    <ul>\n" +
                             "                                        <li class=\"item-content\">\n" +
                             "                                            <div class=\"item-media\">\n" +
-                            "                                                <img src='../" + product.imgAddr + "' width=\"44\">\n" +
+                            "                                                <img src='.." + product.imgAddr + "' width=\"44\">\n" +
                             "                                            </div>\n" +
                             "                                            <div class=\"item-inner\">\n" +
                             "                                                <div class=\"item-title-row\">\n" +

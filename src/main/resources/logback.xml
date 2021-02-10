@@ -14,7 +14,7 @@
 
     <!--日志文件位置-->
     <!--日志文件存储的根路径-->
-    <property name="log.filePath" value="Log/logs/webapps"/>
+    <property name="log.filePath" value="${catalina.base}/logs/webapps"/>
 
     <!--日志文件存活时间-->
     <!--文件日志的保留时间-->
@@ -34,7 +34,7 @@
     <!--文件是滚动的，按照天或者月来不断生成新的日志文件-->
     <appender name="debugAppender" class="ch.qos.logback.core.rolling.RollingFileAppender">
         <!--最新日志文件位置，时间到了就放置到fileNamePattern中-->
-        <file>${log.filePath}/debug.log</file>
+        <file>${catalina.base}/debug.log</file>
         <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
             <!--按天生成文件-->
             <fileNamePattern>${log.filePath}/debug/debug.%d{yyyy-MM-dd}.log.gz</fileNamePattern>
@@ -57,7 +57,7 @@
 
     <!--INFO-->
     <appender name="infoAppender" class="ch.qos.logback.core.rolling.RollingFileAppender">
-        <file>${log.filePath}/info.log</file>
+        <file>${catalina.base}/info.log</file>
         <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
             <!--按天生成文件-->
             <fileNamePattern>${log.filePath}/info/info.%d{yyyy-MM-dd}.log.gz</fileNamePattern>
@@ -80,7 +80,7 @@
 
     <!--ERROR-->
     <appender name="errorAppender" class="ch.qos.logback.core.rolling.RollingFileAppender">
-        <file>${log.filePath}/error.log</file>
+        <file>${catalina.base}/error.log</file>
         <!--每过一天，error.log中文件转移到rollingPolicy下的文件夹-->
         <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
             <!--按天生成文件-->

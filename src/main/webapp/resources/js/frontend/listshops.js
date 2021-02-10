@@ -34,7 +34,7 @@ $(function () {
                             "                    <ul>\n" +
                             "                        <li class=\"item-content\">\n" +
                             "                            <div class=\"item-media\">\n" +
-                            "                                <img src='../" + shop.shopImg + "' width=\"44\">\n" +
+                            "                                <img src='.." + shop.shopImg + "' width=\"44\">\n" +
                             "                            </div>\n" +
                             "                            <div class=\"item-inner\">\n" +
                             "                                <div class=\"item-title-row\">\n" +

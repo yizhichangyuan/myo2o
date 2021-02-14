@@ -16,7 +16,9 @@ $(function () {
                 $(".bar-nav .title").text(product.productName);
                 $(".card-cover").attr("src", ".." + product.imgAddr);
                 $(".lastEditTime").text(transfer(product.lastEditTime));
-                // $(".bonus").text("购买可得" + product.bonus + "积分");
+                if (product.point != undefined) {
+                    $(".bonus").text("购买可得" + product.point + "积分");
+                }
                 $(".normal-price s").text("￥" + product.normalPrice);
                 $(".promotion-price").text("￥" + product.promotionPrice);
                 $(".product-desc").text(product.productDesc);

@@ -11,8 +11,9 @@ $(function () {
                     var tempHtml = "";
                     console.log(data.productList);
                     data.productList.map(function (term, index) {
+                        console.log(term);
                         tempHtml += "<div class='row row-product'>" + "<div class='col-40 product-name'>" + term.productName + "</div>"
-                            + "<div class='col-40'>" + term.priority + "</div>"
+                            + "<div class='col-40'>" + term.point + "</div>"
                             + "<div class='col-20'>" + addOperation(term.productId, term.enableStatus) + "</div></div>";
                     });
                     console.log(tempHtml);

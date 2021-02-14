@@ -19,7 +19,8 @@ public class ImageUtil {
 
     static {
         try {
-            basePath = URLDecoder.decode(System.getProperty("user.dir") + "/src/main/resources/watermark.jpg", "utf-8");
+//            basePath = URLDecoder.decode(System.getProperty("user.dir") + "/src/main/resources/watermark.jpg", "utf-8");
+            basePath = URLDecoder.decode(Thread.currentThread().getContextClassLoader().getResource("watermark.jpg").getPath(), "utf-8");
         } catch (UnsupportedEncodingException e) {
             e.printStackTrace();
         }
@@ -121,15 +122,15 @@ public class ImageUtil {
 
     public static void main(String[] args) throws IOException {
         //通过Thread获取resources文件夹的绝对路径
-        String basePath = System.getProperty("user.dir");
-//                Thread.currentThread().getContextClassLoader().getResource("").getPath();
-//                Thread.currentThread().getContextClassLoader().getResource("watermark.jpg").getPath();
+        System.out.println("****");
+        String basePath = Thread.currentThread().getContextClassLoader().getResource("watermark.jpg").getPath();
+//                System.getProperty("user.dir");
         System.out.println(basePath);
 
         //尺寸剪辑、水印位置、水印来源、透明度、0.8f为压缩
-        Thumbnails.of(new File("/Users/yizhichangyuan/Pictures/-1.jpeg"))
-                .size(200, 200).watermark(Positions.BOTTOM_RIGHT,
-                ImageIO.read(new File(basePath + "/src/main/resources/watermark.jpg")),
-                0.25f).outputQuality(0.8f).toFile("/Users/yizhichangyuan/Pictures/-1new.jpeg");
+//        Thumbnails.of(new File("/Users/yizhichangyuan/Pictures/-1.jpeg"))
+//                .size(200, 200).watermark(Positions.BOTTOM_RIGHT,
+//                ImageIO.read(new File(basePath + "/src/main/resources/watermark.jpg")),
+//                0.25f).outputQuality(0.8f).toFile("/Users/yizhichangyuan/Pictures/-1new.jpeg");
     }
 }

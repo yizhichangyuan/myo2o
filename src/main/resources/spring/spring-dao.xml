@@ -11,7 +11,17 @@
     <context:component-scan base-package="com.imooc.o2o.dao"/>
 
     <!--配置数据库properties的数据-->
-    <context:property-placeholder location="classpath:jdbc.properties"/>
+    <!--<context:property-placeholder location="classpath:jdbc.properties"/>-->
+    <!--数据库用户名、密码加密-->
+    <bean class="com.imooc.o2o.util.EncryptPropertyPlaceHolderConfigurer">
+        <property name="locations">
+            <list>
+                <value>classpath:jdbc.properties</value>
+                <value>classpath:redis.properties</value>
+            </list>
+        </property>
+        <property name="fileEncoding" value="UTF-8"/>
+    </bean>
 
     <!--数据库连接池，设置为abstract，便于后面继承属性配置主从库-->
     <bean id="abstractDataSource" class="com.mchange.v2.c3p0.ComboPooledDataSource"

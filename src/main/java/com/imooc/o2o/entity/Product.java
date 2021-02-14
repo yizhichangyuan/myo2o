@@ -13,12 +13,21 @@ public class Product {
     private List<ProductImg> productImgList; //商品详情图列表
     private ProductCategory productCategory;
     private Shop shop;
+    private int point; // 商品积分
 
     // 管理信息
     private Integer priority;
     private Date createTime;
     private Date lastEditTime;
     private Integer enableStatus; //商品状态，0表示下架不可用，1表示上架
+
+    public int getPoint() {
+        return point;
+    }
+
+    public void setPoint(int point) {
+        this.point = point;
+    }
 
     public Date getLastEditTime() {
         return lastEditTime;

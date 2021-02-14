@@ -25,6 +25,7 @@ $(function () {
                     $("#normal-price").val(product.normalPrice);
                     $("#promotion-price").val(product.promotionPrice);
                     $("#priority").val(product.priority);
+                    $("#point").val(product.point);
                     $("#product-category option[id='" + product.productId + "']").attr('selected', "selected");
                 } else {
                     console.log("getproductbyid fail");
@@ -56,6 +57,7 @@ $(function () {
                 return !this.selected;
             }).attr('id')
         };
+        product.point = $("#point").val();
         if (!isAdd) {
             product.productId = productId;
         }

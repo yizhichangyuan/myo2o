@@ -36,4 +36,26 @@
         <property name="maxInMemorySize" value="20971520"></property>
     </bean>
 
+    <mvc:interceptors>
+        <!--校验店家是否登陆的拦截器-->
+        <mvc:interceptor>
+            <mvc:mapping path="/shopadmin/**"/>
+            <bean class="com.imooc.o2o.interceptors.LoginInterceptor"/>
+        </mvc:interceptor>
+        <!--校验店家是否有该店铺的编辑权限-->
+        <mvc:interceptor>
+            <mvc:mapping path="/shopadmin/**"/>
+            <!--不拦截这的原因在于，getshoplist才是将shopList放入到session中-->
+            <mvc:exclude-mapping path="/shopadmin/shoplist"/>
+            <mvc:exclude-mapping path="/shopadmin/getshoplist"/>
+
+            <!--不拦截原因，在这里才开始将currentShop放入到session中-->
+            <mvc:exclude-mapping path="/shopadmin/shopmanagement"/>
+            <mvc:exclude-mapping path="/shopadmin/getshopmanagementinfo"/>
+            <mvc:exclude-mapping path="/shopadmin/registershop"/>
+            <mvc:exclude-mapping path="/shopadmin/shopoperation"/>
+            <bean class="com.imooc.o2o.interceptors.ShopPermissionInterceptor"/>
+        </mvc:interceptor>
+    </mvc:interceptors>
+
 </beans>

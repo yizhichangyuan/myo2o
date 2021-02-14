@@ -7,11 +7,11 @@
             keyColumn="product_id" keyProperty="productId">
         insert into tb_product(product_name, product_desc, img_addr, normal_price,
                                promotion_price, priority, create_time, last_edit_time,
-                               enable_status, product_category_id, shop_id)
+                               enable_status, product_category_id, shop_id, point)
         values (#{product.productName}, #{product.productDesc}, #{product.imgAddr}, #{product.normalPrice},
                 #{product.promotionPrice},
                 #{product.priority}, #{product.createTime}, #{product.lastEditTime}, #{product.enableStatus},
-                #{product.productCategory.productCategoryId}, #{product.shop.shopId})
+                #{product.productCategory.productCategoryId}, #{product.shop.shopId}, #{product.point})
     </insert>
 
     <update id="updateProduct" parameterType="com.imooc.o2o.entity.Product">
@@ -45,7 +45,10 @@
                 enable_status = #{product.enableStatus},
             </if>
             <if test="product.productCategory!= null and product.productCategory.productCategoryId != null">
-                product_category_id = #{product.productCategory.productCategoryId}
+                product_category_id = #{product.productCategory.productCategoryId},
+            </if>
+            <if test="product.point != null">
+                point = #{product.point}
             </if>
         </set>
         where product_id = #{product.productId} and shop_id = #{product.shop.shopId}
@@ -62,6 +65,7 @@
         <result property="createTime" column="product_create_time"/>
         <result property="lastEditTime" column="product_last_edit_time"/>
         <result property="enableStatus" column="product_enable_status"/>
+        <result property="point" column="point"/>
         <association property="productCategory" column='product_category_id'
                      javaType="com.imooc.o2o.entity.ProductCategory">
             <id property="productCategoryId" column="product_category_id"/>
@@ -105,6 +109,7 @@
                p.create_time    as product_create_time,
                p.last_edit_time as product_last_edit_time,
                p.enable_status  as product_enable_status,
+               p.point,
                pc.product_category_id,
                pc.product_category_name,
                pc.priority      as product_category_priority,
@@ -130,7 +135,7 @@
 
     <select id="queryProductList" resultMap="productMap">
         select product_id,product_name,product_desc,img_addr,normal_price,promotion_price,priority as
-        product_priority,create_time as product_create_time,
+        product_priority,create_time as product_create_time,point,
         last_edit_time as product_last_edit_time,enable_status as product_enable_status from tb_product
         <where>
             <if test="productCondition.shop != null and productCondition.shop.shopId != null">

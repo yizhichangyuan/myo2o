@@ -36,7 +36,7 @@ create table `tb_wechat_auth`(
 
 // 账号密码表
 create table `tb_local_auth`(
-local_auth_id int(10) not null,
+local_auth_id int(10) not null auto_increment,
 user_id int(10) not null,
 user_name varchar(128) not null,
 password varchar(128) not null,
@@ -139,3 +139,95 @@ foreign key(product_category_id) references tb_product_category(product_category
 foreign key(shop_id) references tb_shop(shop_id)
 )engine=innodb auto_increment=1 default charset=utf8;
 
+
+// ****************** 项目2.0新建表 ********************
+# 积分奖品表
+create table tb_award(
+award_id int(10) not null auto_increment,
+award_name varchar(256) not null,
+award_desc varchar(1024) not null,
+award_img varchar(1024) not null,
+point int(2) not null default '0' comment '奖品兑换积分，默认为0',
+shop_id int(10) not null,
+priority int(2) default null,
+create_time datetime default null,
+last_edit_time datetime default null,
+enable_status int(2) not null default '0' comment '0：未上架 1：上架',
+primary key(award_id),
+foreign key(shop_id) references tb_shop(shop_id)
+)engine=innodb auto_increment=1 default charset=utf8;
+
+# 用户积分兑换记录表
+create table tb_user_award_map(
+user_award_id int(10) not null auto_increment,
+user_id int(10) not null,
+shop_id int(10) not null,
+award_id int(10) not null,
+operator_id int(10) default null comment '兑换操作员id',
+point int(10) default null comment '消耗积分',
+create_time datetime default null comment '兑换时间',
+last_edit_time datetime default null comment '领取时间',
+used_status int(2) not null default '0' comment '0：未领取 1：已领取',
+primary key(user_award_id),
+foreign key(user_id) references tb_person_info(user_id) ,
+foreign key(shop_id) references tb_shop(shop_id),
+foreign key(award_id) references tb_award(award_id),
+foreign key(operator_id) references tb_person_info(user_id)
+)engine=innodb auto_increment=1 default charset=utf8;
+
+# 用户消费记录表
+create table tb_user_product_map(
+user_product_id int(10) not null auto_increment,
+user_id int(10) not null,
+shop_id int(10) not null,
+product_id int(10) not null,
+operator_id int(10) not null,
+create_time datetime default null,
+point int(10) default '0' comment '购买商品获得积分',
+primary key(user_product_id),
+foreign key(user_id) references tb_person_info(user_id),
+foreign key(shop_id) references tb_shop(shop_id),
+foreign key(product_id) references tb_product(product_id),
+foreign key(operator_id) references tb_person_info(user_id)
+)engine=innodb auto_increment=1 default charset=utf8;
+
+# 用户-店铺积分表
+create table tb_user_shop_map(
+user_shop_id int(10) not null auto_increment,
+user_id int(10) not null,
+shop_id int(10) not null,
+point int(2) default '0' comment '用户总积分',
+create_time datetime default null,
+primary key(user_shop_id),
+unique key(user_id,shop_id),
+foreign key(user_id) references tb_person_info(user_id),
+foreign key(shop_id) references tb_shop(shop_id)
+)engine=innodb auto_increment=1 default charset=utf8;
+
+# 商家日统计顾客消费商品表,定时任务统计
+create table tb_product_sell_daily(
+product_sell_daily_id int(10) not null auto_increment,
+product_id int(100) default null,
+shop_id int(10) default null,
+total int(10) default '0',
+create_time datetime default null,
+primary key(product_sell_daily_id),
+unique(create_time, shop_id, product_id),
+foreign key(shop_id) references tb_shop(shop_id),
+foreign key(product_id) references tb_product(product_id)
+)engine=innodb auto_increment=1 default charset=utf8;
+
+create table tb_shop_auth_map(
+shop_auth_id int(10) not null auto_increment,
+shop_id int(10) not null,
+employee_id int(10) not null,
+title varchar(255) default null,
+title_flag int(2) default null,
+create_time datetime default null,
+last_edit_time datetime default null,
+enable_status int(2) not null default '0' comment '0：无效，1：有效',
+primary key(shop_auth_id),
+unique key(shop_id, employee_id),
+foreign key(employee_id) references tb_person_info(user_id),
+foreign key(shop_id) references tb_shop(shop_id)
+)engine=innodb auto_increment=1 default charset=utf8;

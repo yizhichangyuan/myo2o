@@ -73,7 +73,7 @@ public class ShopManagementController {
         if (owner == null) {
             owner = new PersonInfo();
             owner.setUserId(1L);
-            owner.setName("test");
+            owner.setName("lala");
             request.getSession().setAttribute("user", owner);
         }
         try {
@@ -81,6 +81,7 @@ public class ShopManagementController {
             shopCondition.setOwner(owner);
             ShopExecution shopExecution = shopService.getShopList(shopCondition, 0, 100);
             List<Shop> shopList = shopExecution.getShopList();
+            request.getSession().setAttribute("shopList", shopList);
             if (shopList != null) {
                 modelMap.put("success", true);
                 modelMap.put("shopList", shopList);
